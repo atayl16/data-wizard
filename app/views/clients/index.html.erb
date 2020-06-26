@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Clients</h1>
+
+<div>
+  <h4>Import data!</h4>
+  <%= form_tag import_clients_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import from file" %>
+  <% end %>
+</div>
+<table>
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr>
+        <td style ="word-wrap:break-word;"><%= client.client_id %></td>
+        <td style ="word-wrap:break-word;"><%= client.client_first_name %></td>
+        <td style ="word-wrap:break-word;"><%= client.client_last_name %></td>
+        <td style ="word-wrap:break-word;"><%= client.email %></td>
+        <td style ="word-wrap:break-word;"><%= client.mobile_phone %></td>
+        <td style ="word-wrap:break-word;"><%= client.home_phone %></td>
+        <td style ="word-wrap:break-word;"><%= client.work_phone %></td>
+        <td style ="word-wrap:break-word;"><%= client.street_address_1 %></td>
+        <td style ="word-wrap:break-word;"><%= client.street_address_2 %></td>
+        <td style ="word-wrap:break-word;"><%= client.city %></td>
+        <td style ="word-wrap:break-word;"><%= client.state %></td>
+        <td style ="word-wrap:break-word;"><%= client.zip %></td>
+        <td style ="word-wrap:break-word;"><%= client.country %></td>
+        <td style ="word-wrap:break-word;"><%= client.gender %></td>
+        <td style ="word-wrap:break-word;"><%= client.date_of_birth %></td>
+        <td style ="word-wrap:break-word;"><%= client.contact_preference %></td>
+        <td style ="word-wrap:break-word;"><%= client.client_since %></td>
+        <td style ="word-wrap:break-word;"><%= client.can_receive_automated_emails %></td>
+        <td style ="word-wrap:break-word;"><%= client.can_receive_manual_emails %></td>
+        <td style ="word-wrap:break-word;"><%= client.can_receive_automated_sms %></td>
+        <td style ="word-wrap:break-word;"><%= client.can_receive_manual_sms %></td>
+        <td style ="word-wrap:break-word;"><%= client.can_receive_manual_emails %></td>
+        <td style ="word-wrap:break-word;"><%= client.can_receive_manual_sms %></td>
+        <td style ="word-wrap:break-word;"><%= client.notes %></td>
+        <td style ="word-wrap:break-word;"><%= client.preferred_employee_id %></td>
+        <td style ="word-wrap:break-word;"><%= client.preferred_location_id %></td>
+        <td style ="word-wrap:break-word;"><%= client.deleted %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <%= will_paginate @clients %>
+</table>
+
+<br>
+
+<%= link_to 'New Client', new_client_path %>
