@@ -4,8 +4,17 @@ class ClientsController < ApplicationController
   # GET /clients
   # GET /clients.json
   def index
-    @clients = Client.paginate(page: params[:page], per_page: 10)
+    @clients = Client.paginate(page: params[:page])
   end
+
+  def export
+    @clients = Client.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @clients.to_csv, filename: "clients-#{Date.today}.csv" }
+    end
+  end
+
 
   def import
     Client.my_import(params[:file])
