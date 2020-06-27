@@ -15,7 +15,6 @@ class ClientsController < ApplicationController
     end
   end
 
-
   def import
     Client.my_import(params[:file])
     redirect_to root_url, notice: "Imported successfully!"

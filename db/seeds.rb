@@ -5,3 +5,55 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+@user = User.create(email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "Jon", last_name: "Snow")
+puts "1 User created"
+
+# Dir[Rails.root.join('db/seeds/*.rb')].sort.each do |file|
+# puts "Processing #{file.split('/').last}"
+# require file
+10.times do |location|
+  Location.create!(
+    location_id: Faker::Number.unique.number(digits: 1),
+    nickname: Faker::App.unique.name ,
+    country: 'US' ,
+    street_address: Faker::Address.street_address ,
+    street_address_2: Faker::Address.secondary_address ,
+    city: Faker::Address.city ,
+    state: Faker::Address.state_abbr ,
+    zip: Faker::Address.zip ,
+    phone_number: Faker::PhoneNumber.cell_phone ,
+    deleted: false
+  )
+end
+
+1000.times do |client|
+  Client.create!(
+    client_id: Faker::Number.unique.number(digits: 6) ,
+    client_first_name: Faker::Name.first_name ,
+    client_last_name: Faker::Name.last_name ,
+    email: Faker:: Internet.safe_email,
+    home_phone: Faker::PhoneNumber.cell_phone ,
+    work_phone: Faker::PhoneNumber.cell_phone ,
+    street_address: Faker::Address.street_address ,
+    street_address_2: Faker::Address.secondary_address ,
+    city: Faker::Address.city ,
+    state: Faker::Address.state_abbr ,
+    zip: Faker::Address.zip ,
+    country: 'US' ,
+    gender: Faker::Gender.short_binary_type ,
+    date_of_birth: Faker::Date.between(from: '1950-09-23', to: '2005-09-25') ,
+    client_since: Faker::Date.between(from: 900.days.ago, to: Date.today) ,
+    can_receive_automated_emails: Faker::Boolean.boolean ,
+    can_receive_manual_emails: Faker::Boolean.boolean ,
+    can_receive_automated_sms: Faker::Boolean.boolean ,
+    can_receive_manual_sms: Faker::Boolean.boolean ,
+    notes: Faker::Lorem.paragraph(sentence_count: 0, supplemental: false, random_sentences_to_add: 4) ,
+    preferred_employee_id: Faker::Number.between(from: 1, to: 3) ,
+    preferred_location_id: Faker::Number.between(from: 0, to: 9) ,
+    deleted: false
+  )
+
+end

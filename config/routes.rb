@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :locations
   devise_for :users
   root to: 'static#index'
   get 'clients/import' => 'clients#my_import'

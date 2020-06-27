@@ -1,0 +1,45 @@
+
+
+<h1>Locations</h1>
+
+<a class="btn btn-primary" href="locations.csv" role="button">Export</a>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Location ID</th>
+      <th>Nickname</th>
+      <th>Country</th>
+      <th>Street address</th>
+      <th>Street address 2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Phone number</th>
+      <th>Deleted</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.location_id %></td>
+        <td><%= location.nickname %></td>
+        <td><%= location.country %></td>
+        <td><%= location.street_address %></td>
+        <td><%= location.street_address_2 %></td>
+        <td><%= location.city %></td>
+        <td><%= location.state %></td>
+        <td><%= location.zip %></td>
+        <td><%= location.phone_number %></td>
+        <td><%= location.deleted %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Location', new_location_path %>

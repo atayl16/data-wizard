@@ -14,7 +14,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'activerecord-import'
-gem 'will_paginate'
+gem 'will_paginate-bootstrap4'
+gem 'bootstrap', '~> 4.5.0'
+gem 'jquery-rails'
+gem "bootstrap_form", "~> 4.0"
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'seedbank'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

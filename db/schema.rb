@@ -10,20 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_25_092504) do
+ActiveRecord::Schema.define(version: 2020_06_27_160144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "clients", force: :cascade do |t|
-    t.string "client_id"
     t.string "client_first_name"
     t.string "client_last_name"
     t.string "email"
     t.string "mobile_phone"
     t.string "work_phone"
     t.string "home_phone"
-    t.string "street_address_1"
+    t.string "street_address"
     t.string "street_address_2"
     t.string "city"
     t.string "state"
@@ -40,6 +39,23 @@ ActiveRecord::Schema.define(version: 2020_06_25_092504) do
     t.string "notes"
     t.string "preferred_employee_id"
     t.string "preferred_location_id"
+    t.boolean "deleted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "client_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.integer "location_id"
+    t.integer "primary_key"
+    t.string "nickname"
+    t.string "country"
+    t.string "street_address"
+    t.string "street_address_2"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "phone_number"
     t.boolean "deleted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

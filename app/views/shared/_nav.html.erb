@@ -1,0 +1,24 @@
+<div class="row">
+		<div class="col-md-12">
+      <ul class="custom-nav nav nav-tabs">
+				<li class="nav-item">
+					<a class="nav-link <%= active?(root_path) %>" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link <%= active?(locations_path) %>" href="/locations">Locations</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link <%= active?(clients_path) %>" href="/clients">Clients</a>
+				</li>
+        <li class="nav-item dropdown ml-md-auto">
+          <a class="nav-item" id="navbarDropdownMenuLink">
+            <% if user_signed_in? %>
+              <a class="dropdown-item"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></a>
+            <% else %>
+              <a class="dropdown-item"><%= link_to('Login', new_user_session_path) %></a>
+            <% end %>
+          </a>
+        </li>
+  		</ul>
+  	</div>
+  </div>

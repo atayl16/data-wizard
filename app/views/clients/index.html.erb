@@ -1,14 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Clients</h1>
+  <a class="btn btn-primary" href="clients/export.csv" role="button">Export</a>
 
-<div>
-  <h4>Import data!</h4>
-  <%= form_tag import_clients_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <%= submit_tag "Import from file" %>
-  <% end %>
-</div>
 <table>
   <tbody>
     <% @clients.each do |client| %>
@@ -20,7 +12,7 @@
         <td style ="word-wrap:break-word;"><%= client.mobile_phone %></td>
         <td style ="word-wrap:break-word;"><%= client.home_phone %></td>
         <td style ="word-wrap:break-word;"><%= client.work_phone %></td>
-        <td style ="word-wrap:break-word;"><%= client.street_address_1 %></td>
+        <td style ="word-wrap:break-word;"><%= client.street_address %></td>
         <td style ="word-wrap:break-word;"><%= client.street_address_2 %></td>
         <td style ="word-wrap:break-word;"><%= client.city %></td>
         <td style ="word-wrap:break-word;"><%= client.state %></td>
@@ -43,9 +35,13 @@
       </tr>
     <% end %>
   </tbody>
-  <%= will_paginate @clients %>
 </table>
-
 <br>
 
-<%= link_to 'New Client', new_client_path %>
+<%= will_paginate @clients, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+<h4>Needs to add specific clients?</h4>
+<%= form_tag import_clients_path, multipart: true do %>
+   <button type="button" class="btn btn-primary btn-sm"><%= file_field_tag :file %></button>
+  <%= submit_tag "Import" %>
+<% end %>
+<%= link_to 'Or Create Client', new_client_path %>
