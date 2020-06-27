@@ -1,0 +1,2 @@
+module SalonservicesHelper
+end

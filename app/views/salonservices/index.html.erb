@@ -1,0 +1,40 @@
+<h1>Salon Services</h1>
+<a class="btn btn-primary" href="salonservices.csv" role="button">Export</a>
+
+<table>
+  <thead>
+    <tr>
+      <td>service_id</td>
+      <td>category_id</td>
+      <td>name</td>
+      <td>description</td>
+      <td>duration</td>
+      <td>is_add_on</td>
+      <td>is_custom</td>
+      <td>breed_group_id</td>
+      <td>sku</td>
+      <td>deleted</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @salonservices.each do |salonservice| %>
+      <tr>
+        <td><%= salonservice.service_id %></td>
+        <td><%= salonservice.category_id %></td>
+        <td><%= salonservice.name %></td>
+        <td><%= salonservice.description %></td>
+        <td><%= salonservice.duration %></td>
+        <td><%= salonservice.is_add_on %></td>
+        <td><%= salonservice.is_custom %></td>
+        <td><%= salonservice.breed_group_id %></td>
+        <td><%= salonservice.sku %></td>
+        <td><%= salonservice.deleted %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Salonservice', new_salonservice_path %>

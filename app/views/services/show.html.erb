@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @service.service_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @service.category_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @service.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @service.description %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @service.duration %>
+</p>
+
+<p>
+  <strong>Is add on:</strong>
+  <%= @service.is_add_on %>
+</p>
+
+<p>
+  <strong>Is custom:</strong>
+  <%= @service.is_custom %>
+</p>
+
+<p>
+  <strong>Breed group:</strong>
+  <%= @service.breed_group_id %>
+</p>
+
+<p>
+  <strong>Sku:</strong>
+  <%= @service.sku %>
+</p>
+
+<p>
+  <strong>Deleted:</strong>
+  <%= @service.deleted %>
+</p>
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>

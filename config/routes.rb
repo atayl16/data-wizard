@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :salonservices
+  resources :services
   resources :locations
   devise_for :users
   root to: 'static#index'

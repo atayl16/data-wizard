@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_27_160144) do
+ActiveRecord::Schema.define(version: 2020_06_27_211603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,21 @@ ActiveRecord::Schema.define(version: 2020_06_27_160144) do
     t.boolean "deleted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "salonservices", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "service_id"
+    t.integer "category_id"
+    t.string "name"
+    t.string "description"
+    t.integer "duration"
+    t.boolean "is_add_on"
+    t.boolean "is_custom"
+    t.integer "breed_group_id"
+    t.string "sku"
+    t.boolean "deleted"
   end
 
   create_table "users", force: :cascade do |t|
