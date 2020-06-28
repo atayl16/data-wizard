@@ -39,7 +39,7 @@ Salonservice.create!(service_id: 7, category_id: 3, name: "Shampoo & Dry", durat
 
 50000.times do |client|
   Client.create!(
-    client_id: Faker::Number.unique.number(digits: 3) ,
+    client_id: Faker::Number.unique.number(digits: 5) ,
     client_first_name: Faker::Name.first_name ,
     client_last_name: Faker::Name.last_name ,
     email: Faker:: Internet.safe_email,
