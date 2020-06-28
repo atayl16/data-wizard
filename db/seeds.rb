@@ -37,9 +37,9 @@ Salonservice.create!(service_id: 5, category_id: 2, name: "Full Color", duration
 Salonservice.create!(service_id: 6, category_id: 2, name: "Balayage", duration: 120, is_add_on: false, is_custom: false, deleted: false)
 Salonservice.create!(service_id: 7, category_id: 3, name: "Shampoo & Dry", duration: 15, is_add_on: true, is_custom: false, deleted: false)
 
-1000.times do |client|
+50000.times do |client|
   Client.create!(
-    client_id: Faker::Number.unique.number(digits: 6) ,
+    client_id: Faker::Number.unique.number(digits: 3) ,
     client_first_name: Faker::Name.first_name ,
     client_last_name: Faker::Name.last_name ,
     email: Faker:: Internet.safe_email,
@@ -59,8 +59,8 @@ Salonservice.create!(service_id: 7, category_id: 3, name: "Shampoo & Dry", durat
     can_receive_automated_sms: Faker::Boolean.boolean ,
     can_receive_manual_sms: Faker::Boolean.boolean ,
     notes: Faker::Lorem.paragraph(sentence_count: 0, supplemental: false, random_sentences_to_add: 4) ,
-    preferred_employee_id: Faker::Number.between(from: 1, to: 3) ,
-    preferred_location_id: Faker::Number.between(from: 0, to: 9) ,
+#    preferred_employee_id: Faker::Number.between(from: 1, to: 50) ,
+#    preferred_location_id: Faker::Number.between(from: 0, to: 9) ,
     deleted: false
   )
 
