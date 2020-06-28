@@ -37,7 +37,7 @@ Salonservice.create!(service_id: 5, category_id: 2, name: "Full Color", duration
 Salonservice.create!(service_id: 6, category_id: 2, name: "Balayage", duration: 120, is_add_on: false, is_custom: false, deleted: false)
 Salonservice.create!(service_id: 7, category_id: 3, name: "Shampoo & Dry", duration: 15, is_add_on: true, is_custom: false, deleted: false)
 
-50000.times do |client|
+5000.times do |client|
   Client.create!(
     client_id: Faker::Number.unique.number(digits: 5) ,
     client_first_name: Faker::Name.first_name ,
