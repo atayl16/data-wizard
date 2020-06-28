@@ -2,6 +2,38 @@
   <a class="btn btn-primary" href="clients/export.csv" role="button">Export</a>
 
 <table>
+  <thead>
+    <tr>
+      <th>client_id</th>
+      <th>client_first_name</th>
+      <th>client_last_name</th>
+      <th>email</th>
+      <th>mobile_phone</th>
+      <th>home_phone</th>
+      <th>work_phone</th>
+      <th>street_address</th>
+      <th>street_address_2</th>
+      <th>city</th>
+      <th>state</th>
+      <th>zip</th>
+      <th>country</th>
+      <th>gender</th>
+      <th>date_of_birth</th>
+      <th>contact_preference</th>
+      <th>client_since</th>
+      <th>can_receive_automated_emails</th>
+      <th>can_receive_manual_emails</th>
+      <th>can_receive_automated_sms</th>
+      <th>can_receive_manual_sms</th>
+      <th>can_receive_manual_emails</th>
+      <th>can_receive_manual_sms</th>
+      <th>notes</th>
+      <th>preferred_employee_id</th>
+      <th>preferred_location_id</th>
+      <th>deleted</th>
+    </tr>
+  </thead>
+
   <tbody>
     <% @clients.each do |client| %>
       <tr>
