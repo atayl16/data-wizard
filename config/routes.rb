@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root to: 'static#index'
   get 'clients/import' => 'clients#my_import'
   get 'clients/export' => 'clients#export'
+  get 'seeds/run'
 
   resources :clients do
     collection {post :import}

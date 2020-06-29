@@ -10,10 +10,10 @@ require 'faker'
 
 @user = User.create(email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "Jon", last_name: "Snow")
 puts "1 User created"
+Faker::UniqueGenerator.clear # Clears used values for all generators
 
-# Dir[Rails.root.join('db/seeds/*.rb')].sort.each do |file|
-# puts "Processing #{file.split('/').last}"
-# require file
+# Dir[Rails.root.join('db/seeds/*.rb')].sort.each { |seed| load seed }
+
 10.times do |location|
   Location.create!(
     location_id: Faker::Number.unique.number(digits: 1),
@@ -38,8 +38,8 @@ Salonservice.create!(service_id: 6, category_id: 2, name: "Balayage", duration: 
 Salonservice.create!(service_id: 7, category_id: 3, name: "Shampoo & Dry", duration: 15, is_add_on: true, is_custom: false, deleted: false)
 
 5000.times do |client|
-  Client.create!(
-    client_id: Faker::Number.unique.number(digits: 5) ,
+  Client.where(
+    client_id: Faker::Number.unique.between(from: 1, to: 5000),
     client_first_name: Faker::Name.first_name ,
     client_last_name: Faker::Name.last_name ,
     email: Faker:: Internet.safe_email,
@@ -62,6 +62,6 @@ Salonservice.create!(service_id: 7, category_id: 3, name: "Shampoo & Dry", durat
 #    preferred_employee_id: Faker::Number.between(from: 1, to: 50) ,
 #    preferred_location_id: Faker::Number.between(from: 0, to: 9) ,
     deleted: false
-  )
+  ).first_or_create
 
 end

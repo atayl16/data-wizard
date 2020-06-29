@@ -23,4 +23,12 @@ class Client < ApplicationRecord
       end
     end
   end
+
+  def run
+    self.truncate!
+      self.connection.execute(
+        "TRUNCATE TABLE #{ self.table_name };"
+      )
+      self.connection.reset_pk_sequence!(self.table_name)
+    end
 end
