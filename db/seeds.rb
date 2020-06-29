@@ -39,7 +39,7 @@ Salonservice.create!(service_id: 7, category_id: 3, name: "Shampoo & Dry", durat
 
 5000.times do |client|
   Client.where(
-    client_id: Faker::Number.unique.between(from: 1, to: 5000),
+    client_id: Faker::Number.unique.between(from: 1, to: 9500),
     client_first_name: Faker::Name.first_name ,
     client_last_name: Faker::Name.last_name ,
     email: Faker:: Internet.safe_email,
