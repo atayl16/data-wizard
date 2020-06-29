@@ -15,18 +15,17 @@ Faker::UniqueGenerator.clear # Clears used values for all generators
 # Dir[Rails.root.join('db/seeds/*.rb')].sort.each { |seed| load seed }
 
 10.times do |location|
-  Location.create!(
+  Location.where(
     location_id: Faker::Number.unique.number(digits: 1),
     nickname: Faker::App.unique.name ,
     country: 'US' ,
     street_address: Faker::Address.street_address ,
-    street_address_2: Faker::Address.secondary_address ,
     city: Faker::Address.city ,
     state: Faker::Address.state_abbr ,
     zip: Faker::Address.zip ,
     phone_number: Faker::PhoneNumber.cell_phone ,
     deleted: false
-  )
+  ).first_or_create
 end
 
 Salonservice.create!(service_id: 1, category_id: 1, name: "Bang Trim", duration: 15, is_add_on: false, is_custom: false, deleted: false)
