@@ -10,9 +10,14 @@
   </head>
 
   <body>
-    <%= render 'shared/nav' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container">
+      <%= render 'shared/nav' %>
+      <!-- <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p> -->
+      <%= yield %>
+      <div id="footer">
+        <p>Copyright 2020</p>
+      </div>
+    </div>
   </body>
 </html>

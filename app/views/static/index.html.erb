@@ -1,2 +1,41 @@
-<h1>Static#index</h1>
-<p>Find me in app/views/static/index.html.erb</p>
+      <div class="jumbotron">
+      <h2>Choose one or more file types to download</h2>
+			<div class="btn-group" role="group">
+        <a href="/clients/export.csv" class="btn btn-info" type="button">Clients</a>
+        <a href="/locations.csv" class="btn btn-info" type="button">Locations</a>
+        <a href="/salonservices.csv" class="btn btn-info" type="button">Salon Services</a>
+			</div>
+      <br>
+      <em>If you would like to see a sample of the data, click one of the navigation tabs at the top of the page.</em>
+
+
+			</div>
+      <div>
+        <h3>
+          Instructions
+        </h3>
+        <p>Once you have downloaded all of your files, follow the steps below to import them.</p>
+        <ol>
+          <li class="list-item">
+            Download the batch manifest template.
+          </li>
+          <li class="list-item">
+            <span>Open the batch manifest file and replace the fake data with the actual file names and types. Make sure to include all of the files that you wish to import.</span>
+          </li>
+          <li>
+            Save the batch manifest file and close it.
+          </li>
+          <li>
+            <span>Put all of your files, including the batch manifest, in a single folder on your computer.</span>
+          </li>
+          <li class="list-item">
+            <span>Use an archive program to zip the folder. If given an option for the type of folder (zip, tar, etc), choose the zip or .zip type).</span>
+          </li>
+          <li class="list-item">
+            Login to your merchant account and choose the Ingest Data option in the top right menu. This should be done from the child account, not the parent account.
+          </li>
+          <li class="list-item">
+            Choose the Import option and import the file.
+          </li>
+        </ol>
+      </div>

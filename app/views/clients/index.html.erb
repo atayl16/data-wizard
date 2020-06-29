@@ -1,36 +1,25 @@
-<h1>Clients</h1>
+<h1 id="title">Clients</h1>
   <a class="btn btn-primary" href="clients/export.csv" role="button">Export</a>
-
-<table>
+<br>
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
   <thead>
     <tr>
-      <th>client_id</th>
-      <th>client_first_name</th>
-      <th>client_last_name</th>
-      <th>email</th>
-      <th>mobile_phone</th>
-      <th>home_phone</th>
-      <th>work_phone</th>
-      <th>street_address</th>
-      <th>street_address_2</th>
-      <th>city</th>
-      <th>state</th>
-      <th>zip</th>
-      <th>country</th>
-      <th>gender</th>
-      <th>date_of_birth</th>
-      <th>contact_preference</th>
-      <th>client_since</th>
-      <th>can_receive_automated_emails</th>
-      <th>can_receive_manual_emails</th>
-      <th>can_receive_automated_sms</th>
-      <th>can_receive_manual_sms</th>
-      <th>can_receive_manual_emails</th>
-      <th>can_receive_manual_sms</th>
-      <th>notes</th>
-      <th>preferred_employee_id</th>
-      <th>preferred_location_id</th>
-      <th>deleted</th>
+      <th style ="word-wrap:break-word;">client id</th>
+      <th style ="word-wrap:break-word;">client first name</th>
+      <th style ="word-wrap:break-word;">client last name</th>
+      <th style ="word-wrap:break-word;">email</th>
+      <th style ="word-wrap:break-word;">home phone</th>
+      <th style ="word-wrap:break-word;">street address</th>
+      <th style ="word-wrap:break-word;">city</th>
+      <th style ="word-wrap:break-word;">state</th>
+      <th style ="word-wrap:break-word;">zip</th>
+      <th style ="word-wrap:break-word;">country</th>
+      <th style ="word-wrap:break-word;">gender</th>
+      <th style ="word-wrap:break-word;">date of birth</th>
+      <th style ="word-wrap:break-word;">contact preference</th>
+      <th style ="word-wrap:break-word;">client since</th>
+      <th style ="word-wrap:break-word;">receive emails</th>
+      <th style ="word-wrap:break-word;">notes</th>
     </tr>
   </thead>
 
@@ -40,12 +29,9 @@
         <td style ="word-wrap:break-word;"><%= client.client_id %></td>
         <td style ="word-wrap:break-word;"><%= client.client_first_name %></td>
         <td style ="word-wrap:break-word;"><%= client.client_last_name %></td>
-        <td style ="word-wrap:break-word;"><%= client.email %></td>
         <td style ="word-wrap:break-word;"><%= client.mobile_phone %></td>
         <td style ="word-wrap:break-word;"><%= client.home_phone %></td>
-        <td style ="word-wrap:break-word;"><%= client.work_phone %></td>
         <td style ="word-wrap:break-word;"><%= client.street_address %></td>
-        <td style ="word-wrap:break-word;"><%= client.street_address_2 %></td>
         <td style ="word-wrap:break-word;"><%= client.city %></td>
         <td style ="word-wrap:break-word;"><%= client.state %></td>
         <td style ="word-wrap:break-word;"><%= client.zip %></td>
@@ -55,25 +41,20 @@
         <td style ="word-wrap:break-word;"><%= client.contact_preference %></td>
         <td style ="word-wrap:break-word;"><%= client.client_since %></td>
         <td style ="word-wrap:break-word;"><%= client.can_receive_automated_emails %></td>
-        <td style ="word-wrap:break-word;"><%= client.can_receive_manual_emails %></td>
-        <td style ="word-wrap:break-word;"><%= client.can_receive_automated_sms %></td>
-        <td style ="word-wrap:break-word;"><%= client.can_receive_manual_sms %></td>
-        <td style ="word-wrap:break-word;"><%= client.can_receive_manual_emails %></td>
-        <td style ="word-wrap:break-word;"><%= client.can_receive_manual_sms %></td>
         <td style ="word-wrap:break-word;"><%= client.notes %></td>
-        <td style ="word-wrap:break-word;"><%= client.preferred_employee_id %></td>
-        <td style ="word-wrap:break-word;"><%= client.preferred_location_id %></td>
-        <td style ="word-wrap:break-word;"><%= client.deleted %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<em>*Some fields excluded from table for brevity</em>
 <br>
 
 <%= will_paginate @clients, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
-<h4>Needs to add specific clients?</h4>
+<hr>
+<h4>Needs to add specific clients? Use a client import template...</h4>
 <%= form_tag import_clients_path, multipart: true do %>
    <button type="button" class="btn btn-primary btn-sm"><%= file_field_tag :file %></button>
   <%= submit_tag "Import" %>
 <% end %>
-<%= link_to 'Or Create Client', new_client_path %>
+<%= link_to 'Or Create a Client', new_client_path %>
+<br>

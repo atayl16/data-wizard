@@ -13,7 +13,8 @@
 				<li class="nav-item">
 					<a class="nav-link <%= active?(clients_path) %>" href="/clients">Clients</a>
 				</li>
-        <li class="nav-item dropdown ml-md-auto">
+				<!-- User authentication is setup. Toggle this on and set before action, if outsiders start downloading. -->
+        <!-- <li class="nav-item dropdown ml-md-auto">
           <a class="nav-item" id="navbarDropdownMenuLink">
             <% if user_signed_in? %>
               <a class="dropdown-item"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></a>
@@ -21,7 +22,7 @@
               <a class="dropdown-item"><%= link_to('Login', new_user_session_path) %></a>
             <% end %>
           </a>
-        </li>
+        </li> -->
   		</ul>
   	</div>
   </div>
