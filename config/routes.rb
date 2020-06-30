@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :saloncategories
   resources :staffs
   resources :salonservices
   resources :services
