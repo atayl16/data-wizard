@@ -1,12 +1,13 @@
-# require 'faker'
-#
-# # after :001_locations do
-# #   location1 = location.find_by_id('1')
-# #   location2 = location.find_by_id('2')
-# #   location3 = location.find_by_id('3')
-# #
-# #   location1.staff.create(:first_name => 'James', :last_name => 'McCarthy')
-# #   location2.staff.create(:first_name => 'James', :last_name => 'McCarthy')
-# #   location3.staff.create(:first_name => 'James', :last_name => 'McCarthy')
-#employee_id:integer name title email username location_id:integer deleted:boolean
-# # end
+require 'faker'
+
+50.times do |staff|
+  Staff.where(
+    employee_id: Faker::Number.unique.between(from: 1, to: 50),
+    name: Faker::Name.name,
+    title: Faker::Job.position,
+    email: Faker::Internet.safe_email,
+    location_id: Faker::Number.between(from: 0, to: 9),
+    deleted: false
+  ).first_or_create
+end
+puts "50 staff created"

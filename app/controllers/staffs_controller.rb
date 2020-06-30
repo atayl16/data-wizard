@@ -4,7 +4,7 @@ class StaffsController < ApplicationController
   # GET /staffs
   # GET /staffs.json
   def index
-    @staffs = Staff.all
+    @staffs = Staff.order("location_id")
     respond_to do |format|
       format.html
       format.csv { send_data @staffs.to_csv, filename: "employees.csv" }

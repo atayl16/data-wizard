@@ -4,7 +4,7 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.all
+    @locations = Location.order("location_id")
     respond_to do |format|
       format.html
       format.csv { send_data @locations.to_csv, filename: "locations.csv" }
