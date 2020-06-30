@@ -12,10 +12,12 @@ require 'faker'
 puts "1 User created"
 Faker::UniqueGenerator.clear # Clears used values for all generators
 
+#TODO Refactor this and break it out into files
 # Dir[Rails.root.join('db/seeds/*.rb')].sort.each { |seed| load seed }
-
 10.times do |location|
   Location.where(
+    location_id: Faker::Number.unique.clear,
+
     location_id: Faker::Number.unique.number(digits: 1),
     nickname: Faker::App.unique.name ,
     country: 'US' ,
@@ -24,6 +26,17 @@ Faker::UniqueGenerator.clear # Clears used values for all generators
     state: Faker::Address.state_abbr ,
     zip: Faker::Address.zip ,
     phone_number: Faker::PhoneNumber.cell_phone ,
+    deleted: false
+  ).first_or_create
+end
+
+50.times do |staff|
+  Staff.where(
+    employee_id: Faker::Number.unique.between(from: 1, to: 50),
+    name: Faker::Name.name,
+    title: Faker::Job.position,
+    email: Faker::Internet.safe_email,
+    location_id: Faker::Number.between(from: 0, to: 9),
     deleted: false
   ).first_or_create
 end
@@ -62,5 +75,4 @@ Salonservice.create!(service_id: 7, category_id: 3, name: "Shampoo & Dry", durat
 #    preferred_location_id: Faker::Number.between(from: 0, to: 9) ,
     deleted: false
   ).first_or_create
-
 end

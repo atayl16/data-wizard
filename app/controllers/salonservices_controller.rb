@@ -7,7 +7,7 @@ class SalonservicesController < ApplicationController
     @salonservices = Salonservice.all
     respond_to do |format|
       format.html
-      format.csv { send_data @salonservices.to_csv, filename: "services-#{Date.today}.csv" }
+      format.csv { send_data @salonservices.to_csv, filename: "services.csv" }
     end
   end
 

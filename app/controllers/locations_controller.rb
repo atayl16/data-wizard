@@ -7,7 +7,7 @@ class LocationsController < ApplicationController
     @locations = Location.all
     respond_to do |format|
       format.html
-      format.csv { send_data @locations.to_csv, filename: "locations-#{Date.today}.csv" }
+      format.csv { send_data @locations.to_csv, filename: "locations.csv" }
     end
   end
 

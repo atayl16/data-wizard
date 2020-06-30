@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_27_211603) do
+ActiveRecord::Schema.define(version: 2020_06_30_211749) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 2020_06_27_211603) do
     t.string "zip"
     t.string "country"
     t.string "gender"
-    t.datetime "date_of_birth"
     t.boolean "can_receive_automated_emails"
     t.boolean "can_receive_manual_emails"
     t.boolean "can_receive_automated_sms"
@@ -43,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_211603) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "client_id"
+    t.date "date_of_birth"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -74,6 +74,18 @@ ActiveRecord::Schema.define(version: 2020_06_27_211603) do
     t.integer "breed_group_id"
     t.string "sku"
     t.boolean "deleted"
+  end
+
+  create_table "staffs", force: :cascade do |t|
+    t.integer "employee_id"
+    t.string "name"
+    t.string "title"
+    t.string "email"
+    t.string "username"
+    t.integer "location_id"
+    t.boolean "deleted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

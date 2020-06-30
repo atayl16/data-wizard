@@ -8,4 +8,5 @@
 # #   location1.staff.create(:first_name => 'James', :last_name => 'McCarthy')
 # #   location2.staff.create(:first_name => 'James', :last_name => 'McCarthy')
 # #   location3.staff.create(:first_name => 'James', :last_name => 'McCarthy')
+#employee_id:integer name title email username location_id:integer deleted:boolean
 # # end
