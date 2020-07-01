@@ -1,4 +1,4 @@
-class CreateBatchmanifests < ActiveRecord::Migration[5.2]
+class CreateBatchmanifestfilenames < ActiveRecord::Migration[5.2]
   def change
     create_table :batchmanifests do |t|
       t.string :filename
