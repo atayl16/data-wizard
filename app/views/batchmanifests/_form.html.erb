@@ -1,0 +1,22 @@
+<%= form_with(model: batchmanifest, local: true) do |form| %>
+  <% if batchmanifest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(batchmanifest.errors.count, "error") %> prohibited this batchmanifest from being saved:</h2>
+
+      <ul>
+      <% batchmanifest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :filetype %>
+    <%= form.text_field :filetype %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

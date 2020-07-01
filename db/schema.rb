@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_30_230805) do
+ActiveRecord::Schema.define(version: 2020_07_01_231627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "batchmanifests", force: :cascade do |t|
+    t.string "filename"
+    t.string "filetype"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "clients", force: :cascade do |t|
     t.string "client_first_name"
@@ -65,6 +72,16 @@ ActiveRecord::Schema.define(version: 2020_06_30_230805) do
     t.integer "category_id"
     t.string "name"
     t.boolean "online"
+    t.boolean "deleted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "salonpricings", force: :cascade do |t|
+    t.integer "service_id"
+    t.integer "location_id"
+    t.integer "employee_id"
+    t.decimal "price"
     t.boolean "deleted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :batchmanifests
+  resources :salonpricings
   resources :saloncategories
   resources :staffs
   resources :salonservices
