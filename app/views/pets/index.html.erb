@@ -1,0 +1,28 @@
+<h1 id="title">Pets</h1>
+
+<a class="btn btn-primary" href="pets/export.csv" role="button">Export</a>
+<em>Pet import will not work without the custom fields sheet to define the pet name</em>
+
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Child ID</th>
+      <th>Client ID</th>
+      <th>Deleted</th>
+      <th>Pet name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pets.each do |pet| %>
+      <tr>
+        <td><%= pet.child_id %></td>
+        <td><%= pet.client_id %></td>
+        <td><%= pet.deleted %></td>
+        <td><%= pet.pet_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @pets, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

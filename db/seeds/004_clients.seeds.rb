@@ -2,7 +2,7 @@ require 'faker'
 
 2000.times do |client|
   Client.where(
-    client_id: Faker::Number.unique.between(from: 1, to: 9500),
+    client_id: Faker::Number.unique.between(from: 1, to: 3000),
     client_first_name: Faker::Name.first_name ,
     client_last_name: Faker::Name.last_name ,
     email: Faker:: Internet.safe_email,
