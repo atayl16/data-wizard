@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: 605b405ff9804df525ced6186991b5313f40e0a9
+  revision: 7309c9d59f1f73e7875635c083f7d8958e0c9f3a
   branch: master
   specs:
     faker (2.13.0)
@@ -108,7 +108,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    diff-lcs (1.4.2)
+    diff-lcs (1.4.4)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
@@ -287,6 +287,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.3)
   rspec-rails
+  rubyzip
   sass-rails (~> 5.0)
   seedbank
   selenium-webdriver

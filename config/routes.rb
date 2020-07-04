@@ -4,14 +4,17 @@ Rails.application.routes.draw do
   get 'clients/export' => 'clients#export'
   get 'pets/export' => 'pets#export'
   get 'seeds/run'
-  resources :pets
-  resources :batchmanifests
-  resources :salonpricings
-  resources :saloncategories
-  resources :staffs
-  resources :salonservices
-  resources :services
-  resources :locations
+  get 'static/export' => 'static#export'
+
+  resources :pets, only: [:index, :export]
+  resources :customfields, only: [:index, :export]
+  resources :batchmanifests, only: [:index, :export]
+  resources :salonpricings, only: [:index, :export]
+  resources :saloncategories, only: [:index, :export]
+  resources :staffs, only: [:index, :export]
+  resources :salonservices, only: [:index, :export]
+  resources :services, only: [:index, :export]
+  resources :locations, only: [:index, :export]
   devise_for :users
 
   resources :clients do

@@ -9,8 +9,9 @@ class ClientsController < ApplicationController
 
   def export
     @clients = Client.all
-    respond_to do |format|
-      format.csv { send_data @clients.to_csv, filename: "clients.csv" }
+      respond_to do |format|
+        format.csv { send_data @clients.to_csv, filename: "clients.csv" }
+      end
     end
   end
 
