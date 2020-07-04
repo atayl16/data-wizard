@@ -1,4 +1,4 @@
-class CreateCustomfields < ActiveRecord::Migration[5.2]
+class CreateCustomFields < ActiveRecord::Migration[5.2]
   def change
     create_table :customfields do |t|
       t.string :uuid
