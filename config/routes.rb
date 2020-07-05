@@ -4,8 +4,14 @@ Rails.application.routes.draw do
   get 'clients/export' => 'clients#export'
   get 'pets/export' => 'pets#export'
   get 'seeds/run'
-  get 'static/export' => 'static#export'
+  get 'static/export_clients_and_pets' => 'static#export_clients_and_pets'
+  get 'static/export_appointments' => 'static#export_appointments'
+  get 'static/export_salon' => 'static#export_salon'
+  get 'appointments/export' => 'appointments#export'
+  get 'appointments/export_services' => 'appointments#export_services'
+  get 'appointments/export_statuses' => 'appointments#export_statuses'
 
+  resources :appointments, only: [:index, :export]
   resources :pets, only: [:index, :export]
   resources :customfields, only: [:index, :export]
   resources :batchmanifests, only: [:index, :export]

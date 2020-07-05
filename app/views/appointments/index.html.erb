@@ -1,0 +1,46 @@
+<h1 id="title">Appointments</h1>
+
+<a class="btn btn-primary" href="appointments/export.csv" role="button">Export Appointments</a>
+<a class="btn btn-primary" href="appointments/export_services.csv" role="button">Export Appointment Services</a>
+<a class="btn btn-primary" href="appointments/export_statuses.csv" role="button">Export Appointment Statuses</a>
+
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Appointment</th>
+      <th>Location</th>
+      <th>Employee</th>
+      <th>Client</th>
+      <th>Child</th>
+      <th>Notes</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Service</th>
+      <th>Price</th>
+      <th>Duration</th>
+      <th>Status</th>
+      <th>Change time</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.appointment_id %></td>
+        <td><%= appointment.location_id %></td>
+        <td><%= appointment.employee_id %></td>
+        <td><%= appointment.client_id %></td>
+        <td><%= appointment.child_id %></td>
+        <td><%= appointment.notes %></td>
+        <td><%= appointment.start_time %></td>
+        <td><%= appointment.end_time %></td>
+        <td><%= appointment.service_id %></td>
+        <td><%= appointment.price %></td>
+        <td><%= appointment.duration %></td>
+        <td><%= appointment.status %></td>
+        <td><%= appointment.change_time %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @appointments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
