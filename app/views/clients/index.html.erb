@@ -1,65 +1,39 @@
-<h1 id="title">Clients</h1>
-  <a class="btn btn-primary" href="clients/export.csv" role="button">Export</a>
+<h3 id="title">Client Profile</h3>
 
-<!-- <br>
-<p>Need different clients?
-  <%= link_to 'Regenerate', seeds_run_path, action: :run %>
-  <em>This usually takes 2-3 minutes to completely regenerate the client database.
-    <br> Clicking another page will not interrupt this process. Please be patient!</em>
-</p>
-<br> -->
-<table class="table table-striped table-bordered table-sm" cellspacing="0">
-  <thead>
-    <tr>
-      <th style ="word-wrap:break-word;">client id</th>
-      <th style ="word-wrap:break-word;">client first name</th>
-      <th style ="word-wrap:break-word;">client last name</th>
-      <th style ="word-wrap:break-word;">home phone</th>
-      <th style ="word-wrap:break-word;">street address</th>
-      <th style ="word-wrap:break-word;">city</th>
-      <th style ="word-wrap:break-word;">state</th>
-      <th style ="word-wrap:break-word;">zip</th>
-      <th style ="word-wrap:break-word;">country</th>
-      <th style ="word-wrap:break-word;">gender</th>
-      <th style ="word-wrap:break-word;">date of birth</th>
-      <th style ="word-wrap:break-word;">contact preference</th>
-      <th style ="word-wrap:break-word;">client since</th>
-      <th style ="word-wrap:break-word;">receive emails</th>
-      <th style ="word-wrap:break-word;">notes</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @clients.each do |client| %>
-      <tr>
-        <td style ="word-wrap:break-word;"><%= client.client_id %></td>
-        <td style ="word-wrap:break-word;"><%= client.client_first_name %></td>
-        <td style ="word-wrap:break-word;"><%= client.client_last_name %></td>
-        <td style ="word-wrap:break-word;"><%= client.home_phone %></td>
-        <td style ="word-wrap:break-word;"><%= client.street_address %></td>
-        <td style ="word-wrap:break-word;"><%= client.city %></td>
-        <td style ="word-wrap:break-word;"><%= client.state %></td>
-        <td style ="word-wrap:break-word;"><%= client.zip %></td>
-        <td style ="word-wrap:break-word;"><%= client.country %></td>
-        <td style ="word-wrap:break-word;"><%= client.gender %></td>
-        <td style ="word-wrap:break-word;"><%= client.date_of_birth %></td>
-        <td style ="word-wrap:break-word;"><%= client.contact_preference %></td>
-        <td style ="word-wrap:break-word;"><%= client.client_since %></td>
-        <td style ="word-wrap:break-word;"><%= client.can_receive_automated_emails %></td>
-        <td style ="word-wrap:break-word;"><%= client.notes %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<em>*Some fields excluded from table for brevity</em>
-<br>
-
-<%= will_paginate @clients, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
-<hr>
-<h4>Needs to add specific clients? Use a client import template...</h4>
-<%= form_tag import_clients_path, multipart: true do %>
-   <button type="button" class="btn btn-primary btn-sm"><%= file_field_tag :file %></button>
-  <%= submit_tag "Import" %>
-<% end %>
-<%= link_to 'Or Create a Client', new_client_path %>
-<br>
+<div id="card-32132">
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-32132" href="#card-element-321321">Clients</a>
+    </div>
+    <div id="card-element-321321" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "list" %>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-32132" href="#card-element-213213">Import Clients?</a>
+    </div>
+    <div id="card-element-213213" class="collapse">
+      <div class="card-body">
+        Needs to add specific clients? Use a client import template...
+        <%= form_tag import_clients_path, multipart: true do %>
+           <button type="button" class="btn btn-outline-primary btn-sm"><%= file_field_tag :file %></button>
+          <%= submit_tag "Import" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-32132" href="#card-element-122122">Custom Fields</a>
+    </div>
+    <div id="card-element-122122" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "customfields/list", locals: {customfield: @customfields}%>
+      </div>
+    </div>
+  </div>
+</div>

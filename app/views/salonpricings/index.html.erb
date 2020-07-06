@@ -1,25 +1,15 @@
-<h1 id="title">Salonpricings</h1>
+<h3 id="title">Service Prices</h3>
 
-<a class="btn btn-primary" href="salonpricings.csv" role="button">Export</a>
 
-<table class="table table-striped table-bordered table-sm" cellspacing="0">
-  <thead>
-    <tr>
-      <th>Service</th>
-      <th>Location</th>
-      <th>Price</th>
-      <th>Deleted</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @salonpricings.each do |salonpricing| %>
-      <tr>
-        <td><%= salonpricing.service_id %></td>
-        <td><%= salonpricing.location_id %></td>
-        <td><%= salonpricing.price %></td>
-        <td><%= salonpricing.deleted %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id="card-54354">
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-54354" href="#card-element-543543">Pricing</a>
+    </div>
+    <div id="card-element-543543" class="show">
+      <div class="card-body">
+        <%= render :partial => "list" %>
+      </div>
+    </div>
+  </div>
+</div>

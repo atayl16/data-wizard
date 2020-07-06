@@ -7,9 +7,9 @@ require 'faker'
     nickname: Faker::App.unique.name ,
     country: 'US' ,
     street_address: Faker::Address.street_address ,
-    city: Faker::Address.city ,
-    state: Faker::Address.state_abbr ,
-    zip: Faker::Address.zip ,
+    city: "Nome" ,
+    state: "AK" ,
+    zip: "99762" ,
     phone_number: Faker::PhoneNumber.cell_phone ,
     deleted: false
   )

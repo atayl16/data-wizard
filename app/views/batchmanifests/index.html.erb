@@ -1,21 +1,16 @@
-<h1 id="title">Batch Manifest</h1>
+<h3 id="title">Batch Manifest</h3>
 
-<a class="btn btn-primary" href="batchmanifests.csv" role="button">Export</a>
 
-<table class="table table-striped table-bordered table-sm" cellspacing="0">
-  <thead>
-    <tr>
-      <th>Filename</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @batchmanifests.each do |batchmanifest| %>
-      <tr>
-        <td><%= batchmanifest.filename %></td>
-        <td><%= batchmanifest.filetype %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id="card-56565">
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-56565" href="#card-element-565656">Manifest File</a>
+    </div>
+    <div id="card-element-565656" class="show">
+      <div class="card-body">
+        <em>Make sure to edit this file, as needed, to include all files you will import with the correct filename and file type. Pay attention to spelling and capitaliztion.</em><br>
+        <%= render :partial => "list" %>
+      </div>
+    </div>
+  </div>
+</div>

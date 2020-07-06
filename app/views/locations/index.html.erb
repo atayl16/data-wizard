@@ -1,35 +1,15 @@
-<h1 id="title">Locations</h1>
+<h3 id="title">Locations</h3>
 
-<a class="btn btn-primary" href="locations.csv" role="button">Export</a>
 
-<table class="table table-striped table-bordered table-sm" cellspacing="0">
-  <thead>
-    <tr>
-      <th>location id</th>
-      <th>nickname</th>
-      <th>country</th>
-      <th>street address</th>
-      <th>city</th>
-      <th>state</th>
-      <th>zip</th>
-      <th>phone</th>
-      <th>deleted</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @locations.each do |location| %>
-      <tr>
-        <td><%= location.location_id %></td>
-        <td><%= location.nickname %></td>
-        <td><%= location.country %></td>
-        <td><%= location.street_address %></td>
-        <td><%= location.city %></td>
-        <td><%= location.state %></td>
-        <td><%= location.zip %></td>
-        <td><%= location.phone_number %></td>
-        <td><%= location.deleted %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id="card-76767">
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-76767" href="#card-element-767676">Locations</a>
+    </div>
+    <div id="card-element-767676" class="show">
+      <div class="card-body">
+        <%= render :partial => "list" %>
+      </div>
+    </div>
+  </div>
+</div>

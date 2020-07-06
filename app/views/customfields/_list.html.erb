@@ -1,0 +1,25 @@
+<a class="btn btn-outline-primary" href="customfields.csv" role="button">Export</a>
+
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+  <thead>
+    <tr>
+      <th>uuid</th>
+      <th>title</th>
+      <th>type</th>
+      <th>required</th>
+      <th>applicable_to</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customfields.each do |customfield| %>
+      <tr>
+        <td><%= customfield.uuid %></td>
+        <td><%= customfield.title %></td>
+        <td><%= customfield.field_type %></td>
+        <td><%= customfield.required %></td>
+        <td><%= customfield.applicable_to %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

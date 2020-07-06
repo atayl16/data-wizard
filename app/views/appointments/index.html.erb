@@ -1,46 +1,45 @@
-<h1 id="title">Appointments</h1>
+<h3 id="title">Appointments</h3><br>
+<a class="btn btn-outline-primary" href="static/export_appointments.zip" role="button">Export Appointment Zip</a>
 
-<a class="btn btn-primary" href="appointments/export.csv" role="button">Export Appointments</a>
-<a class="btn btn-primary" href="appointments/export_services.csv" role="button">Export Appointment Services</a>
-<a class="btn btn-primary" href="appointments/export_statuses.csv" role="button">Export Appointment Statuses</a>
-
-<table class="table table-striped table-bordered table-sm" cellspacing="0">
-  <thead>
-    <tr>
-      <th>Appointment</th>
-      <th>Location</th>
-      <th>Employee</th>
-      <th>Client</th>
-      <th>Child</th>
-      <th>Notes</th>
-      <th>Start time</th>
-      <th>End time</th>
-      <th>Service</th>
-      <th>Price</th>
-      <th>Duration</th>
-      <th>Status</th>
-      <th>Change time</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @appointments.each do |appointment| %>
-      <tr>
-        <td><%= appointment.appointment_id %></td>
-        <td><%= appointment.location_id %></td>
-        <td><%= appointment.employee_id %></td>
-        <td><%= appointment.client_id %></td>
-        <td><%= appointment.child_id %></td>
-        <td><%= appointment.notes %></td>
-        <td><%= appointment.start_time %></td>
-        <td><%= appointment.end_time %></td>
-        <td><%= appointment.service_id %></td>
-        <td><%= appointment.price %></td>
-        <td><%= appointment.duration %></td>
-        <td><%= appointment.status %></td>
-        <td><%= appointment.change_time %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<%= will_paginate @appointments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+<div id="card-85858">
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-858585">Appointments Table</a>
+    </div>
+    <div id="card-element-858585" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "list" %>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-855855">Appointments</a>
+    </div>
+    <div id="card-element-855855" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "listappointments"%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-888888">Appointment Services</a>
+    </div>
+    <div id="card-element-888888" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "listappointmentservices"%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-585858">Appointment Statuses</a>
+    </div>
+    <div id="card-element-585858" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "listappointmentstatuses"%>
+      </div>
+    </div>
+  </div>
+</div>

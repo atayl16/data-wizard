@@ -1,6 +1,6 @@
 <div class="row">
 		<div class="col-md-12">
-      <ul class="custom-nav nav nav-tabs">
+      <ul class="nav nav-pills flex-column">
 				<li class="nav-item">
 					<a class="nav-link <%= active?(root_path) %>" href="/">Home</a>
 				</li>
@@ -14,16 +14,13 @@
 					<a class="nav-link <%= active?(staffs_path) %>" href="/staffs">Staff</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link <%= active?(saloncategories_path) %>" href="/saloncategories">Salon Categories</a>
+					<a class="nav-link <%= active?(saloncategories_path) %>" href="/saloncategories">Salons</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link <%= active?(salonservices_path) %>" href="/salonservices">Salon Services</a>
+					<a class="nav-link <%= active?(salonpricings_path) %>" href="/salonpricings">Service Pricing</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link <%= active?(salonpricings_path) %>" href="/salonpricings">Pricings</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link <%= active?(clients_path) %>" href="/clients">Clients</a>
+					<a class="nav-link <%= active?(clients_path) %>" href="/clients">Client Profile</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link <%= active?(pets_path) %>" href="/pets">Pets</a>

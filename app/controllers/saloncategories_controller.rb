@@ -5,6 +5,8 @@ class SaloncategoriesController < ApplicationController
   # GET /saloncategories.json
   def index
     @saloncategories = Saloncategory.all
+    @salonservices = Salonservice.all
+    @salonpricings = Salonpricing.all
     respond_to do |format|
       format.html
       format.csv { send_data @saloncategories.to_csv, filename: "categories.csv" }

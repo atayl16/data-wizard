@@ -11,10 +11,16 @@
 
   <body>
     <div class="container">
-      <%= render 'shared/nav' %>
+    	<div class="row">
+    		<div class="col-md-2">
+        <%= render 'shared/nav' %>
+      </div>
       <!-- <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p> -->
-      <%= yield %>
+      <div class="col-md-10">
+        <%= yield %>
+      </div>
+    </div>
       <div id="footer">
         <p>Copyright 2020</p>
       </div>

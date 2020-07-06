@@ -14,6 +14,13 @@ class Client < ApplicationRecord
 
   def self.to_csv
     attributes = %w{client_id	client_first_name	client_last_name	email	mobile_phone	home_phone	work_phone	street_address	street_address_2	city	state	zip	country	gender	date_of_birth	contact_preference	client_since	can_receive_automated_emails	can_receive_manual_emails	can_receive_automated_sms	can_receive_manual_sms	notes	preferred_employee_id	preferred_location_id	deleted}
+    CSV.open("#{Rails.root}/app/assets/csvs/clients.csv", "wb", headers: true) do |csv|
+      csv << attributes
+
+      all.each do |client|
+        csv << attributes.map{ |attr| client.send(attr) }
+      end
+    end
 
     CSV.generate(headers: true) do |csv|
       csv << attributes

@@ -1,0 +1,24 @@
+<a class="btn btn-outline-primary" href="appointments/export_services.csv" role="button">Export</a>
+
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Appointment</th>
+      <th>Service</th>
+      <th>Price</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.appointment_id %></td>
+        <td><%= appointment.service_id %></td>
+        <td><%= appointment.price %></td>
+        <td><%= appointment.duration %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @appointments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

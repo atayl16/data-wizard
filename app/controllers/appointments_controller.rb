@@ -27,6 +27,7 @@ class AppointmentsController < ApplicationController
         format.csv { send_data @appointments.to_csv_statuses, filename: "appointment_statuses.csv" }
       end
   end
+
   # GET /appointments/1
   # GET /appointments/1.json
   def show

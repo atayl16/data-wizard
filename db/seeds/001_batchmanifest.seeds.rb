@@ -7,6 +7,7 @@ Batchmanifest.where(filename: "employees.csv", filetype: "employees").first_or_c
 Batchmanifest.where(filename: "addonmappings.csv", filetype: "addonmappings").first_or_create
 Batchmanifest.where(filename: "breedgroups.csv", filetype: "breedgroups").first_or_create
 Batchmanifest.where(filename: "pets.csv", filetype: "pets").first_or_create
+Batchmanifest.where(filename: "appointments.zip", filetype: "appointments").first_or_create
 Batchmanifest.where(filename: "appointments.csv", filetype: "appointments").first_or_create
 Batchmanifest.where(filename: "appointment_services.csv", filetype: "appointment_services").first_or_create
 Batchmanifest.where(filename: "appointment_statuses.csv", filetype: "appointment_statuses").first_or_create

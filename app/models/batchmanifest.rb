@@ -5,10 +5,12 @@ class Batchmanifest < ApplicationRecord
 
   def self.to_csv
     attributes = %w{filename filetype}
-
+    CSV.open("#{Rails.root}/app/assets/csvs/batchmanifest.csv", "wb", headers: true) do |csv|
+      all.each do |batchmanifest|
+        csv << attributes.map{ |attr| batchmanifest.send(attr) }
+      end
+    end
     CSV.generate(headers: true) do |csv|
-      # csv << attributes
-
       all.each do |batchmanifest|
         csv << attributes.map{ |attr| batchmanifest.send(attr) }
       end

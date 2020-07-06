@@ -1,59 +1,99 @@
       <div class="jumbotron">
-      <h2>Choose one or more file types to download</h2>
-			<div class="btn-group" role="group">
-        <a href="/batchmanifests.csv" class="btn btn-info" type="button">Batch Manifest</a>
-        <a href="/locations.csv" class="btn btn-info" type="button">Locations</a>
-        <a href="/staffs.csv" class="btn btn-info" type="button">Staff</a>
-      </div>
-
-      <div class="btn-group" role="group">
-        <a href="/clients/export.csv" class="btn btn-info" type="button">Clients</a>
-        <a href="/pets/export.csv" class="btn btn-info" type="button">Pets</a>
-        <a href="/customfields.csv" class="btn btn-info" type="button">Custom Fields</a>
-      </div>
-
-      <div class="btn-group" role="group">
-        <a href="/salonservices.csv" class="btn btn-info" type="button">Salon Services</a>
-        <a href="/saloncategories.csv" class="btn btn-info" type="button">Salon Categories</a>
-        <a href="/salonpricings.csv" class="btn btn-info" type="button">Pricing</a>
-      </div>
-
-      <div class="btn-group" role="group">
-        <a class="btn btn-primary" href="static/export_salon.zip" role="button">Export Salon Set</a>
-        <a class="btn btn-primary" href="static/export_clients_and_pets.zip" role="button">Export Clients w/ Pets</a>
-        <a class="btn btn-primary" href="static/export_appointments.zip" role="button">Export Appointments</a>
-			</div>
-      <br>
-      <em>If you would like to see a sample of the data, click one of the navigation tabs at the top of the page.</em>
-
-
-			</div>
-      <div>
-        <h3>
-          Instructions
-        </h3>
-        <p>Once you have downloaded all of your files, follow the steps below to import them.</p>
-        <ol>
-          <li class="list-item">
-            Download the batch manifest template.
-          </li>
-          <li class="list-item">
-            <span>Open the batch manifest file and replace the fake data with the actual file names and types. Make sure to include all of the files that you wish to import.</span>
-          </li>
-          <li>
-            Save the batch manifest file and close it.
-          </li>
-          <li>
-            <span>Put all of your files, including the batch manifest, in a single folder on your computer.</span>
-          </li>
-          <li class="list-item">
-            <span>Use an archive program to zip the folder. If given an option for the type of folder (zip, tar, etc), choose the zip or .zip type).</span>
-          </li>
-          <li class="list-item">
-            Login to your merchant account and choose the Ingest Data option in the top right menu. This should be done from the child account, not the parent account.
-          </li>
-          <li class="list-item">
-            Choose the Import option and import the file.
-          </li>
-        </ol>
+        <h2>Expand the sections below and choose one or more files to download</h2>
+        <div id="card-404785">
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-404785" href="#card-element-567567">Single Exports</a>
+            </div>
+            <div id="card-element-567567" class="collapse">
+              <div class="card-body">
+                A generic batch manifest that you should edit for your specific files.<br>
+                Location file with 10 locations.<br>
+                Staff file with 50 staff that align to the 10 locations.<br>
+                <div class="btn-group" role="group">
+                  <a href="/batchmanifests.csv" class="btn btn-outline-primary" type="button">Batch Manifest</a>
+                  <a href="/locations.csv" class="btn btn-outline-primary" type="button">Locations</a>
+                  <a href="/staffs.csv" class="btn btn-outline-primary" type="button">Staff</a>
+                </div>
+                <hr>
+                A client file with preferred location and preferred staff that match staff and location files from above.<br>
+                Pet file with client_ids that align to the client file.<br>
+                Custom fields file required for pet name to import.<br>
+                <div class="btn-group" role="group">
+                  <a href="/clients/export.csv" class="btn btn-outline-primary" type="button">Clients</a>
+                  <a href="/pets/export.csv" class="btn btn-outline-primary" type="button">Pets</a>
+                  <a href="/customfields.csv" class="btn btn-outline-primary" type="button">Custom Fields</a>
+                </div>
+                <hr>
+                Service file, service category file and pricing.<br>
+                <div class="btn-group" role="group">
+                  <a href="/salonservices.csv" class="btn btn-outline-primary" type="button">Salon Services</a>
+                  <a href="/saloncategories.csv" class="btn btn-outline-primary" type="button">Salon Categories</a>
+                  <a href="/salonpricings.csv" class="btn btn-outline-primary" type="button">Pricing</a>
+                </div>
+                <hr>
+                Export clients and pets in a zip file without preferred location or preferred staff. Includes manifest.<br>
+                Export appointment zip file with manifest. Uses location, employee, service, and client IDs from files above.<br>
+                <div class="btn-group" role="group">
+                  <a class="btn btn-outline-primary" href="static/export_clients_and_pets.zip" role="button">Export Clients w/ Pets</a>
+                  <a class="btn btn-outline-primary" href="static/export_appointments.zip" role="button">Export Appointments</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-404785" href="#card-element-229081">Salons</a>
+            </div>
+            <div id="card-element-229081" class="collapse">
+              <div class="card-body">
+                Complete salon set including manifests, locations, staff, services, clients and appointments. <br>
+                <div class="btn-group" role="group">
+                  <a class="btn btn-outline-primary" href="static/export_salon.zip" role="button">Export Salon Set</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-404785" href="#card-element-259345">Pet Grooming </a>
+            </div>
+            <div id="card-element-259345" class="collapse">
+              <div class="card-body">
+                Coming soon!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <em>If you would like to see a sample of the data, click one of the navigation tabs on the left.</em>
+          </div>
+          <br>
+          <h3>Instructions</h3>
+          <p>Once you have downloaded all of your files, follow the steps below to import them.</p>
+          <ol>
+            <li class="list-item">
+              Make sure your download includes the batch manifest template.
+            </li>
+            <li class="list-item">
+              <span>If you did not download a zip set, open the batch manifest file and replace the fake data with the actual file names and types. Make sure to include all of the files that you wish to import.</span>
+            </li>
+            <li>
+              Save the batch manifest file and close it.
+            </li>
+            <li>
+              <span>Put all of your files, including the batch manifest, in a single folder on your computer.</span>
+            </li>
+            <li class="list-item">
+              <span>Use an archive program to zip the folder. If given an option for the type of folder (zip, tar, etc), choose the zip or .zip type).</span>
+            </li>
+            <li class="list-item">
+              Login to your merchant account and choose the Ingest Data option in the top right menu. This should be done from the child account, not the parent account.
+            </li>
+            <li class="list-item">
+              Choose the Import option and import the file.
+            </li>
+          </ol>
+        </div>
       </div>

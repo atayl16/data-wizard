@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'appointments/export_services' => 'appointments#export_services'
   get 'appointments/export_statuses' => 'appointments#export_statuses'
 
+  #get 'static/salons' => stat
+
   resources :appointments, only: [:index, :export]
   resources :pets, only: [:index, :export]
   resources :customfields, only: [:index, :export]

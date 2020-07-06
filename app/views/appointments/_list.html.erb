@@ -1,0 +1,42 @@
+<a class="btn btn-outline-primary" href="appointments/export.csv" role="button">Export Appointments</a>
+<a class="btn btn-outline-primary" href="appointments/export_services.csv" role="button">Export Appointment Services</a>
+<a class="btn btn-outline-primary" href="appointments/export_statuses.csv" role="button">Export Appointment Statuses</a>
+
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Appt</th>
+      <th>Location</th>
+      <th>Employee</th>
+      <th>Client</th>
+      <th>Child</th>
+      <th>Notes</th>
+      <th>Start time</th>
+      <th>Service</th>
+      <th>Price</th>
+      <th>Duration</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.appointment_id %></td>
+        <td><%= appointment.location_id %></td>
+        <td><%= appointment.employee_id %></td>
+        <td><%= appointment.client_id %></td>
+        <td><%= appointment.child_id %></td>
+        <td><%= appointment.notes %></td>
+        <td><%= appointment.start_time %></td>
+        <td><%= appointment.service_id %></td>
+        <td><%= appointment.price %></td>
+        <td><%= appointment.duration %></td>
+        <td><%= appointment.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<em>*Some fields excluded from table for brevity</em>
+<br>
+<%= will_paginate @appointments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

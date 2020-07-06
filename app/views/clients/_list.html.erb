@@ -1,0 +1,46 @@
+<a class="btn btn-outline-primary" href="clients/export.csv" role="button">Export</a>
+
+<!-- <br>
+<p>Need different clients?
+<%= link_to 'Regenerate', seeds_run_path, action: :run %>
+<em>This usually takes 2-3 minutes to completely regenerate the client database.
+  <br> Clicking another page will not interrupt this process. Please be patient!</em>
+</p>
+<br> -->
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+<thead>
+  <tr>
+    <th style ="word-wrap:break-word;">client id</th>
+    <th style ="word-wrap:break-word;">first name</th>
+    <th style ="word-wrap:break-word;">last name</th>
+    <th style ="word-wrap:break-word;">home phone</th>
+    <th style ="word-wrap:break-word;">street address</th>
+    <th style ="word-wrap:break-word;">gender</th>
+    <th style ="word-wrap:break-word;">date of birth</th>
+    <th style ="word-wrap:break-word;">client since</th>
+    <th style ="word-wrap:break-word;">receive emails</th>
+    <th style ="word-wrap:break-word;">notes</th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @clients.each do |client| %>
+    <tr>
+      <td style ="word-wrap:break-word;"><%= client.client_id %></td>
+      <td style ="word-wrap:break-word;"><%= client.client_first_name %></td>
+      <td style ="word-wrap:break-word;"><%= client.client_last_name %></td>
+      <td style ="word-wrap:break-word;"><%= client.home_phone %></td>
+      <td style ="word-wrap:break-word;"><%= client.street_address %></td>
+      <td style ="word-wrap:break-word;"><%= client.gender %></td>
+      <td style ="word-wrap:break-word;"><%= client.date_of_birth %></td>
+      <td style ="word-wrap:break-word;"><%= client.client_since %></td>
+      <td style ="word-wrap:break-word;"><%= client.can_receive_automated_emails %></td>
+      <td style ="word-wrap:break-word;"><%= client.notes %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+<em>*Some fields excluded from table for brevity</em>
+<br>
+
+<%= will_paginate @clients, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

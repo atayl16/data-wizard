@@ -1,27 +1,15 @@
-<h1 id="title">Custom Fields</h1>
+<h3 id="title">Custom Fields</h3>
 
-<a class="btn btn-primary" href="customfields.csv" role="button">Export</a>
 
-<table class="table table-striped table-bordered table-sm" cellspacing="0">
-  <thead>
-    <tr>
-      <th>uuid</th>
-      <th>title</th>
-      <th>type</th>
-      <th>required</th>
-      <th>applicable_to</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @customfields.each do |customfield| %>
-      <tr>
-        <td><%= customfield.uuid %></td>
-        <td><%= customfield.title %></td>
-        <td><%= customfield.field_type %></td>
-        <td><%= customfield.required %></td>
-        <td><%= customfield.applicable_to %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id="card-51515">
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-51515" href="#card-element-515151">Custom Fields</a>
+    </div>
+    <div id="card-element-515151" class="show">
+      <div class="card-body">
+        <%= render :partial => "list" %>
+      </div>
+    </div>
+  </div>
+</div>

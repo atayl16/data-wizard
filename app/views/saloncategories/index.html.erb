@@ -1,25 +1,35 @@
-<h1 id="title">Salon Service Categories</h1>
+<h3 id="title">Salons</h3>
 
-<a class="btn btn-primary" href="saloncategories.csv" role="button">Export</a>
 
-<table class="table table-striped table-bordered table-sm" cellspacing="0">
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Name</th>
-      <th>Online</th>
-      <th>Deleted</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @saloncategories.each do |saloncategory| %>
-      <tr>
-        <td><%= saloncategory.category_id %></td>
-        <td><%= saloncategory.name %></td>
-        <td><%= saloncategory.online %></td>
-        <td><%= saloncategory.deleted %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id="card-67149">
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-67149" href="#card-element-100604">Service Categories</a>
+    </div>
+    <div id="card-element-100604" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "list" %>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-67149" href="#card-element-992531">Services</a>
+    </div>
+    <div id="card-element-992531" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "salonservices/list", locals: {salonservice: @salonservices}%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-67149" href="#card-element-123123">Pricing</a>
+    </div>
+    <div id="card-element-123123" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "salonpricings/list", locals: {salonpricing: @salonpricings}%>
+      </div>
+    </div>
+  </div>
+</div>

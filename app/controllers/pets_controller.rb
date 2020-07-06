@@ -5,6 +5,7 @@ class PetsController < ApplicationController
   # GET /pets.json
   def index
     @pets = Pet.paginate(page: params[:page], :per_page => 5)
+    @customfields = Customfield.all
   end
 
   def export
