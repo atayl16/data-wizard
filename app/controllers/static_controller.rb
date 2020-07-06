@@ -12,7 +12,6 @@ class StaticController < ApplicationController
       zip.put_next_entry "categories.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/categories.csv")
       zip.put_next_entry "categories.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/categories.csv")
       zip.put_next_entry "clients.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/clients.csv")
-      zip.put_next_entry "customfields.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/customfields.csv")
       zip.put_next_entry "employees.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/employees.csv")
       zip.put_next_entry "locations.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/locations.csv")
       zip.put_next_entry "pricings.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/pricings.csv")
