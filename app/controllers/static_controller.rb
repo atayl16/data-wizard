@@ -50,7 +50,7 @@ class StaticController < ApplicationController
 
   def export_appointments
     file_stream = Zip::OutputStream.write_buffer do |zip|
-      zip.put_next_entry "appointments_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments_manifest.csv")
+      zip.put_next_entry "appointment_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointment_manifest.csv")
       zip.put_next_entry "appointments.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.csv")
       zip.put_next_entry "appointment_services.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointment_services.csv")
       zip.put_next_entry "appointment_statuses.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointment_statuses.csv")
