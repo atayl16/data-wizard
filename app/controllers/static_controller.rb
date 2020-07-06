@@ -6,8 +6,9 @@ class StaticController < ApplicationController
 
   def export_salon
     file_stream = Zip::OutputStream.write_buffer do |zip|
-      zip.put_next_entry "appointments.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
-      zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest.csv")
+# =>  appointment import currently not working
+#      zip.put_next_entry "appointments.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
+      zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_simple_salon.csv")
       zip.put_next_entry "categories.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/categories.csv")
       zip.put_next_entry "categories.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/categories.csv")
       zip.put_next_entry "clients.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/clients.csv")
