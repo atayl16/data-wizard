@@ -15,9 +15,12 @@
 @import "rails_bootstrap_forms";
 
 
-.btn{
-  margin: 5px;
-  margin-bottom: 10px;
+.btn-danger, .btn-warning, .btn-success{
+  margin: 10px;
+}
+
+.btn-block{
+  margin: 3px;
 }
 
 #footer{

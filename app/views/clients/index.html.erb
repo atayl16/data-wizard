@@ -20,7 +20,7 @@
       <div class="card-body">
         Needs to add specific clients? Use a client import template...
         <%= form_tag import_clients_path, multipart: true do %>
-           <button type="button" class="btn btn-outline-primary btn-sm"><%= file_field_tag :file %></button>
+           <button type="button" class="btn btn-info btn-sm"><%= file_field_tag :file %></button>
           <%= submit_tag "Import" %>
         <% end %>
       </div>

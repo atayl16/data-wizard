@@ -3,60 +3,13 @@
         <div id="card-404785">
           <div class="card">
             <div class="card-header">
-              <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-404785" href="#card-element-567567">Single Exports</a>
-            </div>
-            <div id="card-element-567567" class="collapse">
-              <div class="card-body">
-                A generic batch manifest that you should edit for your specific files.<br>
-                Location file with 10 locations.<br>
-                Staff file with 50 staff that align to the 10 locations.<br>
-                <div class="btn-group" role="group">
-                  <a href="/batchmanifests.csv" class="btn btn-outline-primary" type="button">Batch Manifest</a>
-                  <a href="/locations.csv" class="btn btn-outline-primary" type="button">Locations</a>
-                  <a href="/staffs.csv" class="btn btn-outline-primary" type="button">Staff</a>
-                </div>
-                <hr>
-                A client file with preferred location and preferred staff that match staff and location files from above.<br>
-                Pet file with client_ids that align to the client file.<br>
-                Custom fields file required for pet name to import.<br>
-                <div class="btn-group" role="group">
-                  <a href="/clients/export.csv" class="btn btn-outline-primary" type="button">Clients</a>
-                  <a href="/pets/export.csv" class="btn btn-outline-primary" type="button">Pets</a>
-                  <a href="/customfields.csv" class="btn btn-outline-primary" type="button">Custom Fields</a>
-                </div>
-                <hr>
-                Service file, service category file and pricing for salons.<br>
-                <div class="btn-group" role="group">
-                  <a href="/salonservices.csv" class="btn btn-outline-primary" type="button">Salon Services</a>
-                  <a href="/saloncategories.csv" class="btn btn-outline-primary" type="button">Salon Categories</a>
-                  <a href="/salonpricings.csv" class="btn btn-outline-primary" type="button">Pricing</a>
-                </div>
-                <hr>
-                Service file, service category file and pricing for pet grooming.<br>
-                <div class="btn-group" role="group">
-                  <a href="/petservices.csv" class="btn btn-outline-primary" type="button">Pet Services</a>
-                  <a href="/petcategories.csv" class="btn btn-outline-primary" type="button">Pet Categories</a>
-                  <a href="/salonpricings.csv" class="btn btn-outline-primary" type="button">Pricing</a>
-                </div>
-                <hr>
-                Export clients and pets in a zip file without preferred location or preferred staff. Includes manifest.<br>
-                Export appointment zip file with manifest. Uses location, employee, service, and client IDs from files above.<br>
-                <div class="btn-group" role="group">
-                  <a class="btn btn-outline-primary" href="static/export_clients_and_pets.zip" role="button">Export Clients w/ Pets</a><br>
-                  <a class="btn btn-outline-primary" href="static/export_appointments.zip" role="button"disabled>Export Appointments</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
               <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-404785" href="#card-element-229081">Salons</a>
             </div>
             <div id="card-element-229081" class="collapse">
               <div class="card-body">
                 Complete salon set including manifests, locations, staff, services, clients and appointments. <br>
                 <div class="btn-group" role="group">
-                  <a class="btn btn-outline-primary" href="static/export_salon.zip" role="button">Export Salon Set</a>
+                  <a class="btn btn-success btn-sm" href="static/export_salon.zip" role="button">Export Salon Set</a>
                 </div>
               </div>
             </div>
@@ -68,19 +21,82 @@
             <div id="card-element-259345" class="collapse">
               <div class="card-body">
                 Export clients and pets in a zip file without preferred location or preferred staff. Includes manifest.<br>
-                <a class="btn btn-outline-primary" href="static/export_clients_and_pets.zip" role="button">Export Clients w/ Pets</a><br>
+                <a class="btn btn-warning btn-sm" href="static/export_clients_and_pets.zip" role="button">Export Clients w/ Pets</a><br>
                 Complete pet grooming set including manifests, locations, staff, services, clients, pets and appointments. <br>
                 <div class="btn-group" role="group">
-                  <a class="btn btn-outline-primary" href="static/export_pet.zip" role="button">Export Grooming Set</a>
+                  <a class="btn btn-success btn-sm" href="static/export_pet.zip" role="button">Export Grooming Set</a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-404785" href="#card-element-567567">Single Exports</a>
+            </div>
+            <div id="card-element-567567" class="collapse">
+              <div class="card-body">
+                Files in this section are single files only, meant to replace missing files from your ZIP folder or for the brave souls who wish to build
+                their own zip file from scratch. Remember to include a batch_manifest file in your zipped folder with the correct file names and types.
+                <hr>
+                A generic batch manifest that you should edit for your specific files.<br>
+                Location file with 10 locations.<br>
+                Staff file with 50 staff that align to the 10 locations.<br>
+                <div class="btn-group" role="group">
+                  <a href="/batchmanifests.csv" class="btn btn-danger btn-sm btn-sm" type="button">Batch Manifest</a>
+                  <a href="/locations.csv" class="btn btn-danger btn-sm" type="button">Locations</a>
+                  <a href="/staffs.csv" class="btn btn-danger btn-sm" type="button">Staff</a>
+                  </div>
+                <hr>
+                A client file with preferred location and preferred staff that match staff and location files from above.<br>
+                Pet file with client_ids that align to the client file.<br>
+                Custom fields file required for pet name to import.<br>
+                <div class="btn-group" role="group">
+                  <a href="/clients/export.csv" class="btn btn-danger btn-sm" type="button">Clients</a>
+                  <a href="/pets/export.csv" class="btn btn-danger btn-sm" type="button">Pets</a>
+                  <a href="/customfields.csv" class="btn btn-danger btn-sm" type="button">Custom Fields</a>
+                </div>
+                <hr>
+                Service file, service category file and pricing for salons.<br>
+                <div class="btn-group" role="group">
+                  <a href="/salonservices.csv" class="btn btn-danger btn-sm" type="button">Salon Services</a>
+                  <a href="/saloncategories.csv" class="btn btn-danger btn-sm" type="button">Salon Categories</a>
+                  <a href="/salonpricings.csv" class="btn btn-danger btn-sm" type="button">Pricing</a>
+                </div>
+                <hr>
+                Service file, service category file and pricing for pet grooming.<br>
+                <div class="btn-group" role="group">
+                  <a href="/petservices.csv" class="btn btn-danger btn-sm" type="button">Pet Services</a>
+                  <a href="/petcategories.csv" class="btn btn-danger btn-sm" type="button">Pet Categories</a>
+                  <a href="/salonpricings.csv" class="btn btn-danger btn-sm" type="button">Pricing</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-404785" href="#card-element-334433">Partial Sets</a>
+            </div>
+              <div id="card-element-334433" class="collapse">
+                <div class="card-body">
+                  <!-- <div class="btn-group" role="group"> -->
+                  Export clients and pets in a zip file without preferred location or preferred staff. Includes manifest.<br>
+                  <a class="btn btn-warning btn-sm" href="static/export_clients_and_pets.zip" role="button">Export Clients w/ Pets</a><br>
+                  <hr>
+                  Export appointment zip file with appointments manifest. Uses location, employee, service, and client IDs from files above. <strong>Does not include a batch_manifest.</strong><br>
+                  <a class="btn btn-warning btn-sm" href="static/export_appointments.zip" role="button"disabled>Export Appointments</a>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
         <div>
           <div>
             <em>If you would like to see a sample of the data, click one of the navigation tabs on the left.</em>
           </div>
+          <button type="button" class="btn btn-danger btn-block">Red - File note meant to be used alone</button>
+          <button type="button" class="btn btn-warning btn-block">Yellow - You can use this partial set, but it will not build an entire account</button>
+          <button type="button" class="btn btn-success btn-block">Green - A complete set meant to generate enough data for a full account</button>
           <br>
           <h3>Instructions</h3>
           <p>Once you have downloaded all of your files, follow the steps below to import them.</p>
