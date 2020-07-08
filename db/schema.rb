@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_04_174659) do
+ActiveRecord::Schema.define(version: 2020_07_07_235654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,6 +96,15 @@ ActiveRecord::Schema.define(version: 2020_07_04_174659) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "petcategories", force: :cascade do |t|
+    t.integer "category_id"
+    t.string "name"
+    t.boolean "online"
+    t.boolean "deleted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pets", force: :cascade do |t|
     t.integer "child_id"
     t.integer "client_id"
@@ -103,6 +112,22 @@ ActiveRecord::Schema.define(version: 2020_07_04_174659) do
     t.string "pet_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "petservices", force: :cascade do |t|
+    t.integer "service_id"
+    t.integer "category_id"
+    t.string "name"
+    t.string "description"
+    t.integer "duration"
+    t.boolean "is_add_on"
+    t.boolean "is_custom"
+    t.integer "breed_group_id"
+    t.string "sku"
+    t.boolean "deleted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_id"], name: "index_petservices_on_service_id", unique: true
   end
 
   create_table "saloncategories", force: :cascade do |t|

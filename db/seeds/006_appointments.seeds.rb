@@ -12,9 +12,9 @@ require 'faker'
     service_id: Faker::Number.between(from: 1, to: 7),
     price: Faker::Commerce.price,
     status: 'booked' ,
-    start_time: Faker::Time.between_dates(from: Date.today - 60, to: Date.today + 60, period: :day),
+    start_time: Faker::Time.between_dates(from: Date.today - 30, to: Date.today + 30, period: :night),
     duration: Faker::Number.between(from: 15, to: 90),
-    change_time: Faker::Time.between_dates(from: Date.today - 90, to: Date.today - 60, period: :day),
+    change_time: Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night),
 )
 end
 

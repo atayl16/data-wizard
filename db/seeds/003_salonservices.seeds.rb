@@ -5,7 +5,7 @@ Salonservice.create!(service_id: 4, category_id: 2, name: "Highlights", duration
 Salonservice.create!(service_id: 5, category_id: 2, name: "Full Color", duration: 90, is_add_on: false, is_custom: false, deleted: false)
 Salonservice.create!(service_id: 6, category_id: 2, name: "Balayage", duration: 120, is_add_on: false, is_custom: false, deleted: false)
 Salonservice.create!(service_id: 7, category_id: 3, name: "Shampoo & Dry", duration: 15, is_add_on: false, is_custom: false, deleted: false)
-puts "10 salon services created"
+puts "7 salon services created"
 
 # require 'faker'
 #

@@ -1,0 +1,35 @@
+<h3 id="title">Pets</h3>
+
+<a class="btn btn-outline-primary" href="static/export_pet.zip" role="button">Export Basic Pet Zipfile Set</a>
+<div id="card-67149">
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-67149" href="#card-element-100604">Service Categories</a>
+    </div>
+    <div id="card-element-100604" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "list" %>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-67149" href="#card-element-992531">Services</a>
+    </div>
+    <div id="card-element-992531" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "petservices/list", locals: {petservice: @petservices}%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-67149" href="#card-element-123123">Pricing</a>
+    </div>
+    <div id="card-element-123123" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "salonpricings/list", locals: {salonpricing: @salonpricings}%>
+      </div>
+    </div>
+  </div>
+</div>

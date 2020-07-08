@@ -1,0 +1,35 @@
+<a class="btn btn-outline-primary btn-float-right" href="petservices.csv" role="button">Export</a>
+
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+  <thead>
+    <tr>
+      <th>service id</th>
+      <th>category id</th>
+      <th>name</th>
+      <th>description</th>
+      <th>duration</th>
+      <th>add on</th>
+      <th>custom</th>
+      <th>breed group id</th>
+      <th>sku</th>
+      <th>deleted</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @petservices.each do |petservice| %>
+      <tr>
+        <td><%= petservice.service_id %></td>
+        <td><%= petservice.category_id %></td>
+        <td><%= petservice.name %></td>
+        <td><%= petservice.description %></td>
+        <td><%= petservice.duration %></td>
+        <td><%= petservice.is_add_on %></td>
+        <td><%= petservice.is_custom %></td>
+        <td><%= petservice.breed_group_id %></td>
+        <td><%= petservice.sku %></td>
+        <td><%= petservice.deleted %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

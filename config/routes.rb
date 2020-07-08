@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :petcategories
+  resources :petservices
   root to: 'static#index'
   get 'clients/import' => 'clients#my_import'
   get 'clients/export' => 'clients#export'
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
   get 'static/export_clients_and_pets' => 'static#export_clients_and_pets'
   get 'static/export_appointments' => 'static#export_appointments'
   get 'static/export_salon' => 'static#export_salon'
+  get 'static/export_pet' => 'static#export_pet'
   get 'appointments/export' => 'appointments#export'
   get 'appointments/export_services' => 'appointments#export_services'
   get 'appointments/export_statuses' => 'appointments#export_statuses'

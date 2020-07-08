@@ -6,7 +6,7 @@ class Saloncategory < ApplicationRecord
 
   def self.to_csv
     attributes = %w{category_id name online deleted}
-    CSV.open("#{Rails.root}/app/assets/csvs/categories.csv", "wb", headers: true) do |csv|
+    CSV.open("#{Rails.root}/app/assets/csvs/salon_categories.csv", "wb", headers: true) do |csv|
       csv << attributes
 
       all.each do |saloncategory|
