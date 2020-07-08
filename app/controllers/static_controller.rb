@@ -29,7 +29,7 @@ class StaticController < ApplicationController
 
   def export_pet
     file_stream = Zip::OutputStream.write_buffer do |zip|
-      zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_simple_pet.csv")
+      zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_simple_pet2.csv")
       zip.put_next_entry "categories.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/pet_categories.csv")
       zip.put_next_entry "clients.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/clients.csv")
       zip.put_next_entry "pets.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/pets.csv")
