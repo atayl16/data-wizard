@@ -5,4 +5,4 @@ service_id,category_id,name,description,duration,is_add_on,is_custom,breed_group
 4,2,Mini Groom,,60,false,false,,,false
 5,2,Full Groom,,90,false,false,,,false
 6,2,Elite Groom,,120,false,false,,,false
-7,3,Nail Trim,,15,false,false,,,false
+7,3,Nail Trim,,15,true,false,,,false

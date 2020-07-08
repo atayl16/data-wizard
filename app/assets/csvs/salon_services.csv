@@ -5,4 +5,4 @@ service_id,category_id,name,description,duration,is_add_on,is_custom,breed_group
 4,2,Highlights,,60,false,false,,,false
 5,2,Full Color,,90,false,false,,,false
 6,2,Balayage,,120,false,false,,,false
-7,3,Shampoo & Dry,,15,false,false,,,false
+7,3,Shampoo & Dry,,15,rtue,false,,,false

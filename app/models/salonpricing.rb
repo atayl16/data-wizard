@@ -2,6 +2,7 @@ class Salonpricing < ApplicationRecord
   require 'csv'
   require 'activerecord-import/base'
   require 'activerecord-import/active_record/adapters/postgresql_adapter'
+
   def self.to_csv
     attributes = %w{service_id location_id employee_id price deleted}
     CSV.open("#{Rails.root}/app/assets/csvs/pricings.csv", "wb", headers: true) do |csv|

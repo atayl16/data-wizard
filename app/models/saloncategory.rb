@@ -2,7 +2,6 @@ class Saloncategory < ApplicationRecord
   require 'csv'
   require 'activerecord-import/base'
   require 'activerecord-import/active_record/adapters/postgresql_adapter'
-  has_many :salonservice
 
   def self.to_csv
     attributes = %w{category_id name online deleted}

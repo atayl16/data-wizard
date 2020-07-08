@@ -2,9 +2,6 @@ class Staff < ApplicationRecord
   require 'csv'
   require 'activerecord-import/base'
   require 'activerecord-import/active_record/adapters/postgresql_adapter'
-  has_many :locations
-  has_many :services
-  has_many :salonservices
 
   def self.to_csv
     attributes = %w{employee_id name title email username location_id deleted}

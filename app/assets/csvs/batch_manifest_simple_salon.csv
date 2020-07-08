@@ -5,3 +5,4 @@ services.csv,services
 pricings.csv,pricings
 employees.csv,employees
 appointments.zip,appointments
+addonmappings.csv,add_ons_mappings

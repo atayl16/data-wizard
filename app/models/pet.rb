@@ -2,7 +2,6 @@ class Pet < ApplicationRecord
   require 'csv'
   require 'activerecord-import/base'
   require 'activerecord-import/active_record/adapters/postgresql_adapter'
-  belongs_to :client
 
   def self.to_csv
     attributes = %w{child_id client_id deleted pet_name}

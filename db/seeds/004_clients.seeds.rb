@@ -1,7 +1,7 @@
 require 'faker'
 
 2000.times do |client|
-  Client.where(
+  Client.create!(
     client_id: Faker::Number.unique.between(from: 1, to: 3000),
     client_first_name: Faker::Name.first_name ,
     client_last_name: Faker::Name.last_name ,
@@ -25,6 +25,6 @@ require 'faker'
     preferred_employee_id: Faker::Number.between(from: 1, to: 50) ,
     preferred_location_id: Faker::Number.between(from: 0, to: 9) ,
     deleted: false
-  ).first_or_create
+  )
 end
 puts "2000 clients created"

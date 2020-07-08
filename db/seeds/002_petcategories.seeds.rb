@@ -1,5 +1,5 @@
 Petcategory.create!(category_id: 1, name: "Bath & Brush", online: true, deleted: false)
-Petcategory.create!(category_id: 2, name: "Pet Grooming", online: true, deleted: false)
+Petcategory.create!(category_id: 2, name: "Dog Grooming", online: true, deleted: false)
 Petcategory.create!(category_id: 3, name: "Extras", online: true, deleted: false)
 puts "3 pet categories created"
 
