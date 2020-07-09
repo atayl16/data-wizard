@@ -1,11 +1,12 @@
 require 'faker'
 
-3000.times do |pet|
-  Pet.create!(
-    child_id: Faker::Number.unique.between(from: 3001, to: 6002),
-    client_id: Faker::Number.between(from: 1, to: 3000),
-    deleted: false,
-    pet_name: Faker::Creature::Dog.name
-  )
-end
-puts "3000 pets created"
+  2000.times do |i|
+    p = Pet.new
+      p.child_id = Faker::Number.unique.between(from: 1, to: 2010)
+      p.client_id = p.child_id
+      p.deleted = false
+      p.pet_name = Faker::Creature::Dog.name
+    p.save
+  end
+
+puts "2000 pets created"
