@@ -10,7 +10,7 @@ require 'faker'
     city: "Nome" ,
     state: "AK" ,
     zip: "99762" ,
-    phone_number: Faker::PhoneNumber.cell_phone ,
+    phone_number: Faker::Number.between(from: 5550000000, to: 5559999999) ,
     deleted: false
   )
 end

@@ -6,8 +6,8 @@ require 'faker'
     client_first_name: Faker::Name.first_name ,
     client_last_name: Faker::Name.last_name ,
     email: Faker:: Internet.safe_email,
-    home_phone: Faker::PhoneNumber.cell_phone ,
-    work_phone: Faker::PhoneNumber.cell_phone ,
+    home_phone: Faker::Number.between(from: 5550000000, to: 5559999999),
+    work_phone: Faker::Number.between(from: 5550000000, to: 5559999999) ,
     street_address: Faker::Address.street_address ,
     street_address_2: Faker::Address.secondary_address ,
     city: Faker::Address.city ,
@@ -22,7 +22,6 @@ require 'faker'
     can_receive_automated_sms: Faker::Boolean.boolean ,
     can_receive_manual_sms: Faker::Boolean.boolean ,
     notes: Faker::Lorem.paragraph(sentence_count: 0, supplemental: false, random_sentences_to_add: 4) ,
-    preferred_employee_id: Faker::Number.between(from: 1, to: 50) ,
     preferred_location_id: Faker::Number.between(from: 0, to: 9) ,
     deleted: false
   )
