@@ -2,9 +2,9 @@ class Appointment < ApplicationRecord
   require 'csv'
   require 'activerecord-import/base'
   require 'activerecord-import/active_record/adapters/postgresql_adapter'
-  
+
   def self.to_csv
-    attributes = %w{appointment_id location_id employee_id client_id child_id notes start_time end_time}
+    attributes = %w{appointment_id location_id employee_id client_id child_id notes has_specific_employee start_time end_time}
     CSV.open("#{Rails.root}/app/assets/csvs/appointments.csv", "wb", headers: true) do |csv|
       csv << attributes
 

@@ -4,7 +4,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    @appointments = Appointment.paginate(page: params[:page], :per_page => 5)
+    @appointments = Appointment.paginate(page: params[:page], :per_page => 5).order('service_id ASC')
   end
 
   def export
@@ -15,7 +15,7 @@ class AppointmentsController < ApplicationController
   end
 
   def export_services
-    @appointments = Appointment.all
+    @appointments = Appointment.order("service_id")
       respond_to do |format|
         format.csv { send_data @appointments.to_csv_services, filename: "appointment_services.csv" }
       end

@@ -16,6 +16,7 @@
       <th>Price</th>
       <th>Duration</th>
       <th>Status</th>
+      <th>Requested</th>
     </tr>
   </thead>
 
@@ -33,6 +34,7 @@
         <td><%= appointment.price %></td>
         <td><%= appointment.duration %></td>
         <td><%= appointment.status %></td>
+        <td><%= appointment.has_specific_employee %></td>
       </tr>
     <% end %>
   </tbody>

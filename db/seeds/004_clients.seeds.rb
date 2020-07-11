@@ -23,7 +23,8 @@ require 'faker'
     can_receive_manual_sms: Faker::Boolean.boolean ,
     notes: Faker::Lorem.paragraph(sentence_count: 0, supplemental: false, random_sentences_to_add: 4) ,
     preferred_location_id: Faker::Number.between(from: 0, to: 9) ,
-    deleted: false
+    deleted: false,
+    associated_location_ids: Faker::Number.between(from: 0, to: 9)
   )
 end
 puts "2000 clients created"

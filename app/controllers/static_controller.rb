@@ -76,8 +76,8 @@ class StaticController < ApplicationController
     file_stream = Zip::OutputStream.write_buffer do |zip|
       zip.put_next_entry "appointment_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointment_manifest.csv")
       zip.put_next_entry "appointments.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.csv")
-      zip.put_next_entry "appointment_services.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointment_services.csv")
-      zip.put_next_entry "appointment_statuses.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointment_statuses.csv")
+      zip.put_next_entry "appointment_services.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments_services.csv")
+      zip.put_next_entry "appointment_statuses.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments_statuses.csv")
     end
     file_stream.rewind
     respond_to do |format|

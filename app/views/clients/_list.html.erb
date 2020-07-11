@@ -20,6 +20,7 @@
     <th style ="word-wrap:break-word;">client since</th>
     <th style ="word-wrap:break-word;">receive emails</th>
     <th style ="word-wrap:break-word;">notes</th>
+    <th style ="word-wrap:break-word;">associated location</th>
   </tr>
 </thead>
 
@@ -36,6 +37,7 @@
       <td style ="word-wrap:break-word;"><%= client.client_since %></td>
       <td style ="word-wrap:break-word;"><%= client.can_receive_automated_emails %></td>
       <td style ="word-wrap:break-word;"><%= client.notes %></td>
+      <td style ="word-wrap:break-word;"><%= client.associated_location_ids %></td>
     </tr>
   <% end %>
 </tbody>
