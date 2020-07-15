@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'static#index'
   get 'clients/import' => 'clients#my_import'
   get 'clients/export' => 'clients#export'
-  get 'pets/export' => 'pets#export'
+  get 'pets/export' => 'clients#export_pet'
   get 'seeds/run'
   get 'static/export_clients_and_pets' => 'static#export_clients_and_pets'
   get 'static/export_appointments' => 'static#export_appointments'

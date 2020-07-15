@@ -8,6 +8,14 @@ class ClientsController < ApplicationController
     @customfields = Customfield.all
   end
 
+  def export_pet
+    @clients = Client.all
+      respond_to do |format|
+        format.csv { send_data @clients.to_csv_pets, filename: "pets.csv" }
+      end
+    
+  end
+
   def export
     @clients = Client.all
       respond_to do |format|
@@ -15,6 +23,7 @@ class ClientsController < ApplicationController
       end
     end
   end
+
 
   def import
     Client.my_import(params[:file])
