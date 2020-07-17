@@ -7,7 +7,7 @@
             </div>
             <div id="card-element-229081" class="collapse">
               <div class="card-body">
-                Complete salon set including manifests, locations, staff, services, clients and appointments. <br>
+                Complete salon set including manifests, locations, staff, services, clients appointments, and inventory. <br>
                 <div class="btn-group" role="group">
                   <a class="btn btn-success btn-sm" href="static/export_salon.zip" role="button">Export Salon Set</a>
                 </div>
@@ -20,7 +20,7 @@
             </div>
             <div id="card-element-259345" class="collapse">
               <div class="card-body">
-                Complete pet grooming set including manifests, locations, staff, services, clients, pets and appointments. <br>
+                Complete pet grooming set including manifests, locations, staff, services, clients, pets, appointments and inventory. <br>
                   <a class="btn btn-success btn-sm" href="static/export_pet.zip" role="button">Export Grooming Set</a><br>
                 Export clients and pets in a zip file without preferred location or preferred staff. Includes manifest.<br>
                 <a class="btn btn-warning btn-sm" href="static/export_clients_and_pets.zip" role="button">Export Clients w/ Pets</a><br>
@@ -67,6 +67,13 @@
                   <a href="/petcategories.csv" class="btn btn-danger btn-sm" type="button">Pet Categories</a>
                   <a href="/salonpricings.csv" class="btn btn-danger btn-sm" type="button">Pricing</a>
                 </div>
+                <hr>
+                Inventory files.<br>
+                <div class="btn-group" role="group">
+                  <a href="/inventoryproducts.csv" class="btn btn-danger btn-sm" type="button">Products</a>
+                  <a href="/inventoryskus.csv" class="btn btn-danger btn-sm" type="button">SKUs</a>
+                  <a href="/inventorystocks.csv" class="btn btn-danger btn-sm" type="button">Stocks</a>
+                </div>
               </div>
             </div>
           </div>
@@ -82,6 +89,9 @@
                   <hr>
                   Export appointment zip file with appointments manifest. Uses location, employee, service, and client IDs from files above. <strong>Does not include a batch_manifest.</strong><br>
                   <a class="btn btn-warning btn-sm" href="static/export_appointments.zip" role="button"disabled>Export Appointments</a>
+                  <hr>
+                  Export appointment zip file with inventory manifest. Uses location IDs from files above. <strong>Does not include a batch_manifest.</strong><br>
+                  <a class="btn btn-warning btn-sm" href="static/export_inventory.zip" role="button"disabled>Export Inventory</a>
                   <!-- </div> -->
                 </div>
               </div>

@@ -14,6 +14,7 @@ class StaticController < ApplicationController
       zip.put_next_entry "pricings.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/pricings.csv")
       zip.put_next_entry "services.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/salon_services.csv")
       zip.put_next_entry "appointments.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
+      zip.put_next_entry "inventories.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
       zip.put_next_entry "addonmappings.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
     end
     file_stream.rewind
@@ -39,6 +40,7 @@ class StaticController < ApplicationController
       zip.put_next_entry "pricings.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/pricings.csv")
       zip.put_next_entry "services.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/pet_services.csv")
       zip.put_next_entry "appointments.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
+      zip.put_next_entry "inventories.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
       zip.put_next_entry "addonmappings.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
     end
     file_stream.rewind
@@ -87,6 +89,25 @@ class StaticController < ApplicationController
     end
     file_stream.rewind
       File.open("#{Rails.root}/app/assets/csvs/appointments.zip", 'wb') do |file|
+        file.write(file_stream.read)
+    end
+  end
+
+  def export_inventory
+    file_stream = Zip::OutputStream.write_buffer do |zip|
+      zip.put_next_entry "inventory_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/inventory_manifest.csv")
+      zip.put_next_entry "inventory_skus.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/inventory_skus.csv")
+      zip.put_next_entry "inventory_products.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/inventory_products.csv")
+      zip.put_next_entry "inventory_stocks.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/inventory_stocks.csv")
+    end
+    file_stream.rewind
+    respond_to do |format|
+      format.zip do
+        send_data file_stream.read, filename: "inventories.zip"
+      end
+    end
+    file_stream.rewind
+      File.open("#{Rails.root}/app/assets/csvs/inventories.zip", 'wb') do |file|
         file.write(file_stream.read)
     end
   end

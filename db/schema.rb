@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_15_093941) do
+ActiveRecord::Schema.define(version: 2020_07_16_203231) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +81,50 @@ ActiveRecord::Schema.define(version: 2020_07_15_093941) do
     t.string "field_type"
     t.boolean "required"
     t.string "applicable_to"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "inventoryproducts", force: :cascade do |t|
+    t.integer "product_id"
+    t.string "name"
+    t.string "brand"
+    t.string "category"
+    t.string "vendor"
+    t.text "description"
+    t.boolean "visible_to_clients"
+    t.boolean "commissionable"
+    t.boolean "discontinued"
+    t.string "discontinued_reasons"
+    t.integer "alternative_product_ids"
+    t.boolean "deleted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "inventoryskus", force: :cascade do |t|
+    t.integer "sku_id"
+    t.integer "product_id"
+    t.string "name"
+    t.integer "number"
+    t.string "barcode"
+    t.integer "target_quantity"
+    t.integer "alert_threshold"
+    t.boolean "deleted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "inventorystocks", force: :cascade do |t|
+    t.integer "sku_id"
+    t.integer "location_id"
+    t.integer "quantity"
+    t.decimal "price"
+    t.decimal "cost"
+    t.string "vendor"
+    t.date "expiration_date"
+    t.string "stock_type"
+    t.boolean "deleted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

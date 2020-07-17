@@ -1,0 +1,21 @@
+product_id,name,brand,category,vendor,description,visible_to_clients,commissionable,discontinued,discontinued_reasons,alternative_product_ids,deleted
+11,Incredible Granite Hat,Platinum,Outdoors,Schimmel-Mann,Voluptate ratione unde.,true,true,false,,,false
+7,Practical Granite Knife,Germanium,Sports,Okuneva Group,"",true,true,false,,,false
+9,Incredible Bronze Knife,Uranium,Grocery,Hagenes-Lind,Id hic non.,true,true,false,,,false
+13,Practical Linen Keyboard,Argon,Home,"Ebert, Barton and Yost","",true,true,false,,,false
+6,Practical Iron Coat,Gold,Toys,"O'Keefe, Moen and Kshlerin",Quia itaque aut.,true,true,false,,,false
+5,Durable Granite Wallet,Seaborgium,Clothing,Langosh-Mann,"",false,true,false,,,false
+4,Awesome Rubber Plate,Livermorium,Sports,"Friesen, Fisher and Powlowski","",true,true,false,,,false
+15,Small Silk Wallet,Protactinium,Jewelry,"Vandervort, Kassulke and Hilpert",Et nulla dolorem.,true,true,false,,,false
+20,Synergistic Linen Computer,Cesium,Tools,Hettinger Inc,"",true,true,false,,,false
+3,Ergonomic Linen Wallet,Rhodium,Tools,Heaney Inc,Ducimus illum minima.,true,true,false,,,false
+14,Heavy Duty Iron Bottle,Tantalum,Books,Rice LLC,Iste consectetur nisi.,true,false,false,,,false
+8,Heavy Duty Bronze Bag,Krypton,Grocery,Considine and Sons,Ratione ut dignissimos.,true,true,false,,,false
+17,Small Leather Wallet,Barium,Jewelry,Nicolas-Hane,"",true,false,false,,,false
+2,Durable Granite Watch,Krypton,Garden,Cummerata and Sons,"",true,false,false,,,false
+12,Aerodynamic Steel Bench,Californium,Home,Keeling and Sons,"",true,true,false,,,false
+10,Durable Leather Gloves,Terbium,Games,O'Keefe and Sons,Explicabo fugit quibusdam.,true,true,false,,,false
+16,Intelligent Concrete Bench,Europium,Health,Boyer Group,"",true,true,false,,,false
+18,Gorgeous Copper Wallet,Berkelium,Grocery,Dibbert LLC,Tempora voluptas eligendi.,true,true,false,,,false
+1,Awesome Linen Computer,Molybdenum,Toys,"Cartwright, Nikolaus and Murray",Sapiente rerum eum.,true,true,false,,,false
+19,Lightweight Steel Car,Chromium,Beauty,"Aufderhar, Carroll and Cruickshank",Ullam sunt ad.,true,true,false,,,false

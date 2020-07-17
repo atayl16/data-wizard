@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :inventorystocks
+  resources :inventoryskus
+  resources :inventoryproducts
   resources :petcategories
   resources :petservices
   root to: 'static#index'
@@ -8,6 +11,7 @@ Rails.application.routes.draw do
   get 'seeds/run'
   get 'static/export_clients_and_pets' => 'static#export_clients_and_pets'
   get 'static/export_appointments' => 'static#export_appointments'
+  get 'static/export_inventory' => 'static#export_inventory'
   get 'static/export_salon' => 'static#export_salon'
   get 'static/export_pet' => 'static#export_pet'
   get 'appointments/export' => 'appointments#export'

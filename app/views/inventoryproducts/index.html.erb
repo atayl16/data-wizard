@@ -1,0 +1,36 @@
+<h3 id="title">Inventory</h3>
+
+<a class="btn btn-warning" href="static/export_inventory.zip" role="button" disabled>Export Inventory Zip</a>
+
+<div id="card-45345">
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-45345" href="#card-element-234536">Products</a>
+    </div>
+    <div id="card-element-234536" class="show">
+      <div class="card-body">
+        <%= render :partial => "list" %>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-45345" href="#card-element-645634">SKUs</a>
+    </div>
+    <div id="card-element-645634" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "inventoryskus/list" %>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-45345" href="#card-element-234399">Stocks</a>
+    </div>
+    <div id="card-element-234399" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "inventorystocks/list" %>
+      </div>
+    </div>
+  </div>
+</div>

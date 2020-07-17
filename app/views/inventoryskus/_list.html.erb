@@ -1,0 +1,33 @@
+<a class="btn btn-danger" href="inventoryskus.csv" role="button">Export</a>
+
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Sku</th>
+      <th>Product</th>
+      <th>Name</th>
+      <th>Number</th>
+      <th>Barcode</th>
+      <th>Target quantity</th>
+      <th>Alert threshold</th>
+      <th>Deleted</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inventoryskus.each do |inventorysku| %>
+      <tr>
+        <td><%= inventorysku.sku_id %></td>
+        <td><%= inventorysku.product_id %></td>
+        <td><%= inventorysku.name %></td>
+        <td><%= inventorysku.number %></td>
+        <td><%= inventorysku.barcode %></td>
+        <td><%= inventorysku.target_quantity %></td>
+        <td><%= inventorysku.alert_threshold %></td>
+        <td><%= inventorysku.deleted %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

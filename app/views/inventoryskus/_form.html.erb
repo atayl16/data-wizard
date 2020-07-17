@@ -1,0 +1,57 @@
+<%= form_with(model: inventorysku, local: true) do |form| %>
+  <% if inventorysku.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(inventorysku.errors.count, "error") %> prohibited this inventorysku from being saved:</h2>
+
+      <ul>
+      <% inventorysku.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :sku_id %>
+    <%= form.number_field :sku_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.number_field :product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.number_field :number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :barcode %>
+    <%= form.text_field :barcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :target_quantity %>
+    <%= form.number_field :target_quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alert_threshold %>
+    <%= form.number_field :alert_threshold %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deleted %>
+    <%= form.check_box :deleted %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
