@@ -59,4 +59,85 @@ class Appointment < ApplicationRecord
       end
     end
   end
+
+  def self.to_csv_tickets
+    attributes = %w{ticket_id location_id client_id ticket_status employee_id employee_id start_time}
+    headers = %w{ticket_id location_id client_id status employee_id closed_by_employee_id closed_at}
+    CSV.open("#{Rails.root}/app/assets/csvs/tickets.csv", "wb", headers: true) do |csv|
+      csv << headers
+
+      all.each do |appointment|
+        csv << attributes.map{ |attr| appointment.send(attr) }
+      end
+    end
+
+    CSV.generate(headers: true) do |csv|
+      csv << headers
+
+      all.each do |appointment|
+        csv << attributes.map{ |attr| appointment.send(attr) }
+      end
+    end
+  end
+
+  def self.to_csv_skus
+    attributes = %w{ticket_id inventory_sku_id quantity sku_amount sku_amount}
+    headers = %w{ticket_id inventory_sku_id quantity amount_before_discount amount}
+    CSV.open("#{Rails.root}/app/assets/csvs/ticketsskuitems.csv", "wb", headers: true) do |csv|
+      csv << headers
+
+      all.each do |appointment|
+        csv << attributes.map{ |attr| appointment.send(attr) }
+      end
+    end
+
+    CSV.generate(headers: true) do |csv|
+      csv << headers
+
+      all.each do |appointment|
+        csv << attributes.map{ |attr| appointment.send(attr) }
+      end
+    end
+  end
+
+  def self.to_csv_ticketservices
+    attributes = %w{ticket_id appointment_id service_id quantity price price}
+    headers = %w{ticket_id appointment_id service_id quantity amount_before_discount amount}
+    CSV.open("#{Rails.root}/app/assets/csvs/ticketsserviceitems.csv", "wb", headers: true, headers: headers) do |csv|
+      csv << headers
+
+      all.each do |appointment|
+        csv << attributes.map{ |attr| appointment.send(attr) }
+      end
+    end
+
+    CSV.generate(headers: true) do |csv|
+      csv << headers
+
+      all.each do |appointment|
+        csv << attributes.map{ |attr| appointment.send(attr) }
+      end
+    end
+  end
+
+  def self.to_csv_payments
+    attributes = %w{ticket_id payment_item_id ticket_type amount}
+    headers = %w{ticket_id payment_item_id type amount}
+    CSV.open("#{Rails.root}/app/assets/csvs/ticketspaymentitems.csv", "wb", headers: true, headers: headers) do |csv|
+      csv << headers
+
+      all.each do |appointment|
+        csv << attributes.map{ |attr| appointment.send(attr) }
+      end
+    end
+
+    CSV.generate(headers: true) do |csv|
+      csv << headers
+
+      all.each do |appointment|
+        csv << attributes.map{ |attr| appointment.send(attr) }
+      end
+    end
+  end
+
 end

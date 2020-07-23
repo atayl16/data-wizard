@@ -1,21 +1,21 @@
 product_id,name,brand,category,vendor,description,visible_to_clients,commissionable,discontinued,discontinued_reasons,alternative_product_ids,deleted
-17,Sleek Steel Car,Chromium,Sports,Paucek Inc,"",true,true,false,,,false
-18,Lightweight Iron Chair,Gallium,Books,"Schinner, Homenick and Hettinger","",true,true,false,,,false
-7,Synergistic Wool Keyboard,Iodine,Grocery,Macejkovic-Wolff,"",true,true,false,,,false
-13,Lightweight Cotton Computer,Hydrogen,Clothing,"Ernser, Fahey and Morar","",true,false,false,,,false
-19,Lightweight Bronze Keyboard,Berkelium,Beauty,Gerhold-Gleason,Eaque nihil illum.,true,true,false,,,false
-4,Aerodynamic Concrete Plate,Argon,Movies,"McDermott, Breitenberg and Funk","",true,true,false,,,false
-12,Enormous Granite Lamp,Chlorine,Garden,Senger LLC,"",true,true,false,,,false
-9,Sleek Wooden Bag,Tantalum,Outdoors,Goyette LLC,"",true,true,false,,,false
-16,Fantastic Plastic Chair,Arsenic,Garden,"Wunsch, Funk and Medhurst",Non ut vitae.,true,true,false,,,false
-3,Sleek Linen Bench,Silicon,Outdoors,Schaden-Muller,Est et nobis.,true,true,false,,,false
-11,Incredible Iron Bag,Californium,Toys,Treutel-Parisian,"",true,true,false,,,false
-10,Incredible Concrete Table,Antimony,Industrial,"Heathcote, Koepp and Dickinson","",true,true,false,,,false
-6,Lightweight Copper Knife,Mercury,Home,"Harber, Schneider and Hermiston",Aut eveniet qui.,true,true,false,,,false
-20,Heavy Duty Aluminum Computer,Ruthenium,Jewelry,Harris and Sons,Non et tempore.,true,true,false,,,false
-5,Intelligent Cotton Bench,Uranium,Home,Koelpin-Stokes,Facilis veniam consequatur.,true,true,false,,,false
-15,Enormous Iron Keyboard,Dubnium,Grocery,Gleason-Spencer,Et cum et.,true,true,false,,,false
-2,Aerodynamic Paper Car,Moscovium,Industrial,Rolfson-Davis,"",true,false,false,,,false
-1,Rustic Silk Keyboard,Flerovium,Kids,Kuhn and Sons,Vitae officia debitis.,true,true,false,,,false
-14,Ergonomic Paper Bag,Rutherfordium,Outdoors,"Wisoky, Rohan and Streich","",true,true,false,,,false
-8,Aerodynamic Paper Clock,Boron,Toys,Romaguera-Schmitt,"",true,true,false,,,false
+20,Awesome Marble Bench,Uranium,Baby,Olson-Hand,Neque facilis est.,true,true,false,,,false
+14,Aerodynamic Steel Plate,Scandium,Games,Jerde-Kris,"",false,true,false,,,false
+6,Small Concrete Watch,Silicon,Movies,Hegmann-Osinski,"",true,true,false,,,false
+10,Fantastic Steel Keyboard,Zirconium,Clothing,Leannon Inc,Sequi pariatur omnis.,true,true,false,,,false
+18,Incredible Aluminum Gloves,Lead,Health,"Kreiger, Pfannerstill and Abshire",In est illum.,true,true,false,,,false
+15,Sleek Bronze Bag,Bromine,Jewelry,Herzog Group,"",false,true,false,,,false
+7,Fantastic Copper Bench,Cadmium,Clothing,"Corkery, Kautzer and Runolfsson","",true,true,false,,,false
+4,Awesome Granite Plate,Barium,Sports,"Kassulke, Roob and Hartmann",Similique facilis sunt.,true,true,false,,,false
+19,Lightweight Paper Coat,Curium,Movies,Schuster and Sons,"",true,true,false,,,false
+11,Small Rubber Clock,Copper,Electronics,Feeney LLC,Soluta sint maxime.,true,true,false,,,false
+16,Small Aluminum Chair,Thorium,Tools,Krajcik-Metz,"",true,true,false,,,false
+13,Enormous Marble Lamp,Rutherfordium,Movies,"Jacobs, Hoppe and Nader","",true,true,false,,,false
+5,Intelligent Granite Bench,Polonium,Computers,"Sporer, Klocko and Morissette",Dicta consequuntur quia.,true,true,false,,,false
+3,Enormous Paper Shirt,Tellurium,Games,Bode-Monahan,"",false,true,false,,,false
+9,Awesome Steel Knife,Bismuth,Automotive,Jacobi-Kreiger,Expedita et soluta.,true,true,false,,,false
+8,Lightweight Leather Shirt,Einsteinium,Kids,McCullough-Emard,Aperiam minima id.,true,true,false,,,false
+1,Incredible Concrete Chair,Krypton,Grocery,Bailey Inc,"",true,true,false,,,false
+12,Aerodynamic Marble Car,Hydrogen,Computers,Skiles-Yost,Ratione illo odit.,true,false,false,,,false
+2,Incredible Cotton Clock,Osmium,Kids,"Grady, Veum and Beier",Est suscipit ipsa.,true,true,false,,,false
+17,Practical Cotton Bench,Lawrencium,Sports,"Zboncak, Stracke and Hane","",true,false,false,,,false

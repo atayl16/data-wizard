@@ -1,0 +1,37 @@
+<a class="btn btn-danger" href="tickets/export.csv" role="button">Export</a>
+
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Ticket</th>
+      <th>Client</th>
+      <th>Status</th>
+      <th>Employee</th>
+      <th>Type</th>
+      <th>Inventory sku</th>
+      <th>Quantity</th>
+      <th>Appointment</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.ticket_id %></td>
+        <td><%= appointment.location_id %></td>
+        <td><%= appointment.ticket_status %></td>
+        <td><%= appointment.employee_id %></td>
+        <td><%= appointment.ticket_type %></td>
+        <td><%= appointment.inventory_sku_id %></td>
+        <td><%= appointment.quantity %></td>
+        <td><%= appointment.appointment_id %></td>
+        <td><%= appointment.amount %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<em>*Some fields excluded from table for brevity</em>
+<br>
+
+<%= will_paginate @appointments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

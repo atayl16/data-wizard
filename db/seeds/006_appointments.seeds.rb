@@ -16,6 +16,15 @@ appointments = []
       a.duration = Faker::Number.between(from: 15, to: 90)
       a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
       a.has_specific_employee = Faker::Boolean.boolean
+      a.ticket_id = Faker::Number.unique.between(from: 100000, to: 900000)
+      a.ticket_id = Faker::Number.unique.between(from: 100000, to: 900000)
+      a.ticket_status = 'closed'
+      a.payment_item_id = Faker::Number.unique.between(from: 100000, to: 900000)
+      a.ticket_type =  "cash"
+      a.inventory_sku_id =  Faker::Number.between(from: 1, to: 101)
+      a.sku_amount = Faker::Commerce.price
+      a.quantity =  1
+      a.amount = (a.price + a.sku_amount)
     a.save
     appointments << a
 
@@ -33,6 +42,14 @@ appointments = []
       a.duration = Faker::Number.between(from: 15, to: 90)
       a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
       a.has_specific_employee = Faker::Boolean.boolean
+      a.ticket_id = Faker::Number.unique.between(from: 100000, to: 900000)
+      a.ticket_status = 'closed'
+      a.payment_item_id = Faker::Number.unique.between(from: 100000, to: 900000)
+      a.ticket_type =  "cash"
+      a.inventory_sku_id =  Faker::Number.between(from: 1, to: 101)
+      a.sku_amount = Faker::Commerce.price
+      a.quantity =  1
+      a.amount = (a.price + a.sku_amount)
     a.save
     appointments << a
 
@@ -50,51 +67,25 @@ appointments = []
       a.duration = Faker::Number.between(from: 15, to: 90)
       a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
       a.has_specific_employee = Faker::Boolean.boolean
+      a.ticket_id = Faker::Number.unique.between(from: 100000, to: 900000)
+      a.ticket_id = Faker::Number.unique.between(from: 100000, to: 900000)
+      a.ticket_status = 'closed'
+      a.payment_item_id = Faker::Number.unique.between(from: 100000, to: 900000)
+      a.ticket_type =  "cash"
+      a.inventory_sku_id =  Faker::Number.between(from: 1, to: 101)
+      a.sku_amount = Faker::Commerce.price
+      a.quantity =  1
+      a.amount = (a.price + a.sku_amount)
     a.save
     appointments << a
   end
 
 puts "Appointments created with addons"
-
-require 'faker'
-
-  1000.times do |i|
-    service_amount = appointments[i].price
-    sku_amount = Faker::Commerce.price
-    tip_amount = (service_amount * 0.2).round(2)
-    amount = (service_amount + sku_amount)
-    created = appointments[i].start_time
-    t = Ticket.new
-      t.ticket_id = Faker::Number.unique.between(from: 100000, to: 900000)
-      t.location_id = appointments[i].location_id
-      t.client_id = appointments[i].client_id
-      t.status = "closed"
-      t.employee_id = appointments[i].employee_id
-      t.closed_by_employee_id = appointments[i].employee_id
-      t.closed_at = (created + 1)
-      t.created = created
-      t.updated = (created + 1)
-      t.deleted = false
-      t.amount = amount
-      t.payment_type = "cash"
-      t.payment_item_id = Faker::Number.unique.between(from: 100000, to: 900000)
-      t.inventory_sku_id = Faker::Number.between(from: 1, to: 101)
-      t.skuamount = sku_amount
-      t.sku_amount_before_discount = sku_amount
-      t.quantity = 1
-      t.service_id = appointments[i].service_id
-      t.appointment_id = appointments[i].appointment_id
-      t.serviceamount = service_amount
-      t.service_amount_before_discount = service_amount
-      t.tip_amount = tip_amount
-    t.save
-  end
-
 puts "Tickets created"
 
 
 addon_appointments = []
-  500.times do
+  50.times do
     a = Appointment.new
       a.appointment_id = Faker::Number.unique.between(from: 6000, to: 9000)
       a.location_id = 1
@@ -105,7 +96,7 @@ addon_appointments = []
       a.service_id = Faker::Number.between(from: 1, to: 6)
       a.price = Faker::Commerce.price
       a.status = 'booked'
-      a.start_time = Faker::Time.between_dates(from: Date.today - 30, to: Date.today - 1, period: :night)
+      a.start_time = Faker::Time.between_dates(from: Date.today - 5, to: Date.today +10, period: :night)
       a.duration = Faker::Number.between(from: 15, to: 90)
       a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
       a.has_specific_employee = Faker::Boolean.boolean
@@ -122,7 +113,7 @@ addon_appointments = []
       a.service_id = Faker::Number.between(from: 1, to: 6)
       a.price = Faker::Commerce.price
       a.status = 'booked'
-      a.start_time = Faker::Time.between_dates(from: Date.today - 30, to: Date.today - 1, period: :night)
+      a.start_time = Faker::Time.between_dates(from: Date.today - 5, to: Date.today +10, period: :night)
       a.duration = Faker::Number.between(from: 15, to: 90)
       a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
       a.has_specific_employee = Faker::Boolean.boolean
@@ -139,7 +130,7 @@ addon_appointments = []
       a.service_id = Faker::Number.between(from: 1, to: 6)
       a.price = Faker::Commerce.price
       a.status = 'booked'
-      a.start_time = Faker::Time.between_dates(from: Date.today - 30, to: Date.today - 1, period: :night)
+      a.start_time = Faker::Time.between_dates(from: Date.today - 30, to: Date.today -+10, period: :night)
       a.duration = Faker::Number.between(from: 15, to: 90)
       a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
       a.has_specific_employee = Faker::Boolean.boolean
@@ -159,6 +150,7 @@ end
   a.price = Faker::Commerce.price
   a.status = 'booked'
   a.start_time = addon_appointments[i].start_time
+  a.duration = Faker::Number.between(from: 10, to: 15)
   a.change_time = addon_appointments[i].change_time
   a.save
 end

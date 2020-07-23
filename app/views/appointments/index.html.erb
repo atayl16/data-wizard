@@ -1,5 +1,6 @@
 <h3 id="title">Appointments</h3><br>
 <a class="btn btn-warning" href="static/export_appointments.zip" role="button" disabled>Export Appointment Zip</a>
+<a class="btn btn-warning" href="static/export_tickets.zip" role="button" disabled>Export Ticket Zip</a>
 
 <div id="card-85858">
   <div class="card">
@@ -39,6 +40,46 @@
     <div id="card-element-585858" class="collapse">
       <div class="card-body">
         <%= render :partial => "listappointmentstatuses"%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-767676">Tickets</a>
+    </div>
+    <div id="card-element-767676" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "listtickets"%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-313131">Ticket Services</a>
+    </div>
+    <div id="card-element-313131" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "listticketservices"%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-151515">Ticket Payments</a>
+    </div>
+    <div id="card-element-151515" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "listticketpayments"%>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-373737">Ticket SKUs</a>
+    </div>
+    <div id="card-element-373737" class="collapse">
+      <div class="card-body">
+        <%= render :partial => "listticketskus"%>
       </div>
     </div>
   </div>

@@ -28,6 +28,41 @@ class AppointmentsController < ApplicationController
       end
   end
 
+  def export_tickets
+    @appointments = Appointment.all
+      respond_to do |format|
+        format.csv { send_data @appointments.to_csv_tickets, filename: "tickets.csv" }
+      end
+  end
+
+  def export_skus
+    @appointments = Appointment.all
+      respond_to do |format|
+        format.csv { send_data @appointments.to_csv_skus, filename: "ticketsskuitems.csv" }
+      end
+  end
+
+  def export_ticketservices
+    @appointments = Appointment.all
+      respond_to do |format|
+        format.csv { send_data @appointments.to_csv_services, filename: "ticketsserviceitems.csv" }
+      end
+  end
+
+  def export_tips
+    @appointments = Appointment.all
+      respond_to do |format|
+        format.csv { send_data @appointments.to_csv_tips, filename: "tips.csv" }
+      end
+  end
+
+  def export_payments
+    @appointments = Appointment.all
+      respond_to do |format|
+        format.csv { send_data @appointments.to_csv_payments, filename: "ticketspaymentitems.csv" }
+      end
+  end
+
   # GET /appointments/1
   # GET /appointments/1.json
   def show

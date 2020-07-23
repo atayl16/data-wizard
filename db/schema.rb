@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_19_155930) do
+ActiveRecord::Schema.define(version: 2020_07_23_225048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(version: 2020_07_19_155930) do
     t.datetime "updated_at", null: false
     t.integer "service2"
     t.boolean "has_specific_employee"
+    t.string "ticket_id"
+    t.string "ticket_status"
+    t.integer "payment_item_id"
+    t.string "ticket_type"
+    t.integer "inventory_sku_id"
+    t.integer "quantity"
+    t.decimal "amount"
+    t.decimal "sku_amount"
   end
 
   create_table "batchmanifests", force: :cascade do |t|
@@ -241,37 +249,6 @@ ActiveRecord::Schema.define(version: 2020_07_19_155930) do
     t.boolean "deleted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "tickets", force: :cascade do |t|
-    t.integer "ticket_id"
-    t.integer "location_id"
-    t.integer "client_id"
-    t.string "status"
-    t.integer "employee_id"
-    t.integer "closed_by_employee_id"
-    t.datetime "closed_at"
-    t.boolean "deleted"
-    t.integer "payment_item_id"
-    t.string "payment_type"
-    t.integer "inventory_sku_id"
-    t.integer "quantity"
-    t.decimal "amount_before_discount"
-    t.integer "service_id"
-    t.integer "appointment_id"
-    t.decimal "amount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.decimal "skuamount"
-    t.decimal "serviceamount"
-    t.decimal "service_amount_before_discount"
-    t.decimal "sku_amount_before_discount"
-    t.decimal "tip_amount"
-    t.string "employee_name"
-    t.string "client_name"
-    t.datetime "created"
-    t.datetime "updated"
-    t.string "empty"
   end
 
   create_table "users", force: :cascade do |t|

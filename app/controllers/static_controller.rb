@@ -84,14 +84,18 @@ class StaticController < ApplicationController
       zip.put_next_entry "appointment_statuses.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments_statuses.csv")
     end
     file_stream.rewind
+    File.open("#{Rails.root}/app/assets/csvs/appointments.zip", 'wb') do |file|
+      file.write(file_stream.read)
+    end
+    file_stream = Zip::OutputStream.write_buffer do |zip|
+      zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_apptset.csv")
+      zip.put_next_entry "appointments.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
+    end
+    file_stream.rewind
     respond_to do |format|
       format.zip do
         send_data file_stream.read, filename: "appointments.zip"
       end
-    end
-    file_stream.rewind
-      File.open("#{Rails.root}/app/assets/csvs/appointments.zip", 'wb') do |file|
-        file.write(file_stream.read)
     end
   end
 
@@ -103,14 +107,18 @@ class StaticController < ApplicationController
       zip.put_next_entry "inventory_stocks.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/inventory_stocks.csv")
     end
     file_stream.rewind
+    File.open("#{Rails.root}/app/assets/csvs/inventories.zip", 'wb') do |file|
+      file.write(file_stream.read)
+    end
+    file_stream = Zip::OutputStream.write_buffer do |zip|
+      zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_inventory.csv")
+      zip.put_next_entry "inventories.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
+    end
+    file_stream.rewind
     respond_to do |format|
       format.zip do
         send_data file_stream.read, filename: "inventories.zip"
       end
-    end
-    file_stream.rewind
-      File.open("#{Rails.root}/app/assets/csvs/inventories.zip", 'wb') do |file|
-        file.write(file_stream.read)
     end
   end
 
@@ -123,14 +131,18 @@ class StaticController < ApplicationController
       zip.put_next_entry "ticketsskuitems.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/ticketsskuitems.csv")
     end
     file_stream.rewind
+    File.open("#{Rails.root}/app/assets/csvs/tickets.zip", 'wb') do |file|
+      file.write(file_stream.read)
+    end
+    file_stream = Zip::OutputStream.write_buffer do |zip|
+      zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_tickets.csv")
+      zip.put_next_entry "tickets.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+    end
+    file_stream.rewind
     respond_to do |format|
       format.zip do
         send_data file_stream.read, filename: "tickets.zip"
       end
-    end
-    file_stream.rewind
-      File.open("#{Rails.root}/app/assets/csvs/tickets.zip", 'wb') do |file|
-        file.write(file_stream.read)
     end
   end
 
