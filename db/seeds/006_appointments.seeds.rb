@@ -13,7 +13,7 @@ appointments = []
       a.price = Faker::Commerce.price
       a.status = 'booked'
       a.start_time = Faker::Time.between_dates(from: Date.today - 30, to: Date.today - 1, period: :night)
-      #             a.duration = Faker::Number.between(from: 15, to: 90)
+      a.duration = Faker::Number.between(from: 15, to: 90)
       a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
       a.has_specific_employee = Faker::Boolean.boolean
     a.save
@@ -30,7 +30,7 @@ appointments = []
       a.price = Faker::Commerce.price
       a.status = 'booked'
       a.start_time = Faker::Time.between_dates(from: Date.today - 30, to: Date.today - 1, period: :night)
-      #             a.duration = Faker::Number.between(from: 15, to: 90)
+      a.duration = Faker::Number.between(from: 15, to: 90)
       a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
       a.has_specific_employee = Faker::Boolean.boolean
     a.save
@@ -47,7 +47,7 @@ appointments = []
       a.price = Faker::Commerce.price
       a.status = 'booked'
       a.start_time = Faker::Time.between_dates(from: Date.today - 30, to: Date.today - 1, period: :night)
-      #             a.duration = Faker::Number.between(from: 15, to: 90)
+      a.duration = Faker::Number.between(from: 15, to: 90)
       a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
       a.has_specific_employee = Faker::Boolean.boolean
     a.save
@@ -106,7 +106,7 @@ addon_appointments = []
       a.price = Faker::Commerce.price
       a.status = 'booked'
       a.start_time = Faker::Time.between_dates(from: Date.today - 30, to: Date.today - 1, period: :night)
-      #             a.duration = Faker::Number.between(from: 15, to: 90)
+      a.duration = Faker::Number.between(from: 15, to: 90)
       a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
       a.has_specific_employee = Faker::Boolean.boolean
     a.save
@@ -123,7 +123,7 @@ addon_appointments = []
       a.price = Faker::Commerce.price
       a.status = 'booked'
       a.start_time = Faker::Time.between_dates(from: Date.today - 30, to: Date.today - 1, period: :night)
-      #             a.duration = Faker::Number.between(from: 15, to: 90)
+      a.duration = Faker::Number.between(from: 15, to: 90)
       a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
       a.has_specific_employee = Faker::Boolean.boolean
     a.save
@@ -140,7 +140,7 @@ addon_appointments = []
       a.price = Faker::Commerce.price
       a.status = 'booked'
       a.start_time = Faker::Time.between_dates(from: Date.today - 30, to: Date.today - 1, period: :night)
-      #             a.duration = Faker::Number.between(from: 15, to: 90)
+      a.duration = Faker::Number.between(from: 15, to: 90)
       a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
       a.has_specific_employee = Faker::Boolean.boolean
     a.save

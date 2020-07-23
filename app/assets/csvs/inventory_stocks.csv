@@ -1,301 +1,301 @@
 sku_id,location_id,quantity,price,cost,vendor,expiration_date,stock_type,deleted
-77,1,2,39.2,9.46,MacGyver LLC,,,false
-51,1,10,41.46,3.51,"Klein, Douglas and Goldner",,,false
-72,1,4,35.36,1.31,Conn and Sons,,,false
-37,1,10,40.02,9.1,"Gorczany, Oberbrunner and Quigley",,,false
-94,1,3,37.41,14.62,"MacGyver, Kirlin and Cormier",,,false
-33,1,1,39.74,6.32,Carter-Mitchell,,,false
-4,1,7,32.34,2.39,Harber and Sons,,,false
-48,1,8,44.18,3.29,"Kris, Fay and Pouros",,,false
-79,1,8,22.77,4.73,Doyle Inc,,,false
-76,1,5,34.17,7.71,Renner-Hintz,,,false
-99,1,2,38.01,11.99,Ebert-Gutkowski,,,false
-17,1,3,45.93,5.31,Ortiz-Hahn,,,false
-43,1,6,32.74,8.18,"Huels, Auer and Kreiger",,,false
-90,1,10,15.42,13.83,"Hane, VonRueden and Emmerich",,,false
-54,1,5,45.21,5.41,Kreiger Inc,,,false
-98,1,0,43.22,8.38,Prohaska-Boyer,,,false
-78,1,2,32.72,12.04,Marks-Hagenes,,,false
-9,1,10,38.61,10.82,Friesen-Labadie,,,false
-55,1,3,20.38,14.5,"Considine, Brekke and Weimann",,,false
-38,1,10,33.34,6.53,Moen-Reilly,,,false
-95,1,0,18.66,10.74,Dietrich-Kuhlman,,,false
-19,1,4,24.92,1.27,Beier Inc,,,false
-28,1,0,21.42,13.03,Boehm-Adams,,,false
-23,1,7,26.92,12.67,Hauck and Sons,,,false
-3,1,10,37.96,11.56,Johns-Abshire,,,false
-92,1,4,29.33,4.73,Kuvalis-Senger,,,false
-20,1,6,33.85,7.0,Jacobs LLC,,,false
-22,1,1,27.19,6.02,Moen-Jones,,,false
-27,1,5,26.51,10.05,Orn-Mueller,,,false
-42,1,10,44.83,2.31,"Heathcote, Hilll and Wyman",,,false
-30,1,6,20.28,14.48,McKenzie and Sons,,,false
-12,1,6,38.17,11.39,Schmitt and Sons,,,false
-83,1,8,16.47,5.91,"Toy, Kuhic and Roberts",,,false
-31,1,3,47.01,7.51,O'Conner-Medhurst,,,false
-46,1,4,18.49,3.83,Lebsack-Morissette,,,false
-1,1,9,36.8,7.76,"Jenkins, Cummings and Morissette",,,false
-36,1,9,44.16,3.88,Monahan Group,,,false
-80,1,9,36.27,6.77,Auer and Sons,,,false
-75,1,3,25.63,14.86,Graham-Crona,,,false
-2,1,1,41.38,1.29,"Olson, Carroll and Hettinger",,,false
-97,1,6,41.42,10.19,Murray-West,,,false
-65,1,9,29.79,14.97,"Pfeffer, Stanton and O'Kon",,,false
-44,1,10,42.1,14.58,Kreiger-Kozey,,,false
-91,1,1,21.94,1.72,Schuppe Inc,,,false
-86,1,10,29.25,1.57,"Hauck, O'Conner and Wolff",,,false
-56,1,6,31.31,3.77,Aufderhar LLC,,,false
-73,1,7,43.98,14.52,"Cole, McDermott and McDermott",,,false
-10,1,2,36.91,11.25,Grimes and Sons,,,false
-62,1,9,27.02,1.46,"VonRueden, Shields and Stamm",,,false
-57,1,7,38.43,2.95,Runolfsson-Wilkinson,,,false
-74,1,10,38.21,9.33,"Dicki, Pacocha and Ruecker",,,false
-35,1,10,22.68,12.86,Schamberger-King,,,false
-84,1,10,32.26,2.99,Kessler Inc,,,false
-68,1,8,26.6,13.7,Lockman-Jaskolski,,,false
-82,1,2,22.63,1.02,"Schmidt, Mante and Bednar",,,false
-50,1,3,38.04,4.45,"Hauck, Goldner and Beahan",,,false
-101,1,1,32.05,13.96,Prohaska Inc,,,false
-60,1,4,24.36,2.66,Dietrich-Kuhlman,,,false
-18,1,5,47.66,9.81,"Roberts, Hermann and Ferry",,,false
-66,1,2,39.05,10.15,Schinner Inc,,,false
-5,1,3,24.19,11.39,Ruecker-Wyman,,,false
-13,1,2,21.07,6.08,Christiansen-Ratke,,,false
-67,1,5,26.81,14.08,Kessler Group,,,false
-34,1,3,47.52,10.57,"Bechtelar, Ortiz and Pfannerstill",,,false
-64,1,4,26.46,13.36,Purdy-Wolf,,,false
-14,1,3,23.61,14.43,Oberbrunner Inc,,,false
-100,1,4,47.26,2.78,"Erdman, Wintheiser and Kub",,,false
-6,1,8,21.08,2.42,"Considine, Parker and Boehm",,,false
-71,1,7,40.83,4.03,O'Conner Group,,,false
-88,1,3,20.36,2.43,"Schinner, Kiehn and West",,,false
-7,1,9,24.94,8.04,Cruickshank-Stoltenberg,,,false
-16,1,10,17.71,9.17,"Williamson, Legros and Metz",,,false
-59,1,0,23.6,4.25,Wuckert and Sons,,,false
-61,1,1,21.37,11.88,Jakubowski Inc,,,false
-47,1,3,43.75,5.22,"Walter, Nitzsche and Jast",,,false
-87,1,2,26.15,6.48,Wehner-Becker,,,false
-11,1,1,15.97,2.81,Kemmer-Toy,,,false
-53,1,3,21.65,12.06,"Cole, Heathcote and Carroll",,,false
-81,1,8,47.45,8.13,"Murphy, Larson and Raynor",,,false
-40,1,3,42.38,2.62,"Bednar, Kautzer and Corwin",,,false
-32,1,5,17.39,12.69,Adams-Beier,,,false
-63,1,1,38.02,3.25,Little LLC,,,false
-8,1,2,46.66,5.98,"Gorczany, Abbott and Hackett",,,false
-25,1,10,43.46,14.09,Maggio and Sons,,,false
-69,1,1,20.22,13.14,"Cartwright, Lebsack and Rice",,,false
-58,1,7,20.59,4.22,Cole-Collier,,,false
-52,1,5,16.71,13.52,"Rosenbaum, Marquardt and Bednar",,,false
-41,1,2,26.95,1.13,Bode-Emmerich,,,false
-29,1,1,36.72,4.91,Terry and Sons,,,false
-45,1,2,43.48,12.9,Little Inc,,,false
-70,1,6,28.34,11.12,"Pagac, Gutmann and Hirthe",,,false
-49,1,5,29.86,10.13,"Walker, Boyer and Kuhn",,,false
-15,1,1,39.54,2.81,"Halvorson, Crona and Hartmann",,,false
-89,1,3,23.09,5.95,Kulas Group,,,false
-96,1,10,32.38,8.66,Howe Group,,,false
-85,1,9,31.99,11.97,Metz-Hoeger,,,false
-26,1,6,39.87,5.06,King-Morar,,,false
-39,1,5,38.49,1.91,"Conroy, Kris and Schoen",,,false
-21,1,8,19.58,12.31,"Orn, Abernathy and Rosenbaum",,,false
-24,1,3,17.03,4.36,Hahn and Sons,,,false
-77,2,8,30.59,13.22,"Feest, Crooks and Beatty",,,false
-51,2,1,32.86,6.94,"Dicki, Stehr and Friesen",,,false
-72,2,8,44.56,2.26,Mraz-Halvorson,,,false
-37,2,8,49.5,7.71,Wisozk LLC,,,false
-94,2,9,22.6,14.45,Kiehn-Mayert,,,false
-33,2,3,27.71,3.44,Ondricka Inc,,,false
-4,2,6,16.57,7.69,Ondricka-Langosh,,,false
-48,2,0,38.01,2.69,Cartwright and Sons,,,false
-79,2,7,25.92,6.38,Mills Inc,,,false
-76,2,8,26.17,13.89,Barrows Inc,,,false
-99,2,7,36.15,7.83,Veum-Batz,,,false
-17,2,7,30.42,4.84,Nader-Muller,,,false
-43,2,1,31.66,8.17,"Gusikowski, Roberts and Williamson",,,false
-90,2,6,17.15,12.76,Cormier-Frami,,,false
-54,2,8,24.88,3.49,Wiegand and Sons,,,false
-98,2,3,25.35,12.01,Mohr-Brekke,,,false
-78,2,1,32.49,9.18,Kautzer LLC,,,false
-9,2,10,21.73,2.88,Jacobson-Cummings,,,false
-55,2,10,48.74,1.85,Stanton Group,,,false
-38,2,2,18.05,11.73,Howell-Wolff,,,false
-95,2,7,48.55,1.95,Lakin-Johns,,,false
-19,2,7,40.26,9.6,Halvorson and Sons,,,false
-28,2,5,16.08,11.54,Gleichner and Sons,,,false
-23,2,3,25.8,2.89,Kilback-Connelly,,,false
-3,2,2,32.05,12.01,"Labadie, Block and Wiegand",,,false
-92,2,8,25.49,10.04,"Towne, Gibson and Pacocha",,,false
-20,2,8,23.79,5.26,Kihn-Hintz,,,false
-22,2,6,47.1,1.9,Bernier and Sons,,,false
-27,2,9,23.97,14.28,Harber Group,,,false
-42,2,8,20.71,14.06,"VonRueden, Schmitt and Osinski",,,false
-30,2,1,40.96,3.84,"Schmitt, O'Reilly and Thompson",,,false
-12,2,3,17.88,3.03,"Cronin, Cummerata and Treutel",,,false
-83,2,5,20.72,6.74,Kreiger Group,,,false
-31,2,4,44.97,11.52,Brekke-Cartwright,,,false
-46,2,4,16.08,1.94,Schmeler-O'Hara,,,false
-1,2,7,33.26,4.83,Conroy and Sons,,,false
-36,2,2,25.25,6.82,Windler-Roberts,,,false
-80,2,10,41.8,13.33,Schiller Group,,,false
-75,2,5,20.37,8.37,Stamm-Hills,,,false
-2,2,4,39.6,12.91,Will-Weissnat,,,false
-97,2,7,37.65,5.25,"Pacocha, Gorczany and Flatley",,,false
-65,2,4,35.07,2.93,Dare-Fahey,,,false
-44,2,9,48.88,12.34,"Cartwright, Predovic and Kautzer",,,false
-91,2,2,18.11,14.11,Gottlieb-Block,,,false
-86,2,1,33.33,1.52,Leannon and Sons,,,false
-56,2,1,48.71,6.42,Hilpert-Abbott,,,false
-73,2,3,27.96,14.17,O'Reilly-Heaney,,,false
-10,2,7,25.77,5.57,Larson Group,,,false
-62,2,5,45.34,13.65,Quigley Group,,,false
-57,2,3,35.65,12.57,Corkery-Ferry,,,false
-74,2,3,39.3,12.39,Skiles LLC,,,false
-35,2,1,25.81,3.62,Von LLC,,,false
-84,2,10,15.51,5.06,Adams Inc,,,false
-68,2,7,20.72,10.83,Hayes-Veum,,,false
-82,2,9,34.15,5.15,Hermiston-Breitenberg,,,false
-50,2,6,20.62,12.05,Hirthe-Smitham,,,false
-101,2,1,43.28,5.72,Torp-Kshlerin,,,false
-60,2,10,18.71,1.03,Mitchell-Reichel,,,false
-18,2,7,19.47,1.05,Flatley Group,,,false
-66,2,8,23.77,5.1,Borer LLC,,,false
-5,2,1,20.94,8.29,Fahey-Ziemann,,,false
-13,2,9,40.63,5.43,Adams LLC,,,false
-67,2,9,28.23,8.82,Hartmann Group,,,false
-34,2,10,38.66,13.84,"Smitham, Hickle and Durgan",,,false
-64,2,4,28.38,10.23,"Hills, Boehm and Kertzmann",,,false
-14,2,8,42.8,12.23,Strosin-Flatley,,,false
-100,2,9,29.69,8.68,Waelchi-Bayer,,,false
-6,2,5,17.86,9.08,"Kreiger, Harber and Bergnaum",,,false
-71,2,3,28.56,8.12,"Stokes, Bruen and Bruen",,,false
-88,2,4,27.16,7.96,Lesch Inc,,,false
-7,2,6,39.83,11.02,Thompson LLC,,,false
-16,2,7,46.57,1.17,Kiehn-Maggio,,,false
-59,2,8,28.19,8.34,"Langosh, Rolfson and Wolf",,,false
-61,2,4,32.78,3.75,Heidenreich-Schultz,,,false
-47,2,9,27.75,2.89,Schroeder and Sons,,,false
-87,2,1,20.97,12.71,O'Conner Inc,,,false
-11,2,1,20.55,6.56,Mayert-Towne,,,false
-53,2,10,23.47,12.78,Bosco Inc,,,false
-81,2,6,49.77,11.25,Howe and Sons,,,false
-40,2,5,31.54,14.53,Johns-Beer,,,false
-32,2,8,47.36,13.38,Kuphal-Schinner,,,false
-63,2,9,28.3,14.65,Hilll-Graham,,,false
-8,2,5,42.63,14.13,Pagac-Mueller,,,false
-25,2,2,49.01,3.54,Fritsch LLC,,,false
-69,2,9,45.87,1.79,Langosh-Bogisich,,,false
-58,2,0,33.45,10.33,Upton and Sons,,,false
-52,2,8,22.72,14.92,Mraz-Kutch,,,false
-41,2,10,30.14,8.62,Buckridge Inc,,,false
-29,2,2,41.69,13.89,Hahn Inc,,,false
-45,2,6,34.81,9.43,Luettgen Inc,,,false
-70,2,2,49.24,6.31,Kris LLC,,,false
-49,2,7,44.3,4.3,Conroy-Wehner,,,false
-15,2,10,23.11,1.92,Ratke-Murray,,,false
-89,2,3,32.48,8.38,Heaney Group,,,false
-96,2,8,36.6,4.14,"Donnelly, Thompson and Gerhold",,,false
-85,2,4,29.18,8.6,Konopelski Inc,,,false
-26,2,2,25.58,10.59,"Farrell, Jenkins and Witting",,,false
-39,2,0,32.79,13.46,Kerluke Group,,,false
-21,2,0,16.79,3.67,Fritsch-Brown,,,false
-24,2,4,43.1,6.03,Wehner and Sons,,,false
-77,3,2,19.25,3.54,Wintheiser Group,,,false
-51,3,0,21.76,14.08,"Abbott, Moen and Yundt",,,false
-72,3,9,18.94,7.46,Auer-Runolfsson,,,false
-37,3,4,38.04,3.84,"Thiel, Streich and Haag",,,false
-94,3,4,23.71,10.8,"Jenkins, Ziemann and Strosin",,,false
-33,3,9,29.85,1.99,"Luettgen, Stroman and Mitchell",,,false
-4,3,1,36.89,8.19,Herzog-Kub,,,false
-48,3,4,33.91,5.55,Bailey and Sons,,,false
-79,3,0,26.82,11.55,Zboncak-Wintheiser,,,false
-76,3,2,35.84,8.1,Hand-Rempel,,,false
-99,3,5,31.04,13.72,"Hettinger, Kuhic and Metz",,,false
-17,3,4,24.67,1.75,"Heathcote, Mueller and Hamill",,,false
-43,3,9,40.91,11.32,Bernier Inc,,,false
-90,3,5,43.59,13.35,"Goldner, Mraz and Jerde",,,false
-54,3,4,18.36,3.11,Kling Inc,,,false
-98,3,1,35.72,2.19,Koelpin and Sons,,,false
-78,3,4,17.25,5.59,Muller LLC,,,false
-9,3,8,17.27,12.75,Haley-Dooley,,,false
-55,3,9,36.89,12.02,Schimmel-Orn,,,false
-38,3,9,37.67,5.25,Jacobi-Reinger,,,false
-95,3,6,41.33,12.0,Armstrong-O'Kon,,,false
-19,3,9,34.11,9.71,Donnelly LLC,,,false
-28,3,5,47.65,14.16,Koch-Anderson,,,false
-23,3,9,41.43,14.07,"Blanda, Stokes and Keebler",,,false
-3,3,6,35.27,6.35,Stiedemann Inc,,,false
-92,3,5,48.66,6.49,"Kutch, Mills and Cummings",,,false
-20,3,8,47.79,5.56,"Bogisich, Zemlak and Cronin",,,false
-22,3,7,38.06,6.66,Walter-Luettgen,,,false
-27,3,1,23.56,12.16,Stokes Group,,,false
-42,3,6,36.2,9.48,Anderson and Sons,,,false
-30,3,3,29.17,6.96,Fritsch Group,,,false
-12,3,2,21.37,4.35,Kilback-Medhurst,,,false
-83,3,6,17.06,3.88,Braun LLC,,,false
-31,3,10,43.0,6.75,"Windler, Fisher and Steuber",,,false
-46,3,0,23.9,5.18,Sporer-Schuster,,,false
-1,3,8,30.6,7.18,"Fay, Klein and Schmitt",,,false
-36,3,4,29.02,11.34,Hamill-Dare,,,false
-80,3,5,32.29,4.68,Koepp Inc,,,false
-75,3,1,40.54,12.14,Berge Group,,,false
-2,3,5,46.47,9.09,Langworth and Sons,,,false
-97,3,6,43.31,12.96,Ullrich-Feeney,,,false
-65,3,10,37.53,1.18,Corwin-Lesch,,,false
-44,3,2,47.59,9.74,"Hackett, Predovic and Beer",,,false
-91,3,8,28.97,13.57,"Pacocha, Rohan and Friesen",,,false
-86,3,0,38.33,2.22,Predovic and Sons,,,false
-56,3,6,46.06,14.94,Thompson LLC,,,false
-73,3,3,28.19,11.45,McClure LLC,,,false
-10,3,3,15.99,2.31,Will-Stamm,,,false
-62,3,7,27.23,5.23,Bradtke and Sons,,,false
-57,3,8,35.43,3.13,"Reilly, Mann and Daugherty",,,false
-74,3,3,15.2,12.14,"Jenkins, Kuphal and Miller",,,false
-35,3,0,47.17,3.04,Hartmann-Oberbrunner,,,false
-84,3,6,33.6,12.86,"Paucek, Smitham and Sporer",,,false
-68,3,3,21.97,14.59,"Dickens, Schamberger and Lesch",,,false
-82,3,9,40.25,12.38,"Brown, Jones and Hansen",,,false
-50,3,8,31.46,5.97,"Funk, Jaskolski and Waters",,,false
-101,3,1,17.21,11.54,Schmidt-Boyle,,,false
-60,3,8,24.0,5.43,Brakus Inc,,,false
-18,3,5,39.91,3.69,"Hammes, Parker and Kautzer",,,false
-66,3,2,31.34,11.7,Schmeler Inc,,,false
-5,3,3,21.23,13.65,Lynch-Hayes,,,false
-13,3,0,17.55,10.23,"Prohaska, Hermann and Runte",,,false
-67,3,4,32.12,11.96,"Macejkovic, Kuvalis and Yost",,,false
-34,3,4,32.0,3.36,Langosh-Batz,,,false
-64,3,7,24.49,11.23,Hessel and Sons,,,false
-14,3,4,19.4,1.92,Lockman-Aufderhar,,,false
-100,3,1,31.22,5.95,Goldner Group,,,false
-6,3,9,31.57,11.98,"Emard, Brakus and Jenkins",,,false
-71,3,4,44.76,2.69,Lowe-Crist,,,false
-88,3,1,33.05,12.63,Koelpin Inc,,,false
-7,3,4,36.33,4.43,Ondricka-Moen,,,false
-16,3,6,40.83,8.03,Kautzer-Gibson,,,false
-59,3,6,20.12,9.08,"Bechtelar, Hilpert and Cruickshank",,,false
-61,3,4,47.36,1.12,Kassulke-Gutmann,,,false
-47,3,8,42.19,7.08,Crona Inc,,,false
-87,3,2,17.8,8.98,O'Reilly-Rippin,,,false
-11,3,9,41.61,6.86,Prohaska and Sons,,,false
-53,3,1,20.46,14.22,Ullrich and Sons,,,false
-81,3,3,15.72,2.05,Heller-Pollich,,,false
-40,3,10,24.51,13.41,"Kerluke, Ryan and Altenwerth",,,false
-32,3,5,20.55,13.99,"Macejkovic, Cruickshank and West",,,false
-63,3,0,40.88,11.65,"McDermott, Blick and Satterfield",,,false
-8,3,2,44.24,7.97,Turner-Mraz,,,false
-25,3,7,20.89,10.69,Gerhold-Kunze,,,false
-69,3,2,40.51,8.8,"Beatty, Hickle and Hintz",,,false
-58,3,8,41.01,3.01,Erdman Group,,,false
-52,3,5,38.63,11.47,"Miller, Gusikowski and Volkman",,,false
-41,3,7,22.51,7.8,Jacobson-Franecki,,,false
-29,3,5,24.68,5.99,Gutkowski LLC,,,false
-45,3,8,40.89,12.44,Hammes LLC,,,false
-70,3,4,25.3,14.77,"Fritsch, Wintheiser and Kuvalis",,,false
-49,3,1,40.4,6.84,Gottlieb Inc,,,false
-15,3,3,49.01,4.16,Goodwin-Altenwerth,,,false
-89,3,10,46.67,1.73,Heathcote Inc,,,false
-96,3,6,42.52,11.2,Sanford-Brakus,,,false
-85,3,8,20.09,3.93,Farrell Inc,,,false
-26,3,3,43.89,6.23,"Runolfsdottir, Heaney and Hettinger",,,false
-39,3,6,17.95,10.32,Schuppe and Sons,,,false
-21,3,0,48.23,4.34,"Altenwerth, Moore and Schroeder",,,false
-24,3,9,45.06,10.97,"Crist, Turcotte and Towne",,,false
+69,1,6,18.02,2.74,"Mueller, Quitzon and Jacobs",,,false
+25,1,3,29.41,5.98,Wilkinson Group,,,false
+37,1,8,32.77,4.82,Douglas-Deckow,,,false
+40,1,10,22.28,3.34,Kunze-Hintz,,,false
+28,1,5,26.1,10.55,Larkin-Rice,,,false
+14,1,7,35.76,8.32,"Wehner, Schumm and Herzog",,,false
+86,1,4,31.11,8.52,Schulist Group,,,false
+36,1,0,38.82,14.96,Hayes and Sons,,,false
+45,1,5,49.87,2.46,Botsford-Runolfsdottir,,,false
+96,1,10,49.84,6.18,Koepp and Sons,,,false
+98,1,0,24.8,7.64,"Rempel, Gutmann and Morissette",,,false
+94,1,7,28.81,1.8,"Considine, West and Schiller",,,false
+21,1,6,20.81,1.31,Huel Group,,,false
+47,1,7,36.03,5.81,Hilpert-Ratke,,,false
+95,1,2,24.68,11.67,Thiel-Bechtelar,,,false
+32,1,10,41.08,7.57,Langosh Group,,,false
+55,1,1,25.28,13.38,Howe LLC,,,false
+51,1,6,38.11,10.71,Rau-Treutel,,,false
+23,1,0,49.87,2.0,"Dibbert, Borer and McGlynn",,,false
+1,1,3,42.13,14.62,Hartmann Inc,,,false
+101,1,6,23.87,5.56,Kuhlman Group,,,false
+12,1,10,22.14,7.4,Weber-Lemke,,,false
+43,1,10,31.98,5.16,Hettinger LLC,,,false
+31,1,6,42.9,8.22,"Ziemann, Reynolds and Champlin",,,false
+84,1,2,21.54,3.35,Miller-Robel,,,false
+71,1,8,24.91,14.44,"Prohaska, Ondricka and Macejkovic",,,false
+78,1,7,28.76,3.75,Boehm Inc,,,false
+76,1,3,27.22,8.95,"Walter, Dietrich and Jerde",,,false
+26,1,2,49.33,9.03,Becker LLC,,,false
+93,1,4,29.75,4.83,Kuhic-Dibbert,,,false
+33,1,3,46.71,5.96,Howe Inc,,,false
+30,1,4,46.86,1.23,Goodwin Inc,,,false
+11,1,5,23.67,6.83,Fisher Inc,,,false
+2,1,0,24.97,9.25,"Koelpin, Harber and Larkin",,,false
+7,1,9,28.59,7.93,"Graham, Goldner and Powlowski",,,false
+70,1,7,35.18,14.77,"Dooley, Schimmel and O'Connell",,,false
+6,1,10,44.59,7.72,"Botsford, Schultz and Lindgren",,,false
+24,1,1,44.8,8.21,Osinski-Rempel,,,false
+100,1,2,44.44,14.09,Yost-Berge,,,false
+19,1,5,15.13,11.42,Mayer LLC,,,false
+13,1,9,23.54,11.58,Fay-Braun,,,false
+17,1,0,22.46,12.92,"Bernhard, Ruecker and Schaefer",,,false
+15,1,3,32.55,14.86,Greenholt Group,,,false
+89,1,2,38.4,2.89,Stanton and Sons,,,false
+87,1,10,38.15,8.58,"Wisozk, Monahan and Dickinson",,,false
+99,1,10,41.04,11.07,Padberg Inc,,,false
+60,1,4,44.05,4.06,Walter Inc,,,false
+68,1,7,40.93,9.28,Weimann-O'Connell,,,false
+44,1,4,42.72,10.06,"Christiansen, Kassulke and Hane",,,false
+97,1,5,39.23,11.28,"Kling, Rolfson and Feil",,,false
+52,1,9,29.4,7.37,Franecki Group,,,false
+58,1,10,35.5,10.23,Raynor Group,,,false
+64,1,1,18.83,11.49,"Crist, Hammes and Gutmann",,,false
+92,1,2,44.05,12.16,"Cartwright, Stamm and Klocko",,,false
+10,1,3,39.99,8.58,"Corwin, Yost and Williamson",,,false
+46,1,1,17.27,13.14,Miller-Trantow,,,false
+29,1,6,32.77,11.03,"Borer, Gulgowski and Hudson",,,false
+81,1,6,49.83,14.46,Berge-Jacobson,,,false
+9,1,4,29.55,13.82,"Trantow, Thiel and Boehm",,,false
+62,1,0,34.0,13.61,Bashirian-Anderson,,,false
+8,1,9,41.33,5.65,Boehm-Cruickshank,,,false
+41,1,0,20.49,6.79,Padberg Inc,,,false
+5,1,7,23.49,13.94,"Rogahn, Ullrich and Schowalter",,,false
+38,1,10,42.15,1.41,"Lebsack, Gutkowski and Hodkiewicz",,,false
+54,1,9,32.07,4.37,Rosenbaum Inc,,,false
+66,1,2,21.09,14.54,"Roberts, Botsford and Kuhic",,,false
+80,1,7,17.52,9.23,"Gerlach, Okuneva and Boyle",,,false
+3,1,4,20.56,9.32,"Murphy, Schultz and Larson",,,false
+59,1,4,28.65,1.94,"Ullrich, Leuschke and McLaughlin",,,false
+42,1,1,49.1,4.75,Runolfsdottir LLC,,,false
+48,1,0,28.83,13.72,"Tromp, Erdman and Kulas",,,false
+20,1,3,36.8,6.65,Aufderhar-Spencer,,,false
+16,1,10,42.68,1.46,Satterfield-Bartell,,,false
+79,1,8,16.32,13.5,Hoppe LLC,,,false
+82,1,3,32.86,13.15,Beahan-Parisian,,,false
+50,1,9,48.19,5.76,Maggio Group,,,false
+56,1,7,16.3,10.14,Schowalter and Sons,,,false
+75,1,2,43.55,6.4,Wisozk LLC,,,false
+18,1,1,29.82,14.62,Jacobson LLC,,,false
+83,1,4,36.25,1.76,Monahan Group,,,false
+88,1,3,45.2,12.46,"Halvorson, Koepp and Braun",,,false
+73,1,0,46.68,4.07,"Hirthe, Sipes and Klein",,,false
+39,1,5,46.87,10.93,Reynolds-Rolfson,,,false
+34,1,0,49.75,8.95,Schaefer and Sons,,,false
+27,1,9,34.63,4.09,Dickens LLC,,,false
+61,1,1,30.23,7.26,Volkman-Wiegand,,,false
+85,1,8,16.17,3.31,"Hills, Baumbach and Kozey",,,false
+4,1,10,41.8,13.75,Walsh-Kulas,,,false
+72,1,5,22.35,8.5,Jaskolski Group,,,false
+90,1,2,33.59,8.85,Parker Inc,,,false
+77,1,10,16.43,6.87,Feeney LLC,,,false
+35,1,8,19.98,3.83,Hoppe-Ritchie,,,false
+67,1,0,18.71,5.35,Langworth-Koelpin,,,false
+63,1,1,37.14,2.75,"Bartell, Beer and Goodwin",,,false
+65,1,6,48.43,9.31,"Blanda, Rath and Murray",,,false
+91,1,5,46.56,4.92,"Cummings, Ernser and Emmerich",,,false
+74,1,2,39.42,3.47,Bernhard Group,,,false
+49,1,6,49.5,12.24,Dickinson and Sons,,,false
+57,1,1,24.34,3.19,"Kub, Wilkinson and McGlynn",,,false
+53,1,10,49.11,8.92,Wiza-VonRueden,,,false
+69,2,7,22.65,5.83,Gleichner-Abshire,,,false
+25,2,4,46.36,6.03,Lynch-Lesch,,,false
+37,2,7,32.76,9.5,Pacocha-Jones,,,false
+40,2,4,49.85,2.29,Feest-Kihn,,,false
+28,2,0,28.83,5.46,"Wisoky, Sawayn and Corkery",,,false
+14,2,10,32.62,7.3,Parisian Group,,,false
+86,2,10,16.84,8.61,Wilkinson Group,,,false
+36,2,4,36.82,2.58,"Considine, Herzog and Windler",,,false
+45,2,3,24.55,6.67,Bartell LLC,,,false
+96,2,1,31.7,13.79,"Bednar, Davis and Beatty",,,false
+98,2,7,33.13,13.46,"Kunze, Haley and Rosenbaum",,,false
+94,2,3,44.05,2.31,Kutch Inc,,,false
+21,2,1,19.15,11.19,"McDermott, Hane and Kilback",,,false
+47,2,10,45.56,1.96,Kerluke-Boehm,,,false
+95,2,7,46.97,14.59,Brown LLC,,,false
+32,2,7,17.13,9.36,"Wyman, Rowe and Luettgen",,,false
+55,2,1,39.68,12.06,"Pagac, Baumbach and Schinner",,,false
+51,2,7,15.26,3.04,Koch LLC,,,false
+23,2,1,47.79,9.02,"Rowe, Hagenes and Hintz",,,false
+1,2,8,49.05,13.62,"Pagac, Mosciski and Abernathy",,,false
+101,2,8,26.81,4.11,"Dare, Marquardt and Rolfson",,,false
+12,2,10,35.91,11.88,Haag-Mante,,,false
+43,2,8,25.35,8.76,"Yost, Reilly and Runte",,,false
+31,2,1,33.97,7.64,"Harris, Simonis and D'Amore",,,false
+84,2,3,30.8,10.14,"Schinner, Tillman and Baumbach",,,false
+71,2,3,31.77,2.99,"Ward, Pfeffer and Mayert",,,false
+78,2,1,18.21,6.1,"Schulist, Schaefer and Donnelly",,,false
+76,2,8,19.7,5.41,Schulist and Sons,,,false
+26,2,0,40.78,7.01,Feest-Nitzsche,,,false
+93,2,3,45.08,5.25,Cassin-Treutel,,,false
+33,2,6,16.3,9.98,Lesch Inc,,,false
+30,2,7,39.56,14.27,Herman LLC,,,false
+11,2,8,43.63,7.44,O'Kon Inc,,,false
+2,2,6,31.01,10.27,Heathcote Group,,,false
+7,2,10,25.03,8.72,"Feil, Walsh and Stokes",,,false
+70,2,0,38.74,1.06,Champlin and Sons,,,false
+6,2,0,29.32,2.47,Russel-Witting,,,false
+24,2,10,15.17,2.7,"Williamson, Wolf and Aufderhar",,,false
+100,2,8,26.64,12.73,Ankunding-O'Keefe,,,false
+19,2,7,48.39,6.48,"Kilback, Mayer and Beier",,,false
+13,2,10,37.75,6.58,Bayer-Sawayn,,,false
+17,2,8,48.84,8.15,Kohler LLC,,,false
+15,2,0,44.65,1.8,Powlowski-Sipes,,,false
+89,2,10,15.8,8.38,Auer-Kuphal,,,false
+87,2,5,44.06,6.0,Kris-Hessel,,,false
+99,2,7,16.46,4.23,"Anderson, Keebler and Miller",,,false
+60,2,7,17.89,11.85,Ritchie LLC,,,false
+68,2,3,24.89,7.12,"Ankunding, Runolfsson and Terry",,,false
+44,2,5,38.69,7.4,Cassin-Friesen,,,false
+97,2,4,15.92,12.51,"Olson, Walter and Johnston",,,false
+52,2,8,27.04,2.02,Ratke-Terry,,,false
+58,2,10,38.97,11.69,Marks-Lemke,,,false
+64,2,9,41.74,11.85,"Conroy, Rolfson and Auer",,,false
+92,2,6,26.3,11.87,Pfannerstill-Cremin,,,false
+10,2,6,47.48,9.51,"Collins, Macejkovic and Deckow",,,false
+46,2,2,28.42,2.96,Renner-Auer,,,false
+29,2,0,33.93,6.46,"Kerluke, Jones and Kunde",,,false
+81,2,4,47.94,1.86,Wyman LLC,,,false
+9,2,6,34.82,5.02,"Terry, Gottlieb and Grant",,,false
+62,2,8,48.93,4.68,Ondricka-Kreiger,,,false
+8,2,10,18.16,6.21,Ziemann-Johnston,,,false
+41,2,0,24.49,14.03,Toy Group,,,false
+5,2,10,43.21,7.55,Gibson and Sons,,,false
+38,2,3,48.24,4.15,Boyle LLC,,,false
+54,2,3,21.02,11.86,"Schroeder, Stark and Bailey",,,false
+66,2,3,24.28,7.87,Barrows Group,,,false
+80,2,9,31.52,7.5,Hand Group,,,false
+3,2,5,21.36,11.23,Watsica-Davis,,,false
+59,2,7,35.77,11.53,Ruecker-DuBuque,,,false
+42,2,10,37.3,6.76,Wintheiser LLC,,,false
+48,2,1,20.28,6.08,"Botsford, Bode and Schamberger",,,false
+20,2,9,24.16,9.24,Medhurst LLC,,,false
+16,2,5,30.02,11.36,"Morar, Nicolas and Hermiston",,,false
+79,2,6,38.44,5.63,Wuckert-Weber,,,false
+82,2,9,20.48,10.14,"Carter, Gerhold and Purdy",,,false
+50,2,2,43.77,6.86,Nitzsche Group,,,false
+56,2,0,20.61,5.95,Fahey Inc,,,false
+75,2,10,43.44,13.28,Keeling-Gaylord,,,false
+18,2,7,30.01,13.75,Mertz-Monahan,,,false
+83,2,9,46.96,7.25,Robel-Rolfson,,,false
+88,2,5,16.86,14.09,"Gleason, Schultz and Kirlin",,,false
+73,2,1,25.84,7.98,"Lesch, Stehr and Heller",,,false
+39,2,9,40.27,13.45,"VonRueden, Littel and Kemmer",,,false
+34,2,4,17.26,7.49,D'Amore-Ernser,,,false
+27,2,7,32.58,9.09,Simonis-Dietrich,,,false
+61,2,7,36.49,8.57,"Reinger, Gulgowski and Doyle",,,false
+85,2,1,46.13,12.93,Raynor-O'Kon,,,false
+4,2,8,42.2,11.92,Ziemann-Runte,,,false
+72,2,0,25.61,3.24,Grant-Haag,,,false
+90,2,10,39.17,10.57,Witting-Steuber,,,false
+77,2,5,20.59,2.03,"Hirthe, Moen and Mertz",,,false
+35,2,9,39.94,4.27,Reichert-Aufderhar,,,false
+67,2,2,46.32,7.8,Hills-Simonis,,,false
+63,2,6,45.57,6.88,Baumbach-Hackett,,,false
+65,2,7,22.19,7.01,Moen-Macejkovic,,,false
+91,2,0,35.24,5.76,Thiel Inc,,,false
+74,2,2,37.19,14.13,"O'Conner, Grady and Mills",,,false
+49,2,3,31.06,11.28,Satterfield Inc,,,false
+57,2,1,27.8,6.07,Graham-Pfeffer,,,false
+53,2,0,35.19,8.2,"Weimann, Haag and Welch",,,false
+69,3,5,36.84,13.46,"Jakubowski, Bahringer and Bernier",,,false
+25,3,0,45.96,12.73,Beier-Brakus,,,false
+37,3,5,45.58,7.0,Nolan-Langosh,,,false
+40,3,0,20.29,7.33,Mueller-Heidenreich,,,false
+28,3,8,25.84,4.93,O'Connell LLC,,,false
+14,3,3,32.57,6.48,O'Hara-Considine,,,false
+86,3,2,48.85,11.77,"Kemmer, Dare and Orn",,,false
+36,3,9,39.75,9.13,Streich-Stehr,,,false
+45,3,9,48.18,5.98,Cole Group,,,false
+96,3,8,47.64,10.75,Gerlach-Pagac,,,false
+98,3,1,27.41,12.49,Strosin Inc,,,false
+94,3,1,38.54,4.85,"Ratke, Leannon and Sporer",,,false
+21,3,5,46.7,6.51,Jakubowski Group,,,false
+47,3,2,33.13,8.25,Zieme Group,,,false
+95,3,6,49.02,2.46,"Koch, Bashirian and Turcotte",,,false
+32,3,6,37.44,5.93,Rodriguez-Dibbert,,,false
+55,3,1,24.18,9.26,Bailey LLC,,,false
+51,3,8,31.96,8.44,Rowe Inc,,,false
+23,3,4,33.82,1.07,"Stoltenberg, Osinski and Pollich",,,false
+1,3,0,34.47,11.65,O'Kon and Sons,,,false
+101,3,4,41.4,13.85,Cassin LLC,,,false
+12,3,8,49.28,2.47,Gleason Inc,,,false
+43,3,3,25.78,8.2,"Rath, Roob and Trantow",,,false
+31,3,2,38.54,7.37,Schmidt Group,,,false
+84,3,0,29.5,10.87,Sawayn-Welch,,,false
+71,3,3,15.23,11.84,Bashirian Group,,,false
+78,3,0,28.6,4.5,"Greenfelder, Price and Wiegand",,,false
+76,3,2,28.75,13.21,Schmitt-Sawayn,,,false
+26,3,10,22.08,2.1,O'Conner-Rutherford,,,false
+93,3,5,20.46,11.59,King Inc,,,false
+33,3,10,45.7,11.44,Goodwin Inc,,,false
+30,3,0,27.91,14.35,"Kovacek, Kulas and Shields",,,false
+11,3,6,27.33,10.37,Jakubowski-Hyatt,,,false
+2,3,2,35.42,11.05,Cassin Group,,,false
+7,3,9,15.69,9.79,"Jast, Christiansen and Bogan",,,false
+70,3,6,37.86,10.28,Ernser-Block,,,false
+6,3,7,49.08,3.4,"Runte, Rice and Boyle",,,false
+24,3,8,42.46,11.4,Wolf-Jenkins,,,false
+100,3,6,34.31,12.48,"Rosenbaum, Pfannerstill and Hintz",,,false
+19,3,7,43.63,11.25,Mertz-Ryan,,,false
+13,3,3,28.37,13.03,Beier and Sons,,,false
+17,3,3,27.25,6.44,"Pouros, Heaney and Beer",,,false
+15,3,8,41.4,10.97,"Trantow, Ferry and Tremblay",,,false
+89,3,6,46.58,13.76,Hermann LLC,,,false
+87,3,9,43.58,4.5,"Beatty, Gleason and Parker",,,false
+99,3,1,49.85,4.15,"Ward, Stiedemann and Donnelly",,,false
+60,3,6,24.25,1.67,Block-Graham,,,false
+68,3,4,44.29,8.08,"Stiedemann, Jacobson and Lubowitz",,,false
+44,3,1,44.15,3.08,"Flatley, Auer and Orn",,,false
+97,3,4,43.53,13.2,Breitenberg Group,,,false
+52,3,6,32.1,4.49,Kuhic-Sporer,,,false
+58,3,0,38.03,14.92,Cronin Inc,,,false
+64,3,0,40.42,9.91,Jenkins-Dickinson,,,false
+92,3,6,33.0,8.1,Leffler LLC,,,false
+10,3,4,49.01,7.73,"Kiehn, Haley and Brekke",,,false
+46,3,1,29.53,1.36,"Gottlieb, Franecki and O'Keefe",,,false
+29,3,3,22.59,13.38,"Reinger, Mann and Marks",,,false
+81,3,2,15.62,12.92,"Pfeffer, Cremin and Effertz",,,false
+9,3,1,32.79,14.57,"Okuneva, O'Conner and Jaskolski",,,false
+62,3,8,47.46,1.51,Macejkovic-Lowe,,,false
+8,3,10,40.39,7.07,Braun-Bernier,,,false
+41,3,6,15.54,11.75,Nienow Inc,,,false
+5,3,6,34.11,10.34,"Wuckert, Orn and Hagenes",,,false
+38,3,6,36.83,14.27,"Rau, Flatley and Kris",,,false
+54,3,7,47.24,3.45,"Kautzer, Borer and Goldner",,,false
+66,3,10,43.08,3.74,"Rohan, Ruecker and Fahey",,,false
+80,3,0,21.12,12.04,Fadel Group,,,false
+3,3,5,37.56,2.89,"Heller, Prosacco and Wolff",,,false
+59,3,0,42.12,14.75,Heidenreich-Stiedemann,,,false
+42,3,7,46.95,5.66,Heathcote-Marquardt,,,false
+48,3,5,32.86,3.77,Kunze-Wiza,,,false
+20,3,3,27.12,6.17,"Bergstrom, Price and Jast",,,false
+16,3,1,40.9,5.27,"White, Hyatt and Herzog",,,false
+79,3,5,32.67,7.33,Lebsack Group,,,false
+82,3,2,26.99,14.05,Kerluke-Walker,,,false
+50,3,7,18.81,6.19,O'Kon Inc,,,false
+56,3,5,17.85,9.4,Howe Group,,,false
+75,3,6,24.39,7.18,"Langworth, Upton and Walker",,,false
+18,3,9,46.21,1.72,Kutch-O'Conner,,,false
+83,3,8,33.56,9.79,Steuber-Gibson,,,false
+88,3,7,23.9,7.1,Weber-Herman,,,false
+73,3,4,32.11,1.4,Reilly LLC,,,false
+39,3,9,34.23,10.26,"Romaguera, Heidenreich and Grady",,,false
+34,3,6,44.61,2.37,"Denesik, Price and Keebler",,,false
+27,3,5,27.96,2.01,Cummings LLC,,,false
+61,3,1,45.83,2.46,Hettinger Inc,,,false
+85,3,6,25.92,13.02,"Russel, Bogisich and Flatley",,,false
+4,3,2,38.74,11.24,"Brekke, Marquardt and Schulist",,,false
+72,3,1,26.69,4.76,"Parisian, Schoen and Shanahan",,,false
+90,3,5,18.24,13.8,Senger Inc,,,false
+77,3,0,45.73,3.81,Stokes-Treutel,,,false
+35,3,1,15.69,13.34,Kilback-Hintz,,,false
+67,3,0,17.15,11.0,"Jast, Kreiger and McLaughlin",,,false
+63,3,0,40.19,3.29,Parker-White,,,false
+65,3,7,20.5,7.13,"Cummerata, Mante and Lubowitz",,,false
+91,3,6,33.86,7.92,Koepp and Sons,,,false
+74,3,0,23.28,14.94,Becker Group,,,false
+49,3,4,41.03,10.57,"King, Ankunding and Mante",,,false
+57,3,5,40.52,14.71,"Kling, White and Veum",,,false
+53,3,8,29.34,12.25,Frami Inc,,,false
