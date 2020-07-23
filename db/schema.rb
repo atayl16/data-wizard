@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_16_203231) do
+ActiveRecord::Schema.define(version: 2020_07_19_155930) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -145,6 +145,33 @@ ActiveRecord::Schema.define(version: 2020_07_16_203231) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "memberships", force: :cascade do |t|
+    t.integer "membership_id"
+    t.string "membership_name"
+    t.string "description"
+    t.decimal "registration_fee_amount"
+    t.decimal "cancellation_fee_amount"
+    t.decimal "price"
+    t.integer "period_size"
+    t.string "period_type"
+    t.string "billing_cycle_type"
+    t.integer "billing_day"
+    t.string "payment_type"
+    t.integer "location_id"
+    t.integer "benefit_id"
+    t.string "benefit_type"
+    t.string "benefit_discount_type"
+    t.integer "benefit_value"
+    t.integer "benefit_limit"
+    t.boolean "eligible_for_all_services"
+    t.boolean "eligible_for_all_products"
+    t.string "benefit_name"
+    t.integer "service_id"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "petcategories", force: :cascade do |t|
     t.integer "category_id"
     t.string "name"
@@ -214,6 +241,37 @@ ActiveRecord::Schema.define(version: 2020_07_16_203231) do
     t.boolean "deleted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.integer "ticket_id"
+    t.integer "location_id"
+    t.integer "client_id"
+    t.string "status"
+    t.integer "employee_id"
+    t.integer "closed_by_employee_id"
+    t.datetime "closed_at"
+    t.boolean "deleted"
+    t.integer "payment_item_id"
+    t.string "payment_type"
+    t.integer "inventory_sku_id"
+    t.integer "quantity"
+    t.decimal "amount_before_discount"
+    t.integer "service_id"
+    t.integer "appointment_id"
+    t.decimal "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.decimal "skuamount"
+    t.decimal "serviceamount"
+    t.decimal "service_amount_before_discount"
+    t.decimal "sku_amount_before_discount"
+    t.decimal "tip_amount"
+    t.string "employee_name"
+    t.string "client_name"
+    t.datetime "created"
+    t.datetime "updated"
+    t.string "empty"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Memberships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Membership</th>
+      <th>Membership name</th>
+      <th>Description</th>
+      <th>Registration fee amount</th>
+      <th>Cancellation fee amount</th>
+      <th>Price</th>
+      <th>Period size</th>
+      <th>Period type</th>
+      <th>Billing cycle type</th>
+      <th>Billing day</th>
+      <th>Payment type</th>
+      <th>Location</th>
+      <th>Benefit</th>
+      <th>Benefit type</th>
+      <th>Benefit discount type</th>
+      <th>Benefit value</th>
+      <th>Benefit limit</th>
+      <th>Eligible for all services</th>
+      <th>Eligible for all products</th>
+      <th>Benefit name</th>
+      <th>Service</th>
+      <th>Product</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @memberships.each do |membership| %>
+      <tr>
+        <td><%= membership.membership_id %></td>
+        <td><%= membership.membership_name %></td>
+        <td><%= membership.description %></td>
+        <td><%= membership.registration_fee_amount %></td>
+        <td><%= membership.cancellation_fee_amount %></td>
+        <td><%= membership.price %></td>
+        <td><%= membership.period_size %></td>
+        <td><%= membership.period_type %></td>
+        <td><%= membership.billing_cycle_type %></td>
+        <td><%= membership.billing_day %></td>
+        <td><%= membership.payment_type %></td>
+        <td><%= membership.location_id %></td>
+        <td><%= membership.benefit_id %></td>
+        <td><%= membership.benefit_type %></td>
+        <td><%= membership.benefit_discount_type %></td>
+        <td><%= membership.benefit_value %></td>
+        <td><%= membership.benefit_limit %></td>
+        <td><%= membership.eligible_for_all_services %></td>
+        <td><%= membership.eligible_for_all_products %></td>
+        <td><%= membership.benefit_name %></td>
+        <td><%= membership.service_id %></td>
+        <td><%= membership.product_id %></td>
+        <td><%= link_to 'Show', membership %></td>
+        <td><%= link_to 'Edit', edit_membership_path(membership) %></td>
+        <td><%= link_to 'Destroy', membership, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Membership', new_membership_path %>

@@ -35,18 +35,6 @@ skus = []
   100.times do |i|
     c = Inventorystock.new
       c.sku_id = skus[i].sku_id
-      c.location_id = 0
-      c.quantity = Faker::Number.between(from: 0, to: 10)
-      c.price = Faker::Commerce.price(range: 15..50.0)
-      c.cost = Faker::Commerce.price(range: 1..15.0)
-      c.vendor = Faker::Company.name
-      c.deleted = false
-      c.save
-    end
-
-  100.times do |i|
-    c = Inventorystock.new
-      c.sku_id = skus[i].sku_id
       c.location_id = 1
       c.quantity = Faker::Number.between(from: 0, to: 10)
       c.price = Faker::Commerce.price(range: 15..50.0)
@@ -80,91 +68,4 @@ skus = []
       c.save
     end
 
-  100.times do |i|
-    c = Inventorystock.new
-      c.sku_id = skus[i].sku_id
-      c.location_id = 4
-      c.quantity = Faker::Number.between(from: 0, to: 10)
-      c.price = Faker::Commerce.price(range: 15..50.0)
-      c.cost = Faker::Commerce.price(range: 1..15.0)
-      c.vendor = Faker::Company.name
-      c.deleted = false
-      c.save
-    end
-
-  100.times do |i|
-    c = Inventorystock.new
-      c.sku_id = skus[i].sku_id
-      c.location_id = 5
-      c.quantity = Faker::Number.between(from: 0, to: 10)
-      c.price = Faker::Commerce.price(range: 15..50.0)
-      c.cost = Faker::Commerce.price(range: 1..15.0)
-      c.vendor = Faker::Company.name
-      c.deleted = false
-      c.save
-    end
-
-  100.times do |i|
-    c = Inventorystock.new
-      c.sku_id = skus[i].sku_id
-      c.location_id = 6
-      c.quantity = Faker::Number.between(from: 0, to: 10)
-      c.price = Faker::Commerce.price(range: 15..50.0)
-      c.cost = Faker::Commerce.price(range: 1..15.0)
-      c.vendor = Faker::Company.name
-      c.deleted = false
-      c.save
-    end
-
-  100.times do |i|
-    c = Inventorystock.new
-      c.sku_id = skus[i].sku_id
-      c.location_id = 7
-      c.quantity = Faker::Number.between(from: 0, to: 10)
-      c.price = Faker::Commerce.price(range: 15..50.0)
-      c.cost = Faker::Commerce.price(range: 1..15.0)
-      c.vendor = Faker::Company.name
-      c.deleted = false
-      c.save
-    end
-
-  100.times do |i|
-    c = Inventorystock.new
-      c.sku_id = skus[i].sku_id
-      c.location_id = 8
-      c.quantity = Faker::Number.between(from: 0, to: 10)
-      c.price = Faker::Commerce.price(range: 15..50.0)
-      c.cost = Faker::Commerce.price(range: 1..15.0)
-      c.vendor = Faker::Company.name
-      c.deleted = false
-      c.save
-    end
-
-  100.times do |i|
-    c = Inventorystock.new
-      c.sku_id = skus[i].sku_id
-      c.location_id = 9
-      c.quantity = Faker::Number.between(from: 0, to: 10)
-      c.price = Faker::Commerce.price(range: 15..50.0)
-      c.cost = Faker::Commerce.price(range: 1..15.0)
-      c.vendor = Faker::Company.name
-      c.deleted = false
-      c.save
-    end
-    puts "1000 inventory stocks created"
-
-  1000.times do ||
-    c = Inventorystock.new
-      c.sku_id = Faker::Number.between(from: 1, to: 101)
-      c.location_id = Faker::Number.between(from: 0, to: 9)
-      c.quantity = Faker::Number.between(from: 0, to: 10)
-      c.price = Faker::Commerce.price(range: 15..50.0)
-      c.cost = Faker::Commerce.price(range: 1..15.0)
-      c.vendor = Faker::Company.name
-      c.stock_type = "back_bar"
-      c.deleted = false
-      c.save
-    end
-    puts "1000 inventory back bar created"
-
-puts "2120 rows for inventory created"
+puts "Inventory created"

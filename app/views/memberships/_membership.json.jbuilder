@@ -1,0 +1,2 @@
+json.extract! membership, :id, :membership_id, :membership_name, :description, :registration_fee_amount, :cancellation_fee_amount, :price, :period_size, :period_type, :billing_cycle_type, :billing_day, :payment_type, :location_id, :benefit_id, :benefit_type, :benefit_discount_type, :benefit_value, :benefit_limit, :eligible_for_all_services, :eligible_for_all_products, :benefit_name, :service_id, :product_id, :created_at, :updated_at
+json.url membership_url(membership, format: :json)

@@ -1,0 +1,7 @@
+membership_id,name,benefit_id,benefit_type,benefit_discount_type,benefit_value,benefit_limit,eligible_for_all_services,eligible_for_all_products
+1,10% discount,1,discount,percentage,10,0,true,true
+2,10% discount,2,discount,percentage,10,0,true,true
+3,10% discount,3,discount,percentage,10,0,true,true
+4,Unlimted free add-ons,4,full,,0,0,false,false
+5,Unlimted free add-ons,5,full,,0,0,false,false
+6,Unlimted free add-ons,6,full,,0,0,false,false

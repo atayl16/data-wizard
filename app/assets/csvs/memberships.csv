@@ -1,0 +1,7 @@
+membership_id,name,description,registration_fee_amount,cancellation_fee_amount,price,period_size,period_type,billing_cycle_type,billing_day,payment_type
+1,10% Everything,10% off of all products and services,0.0,10.0,20.0,12,,date_of_sale,,monthly
+2,10% Everything,10% off of all products and services,0.0,10.0,20.0,12,,date_of_sale,,monthly
+3,10% Everything,10% off of all products and services,0.0,10.0,20.0,12,,date_of_sale,,monthly
+4,Free Add-ons,Unlimited Add-ons,0.0,10.0,37.5,12,,date_of_sale,,monthly
+5,Free Add-ons,Unlimited Add-ons,0.0,10.0,37.5,12,,date_of_sale,,monthly
+6,Free Add-ons,Unlimited Add-ons,0.0,10.0,37.5,12,,date_of_sale,,monthly

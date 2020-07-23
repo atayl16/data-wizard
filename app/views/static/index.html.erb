@@ -7,7 +7,7 @@
             </div>
             <div id="card-element-229081" class="collapse">
               <div class="card-body">
-                Complete salon set including manifests, locations, staff, services, clients appointments, and inventory. <br>
+                Complete salon set including manifests, locations, staff, services, clients, appointments, tickets and inventory. <br>
                 <div class="btn-group" role="group">
                   <a class="btn btn-success btn-sm" href="static/export_salon.zip" role="button">Export Salon Set</a>
                 </div>
@@ -74,6 +74,14 @@
                   <a href="/inventoryskus.csv" class="btn btn-danger btn-sm" type="button">SKUs</a>
                   <a href="/inventorystocks.csv" class="btn btn-danger btn-sm" type="button">Stocks</a>
                 </div>
+                <hr>
+                Ticket files.<br>
+                <div class="btn-group" role="group">
+                  <a href="/tickets/export.csv" class="btn btn-danger" type="button">Tickets</a>
+                  <a href="/tickets/export_skus.csv" class="btn btn-danger" type="button">SKUs</a>
+                  <a href="/tickets/export_services.csv" class="btn btn-danger" type="button">Services</a>
+                  <a href="/tickets/export_payments.csv" class="btn btn-danger" type="button">Payments</a>
+                </div>
               </div>
             </div>
           </div>
@@ -92,6 +100,9 @@
                   <hr>
                   Export appointment zip file with inventory manifest. Uses location IDs from files above. <strong>Does not include a batch_manifest.</strong><br>
                   <a class="btn btn-warning btn-sm" href="static/export_inventory.zip" role="button"disabled>Export Inventory</a>
+                  <hr>
+                  Export ticket zip file with ticket manifest. Uses location, clients, appointments, etc from files above. <strong>Does not include a batch_manifest.</strong><br>
+                  <a class="btn btn-warning btn-sm" href="static/export_tickets.zip" role="button"disabled>Export Tickets</a>
                   <!-- </div> -->
                 </div>
               </div>

@@ -13,5 +13,6 @@ Batchmanifest.create!(filename: "appointment_services.csv", filetype: "appointme
 Batchmanifest.create!(filename: "appointment_statuses.csv", filetype: "appointment_statuses")
 Batchmanifest.create!(filename: "appointment_manifest.csv", filetype: "appointment_manifest")
 Batchmanifest.create!(filename: "inventories.zip", filetype: "inventory")
+Batchmanifest.create!(filename: "tickets.zip", filetype: "tickets")
 
 puts "Batch manifest created"
