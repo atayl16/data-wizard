@@ -45,7 +45,7 @@ class AppointmentsController < ApplicationController
   def export_ticketservices
     @appointments = Appointment.all
       respond_to do |format|
-        format.csv { send_data @appointments.to_csv_services, filename: "ticketsserviceitems.csv" }
+        format.csv { send_data @appointments.to_csv_ticketservices, filename: "ticketsserviceitems.csv" }
       end
   end
 
