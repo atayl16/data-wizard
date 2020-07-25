@@ -1,40 +1,21 @@
 require 'faker'
 
-  Location.create!(
-    # location_id: Faker::Number.unique.clear,
-    location_id: 1,
-    nickname: Faker::App.unique.name ,
-    country: 'US' ,
-    street_address: Faker::Address.street_address ,
-    city: "Nome" ,
-    state: "AK" ,
-    zip: "99762" ,
-    phone_number: Faker::Number.between(from: 5550000000, to: 5559999999) ,
-    deleted: false
-  )
-  Location.create!(
-    # location_id: Faker::Number.unique.clear,
-    location_id: 2,
-    nickname: Faker::App.unique.name ,
-    country: 'US' ,
-    street_address: Faker::Address.street_address ,
-    city: "Nome" ,
-    state: "AK" ,
-    zip: "99762" ,
-    phone_number: Faker::Number.between(from: 5550000000, to: 5559999999) ,
-    deleted: false
-  )
-  Location.create!(
-    # location_id: Faker::Number.unique.clear,
-    location_id: 3,
-    nickname: Faker::App.unique.name ,
-    country: 'US' ,
-    street_address: Faker::Address.street_address ,
-    city: "Nome" ,
-    state: "AK" ,
-    zip: "99762" ,
-    phone_number: Faker::Number.between(from: 5550000000, to: 5559999999) ,
-    deleted: false
-  )
+locations = [1,2,3]
 
-puts "3 locations created"
+def create_location(location_id)
+  Location.create!(
+    location_id: location_id,
+    nickname: Faker::App.unique.name ,
+    country: 'US' ,
+    street_address: Faker::Address.street_address ,
+    city: "Nome" ,
+    state: "AK" ,
+    zip: "99762" ,
+    phone_number: Faker::Number.between(from: 5550000000, to: 5559999999) ,
+    deleted: false
+  )
+end
+
+locations.each do |location_id|
+  create_location(location_id)
+end

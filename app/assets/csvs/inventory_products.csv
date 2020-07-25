@@ -1,21 +1,21 @@
 product_id,name,brand,category,vendor,description,visible_to_clients,commissionable,discontinued,discontinued_reasons,alternative_product_ids,deleted
-20,Awesome Marble Bench,Uranium,Baby,Olson-Hand,Neque facilis est.,true,true,false,,,false
-14,Aerodynamic Steel Plate,Scandium,Games,Jerde-Kris,"",false,true,false,,,false
-6,Small Concrete Watch,Silicon,Movies,Hegmann-Osinski,"",true,true,false,,,false
-10,Fantastic Steel Keyboard,Zirconium,Clothing,Leannon Inc,Sequi pariatur omnis.,true,true,false,,,false
-18,Incredible Aluminum Gloves,Lead,Health,"Kreiger, Pfannerstill and Abshire",In est illum.,true,true,false,,,false
-15,Sleek Bronze Bag,Bromine,Jewelry,Herzog Group,"",false,true,false,,,false
-7,Fantastic Copper Bench,Cadmium,Clothing,"Corkery, Kautzer and Runolfsson","",true,true,false,,,false
-4,Awesome Granite Plate,Barium,Sports,"Kassulke, Roob and Hartmann",Similique facilis sunt.,true,true,false,,,false
-19,Lightweight Paper Coat,Curium,Movies,Schuster and Sons,"",true,true,false,,,false
-11,Small Rubber Clock,Copper,Electronics,Feeney LLC,Soluta sint maxime.,true,true,false,,,false
-16,Small Aluminum Chair,Thorium,Tools,Krajcik-Metz,"",true,true,false,,,false
-13,Enormous Marble Lamp,Rutherfordium,Movies,"Jacobs, Hoppe and Nader","",true,true,false,,,false
-5,Intelligent Granite Bench,Polonium,Computers,"Sporer, Klocko and Morissette",Dicta consequuntur quia.,true,true,false,,,false
-3,Enormous Paper Shirt,Tellurium,Games,Bode-Monahan,"",false,true,false,,,false
-9,Awesome Steel Knife,Bismuth,Automotive,Jacobi-Kreiger,Expedita et soluta.,true,true,false,,,false
-8,Lightweight Leather Shirt,Einsteinium,Kids,McCullough-Emard,Aperiam minima id.,true,true,false,,,false
-1,Incredible Concrete Chair,Krypton,Grocery,Bailey Inc,"",true,true,false,,,false
-12,Aerodynamic Marble Car,Hydrogen,Computers,Skiles-Yost,Ratione illo odit.,true,false,false,,,false
-2,Incredible Cotton Clock,Osmium,Kids,"Grady, Veum and Beier",Est suscipit ipsa.,true,true,false,,,false
-17,Practical Cotton Bench,Lawrencium,Sports,"Zboncak, Stracke and Hane","",true,false,false,,,false
+12,Sleek Concrete Lamp,Gallium,Shoes,Walter-Padberg,Reprehenderit perferendis deserunt.,true,true,false,,,false
+10,Sleek Iron Watch,Tin,Automotive,Labadie-Rath,Excepturi aut voluptatem.,true,true,false,,,false
+11,Ergonomic Marble Shirt,Thallium,Clothing,Kuhic-Gulgowski,"",true,true,false,,,false
+14,Aerodynamic Bronze Clock,Radon,Home,"Volkman, Hodkiewicz and Erdman",Quam deleniti aut.,true,true,false,,,false
+13,Intelligent Concrete Gloves,Tin,Home,"Mann, Dickinson and Wisozk",Commodi asperiores vel.,false,true,false,,,false
+2,Aerodynamic Leather Keyboard,Argon,Books,Gorczany-Pacocha,Odit et fugit.,true,true,false,,,false
+6,Durable Cotton Table,Molybdenum,Automotive,Christiansen-Williamson,"",true,true,false,,,false
+15,Durable Marble Lamp,Berkelium,Grocery,Goodwin-Metz,Eum qui et.,true,true,false,,,false
+7,Ergonomic Granite Clock,Holmium,Kids,Wiza-Dickinson,Voluptas non id.,true,false,false,,,false
+17,Fantastic Aluminum Pants,Silicon,Electronics,"Brekke, Brekke and Hauck",Reiciendis laudantium qui.,true,true,false,,,false
+19,Intelligent Silk Shoes,Cadmium,Garden,"Kuphal, Hayes and Morissette","",true,true,false,,,false
+8,Ergonomic Steel Clock,Astatine,Shoes,"Koelpin, Hackett and Armstrong",Quidem blanditiis eum.,false,true,false,,,false
+5,Sleek Silk Bench,Astatine,Jewelry,"Pfannerstill, Durgan and Ernser","",true,true,false,,,false
+4,Fantastic Bronze Gloves,Gallium,Home,Okuneva Group,Occaecati non provident.,true,true,false,,,false
+16,Incredible Plastic Computer,Dysprosium,Baby,Keeling-Koch,"",false,true,false,,,false
+18,Synergistic Rubber Watch,Einsteinium,Games,"Erdman, Crooks and Feeney",Ad aut voluptate.,true,false,false,,,false
+1,Small Bronze Chair,Titanium,Toys,Ziemann LLC,Quia ut quibusdam.,true,true,false,,,false
+9,Small Silk Clock,Actinium,Tools,Langosh LLC,Et autem cumque.,true,true,false,,,false
+3,Lightweight Linen Bag,Titanium,Clothing,"Dickens, Ziemann and D'Amore",Dolor beatae placeat.,true,false,false,,,false
+20,Ergonomic Marble Bottle,Palladium,Health,Stroman-Boyer,"",true,true,false,,,false

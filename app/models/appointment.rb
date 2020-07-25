@@ -103,7 +103,7 @@ class Appointment < ApplicationRecord
   def self.to_csv_ticketservices
     attributes = %w{ticket_id appointment_id service_id quantity price price}
     headers = %w{ticket_id appointment_id service_id quantity amount_before_discount amount}
-    CSV.open("#{Rails.root}/app/assets/csvs/ticketsserviceitems.csv", "wb", headers: true, headers: headers) do |csv|
+    CSV.open("#{Rails.root}/app/assets/csvs/ticketsserviceitems.csv", "wb", headers: true) do |csv|
       csv << headers
 
       all.each do |appointment|
@@ -123,7 +123,7 @@ class Appointment < ApplicationRecord
   def self.to_csv_payments
     attributes = %w{ticket_id payment_item_id ticket_type amount}
     headers = %w{ticket_id payment_item_id type amount}
-    CSV.open("#{Rails.root}/app/assets/csvs/ticketspaymentitems.csv", "wb", headers: true, headers: headers) do |csv|
+    CSV.open("#{Rails.root}/app/assets/csvs/ticketspaymentitems.csv", "wb", headers: true) do |csv|
       csv << headers
 
       all.each do |appointment|

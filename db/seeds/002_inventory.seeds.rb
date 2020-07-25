@@ -1,5 +1,7 @@
 require 'faker'
 
+locations = [1,2,3]
+
 20.times do
   p = Inventoryproduct.new
     p.product_id = Faker::Number.unique.between(from: 1, to: 20)
@@ -14,7 +16,6 @@ require 'faker'
     p.deleted = false
   p.save
 end
-puts "20 inventory products created"
 
 skus = []
   100.times do ||
@@ -30,42 +31,24 @@ skus = []
     s.save
     skus << s
   end
-  puts "100 inventory SKUs created"
 
-  100.times do |i|
-    c = Inventorystock.new
-      c.sku_id = skus[i].sku_id
-      c.location_id = 1
-      c.quantity = Faker::Number.between(from: 0, to: 10)
-      c.price = Faker::Commerce.price(range: 15..50.0)
-      c.cost = Faker::Commerce.price(range: 1..15.0)
-      c.vendor = Faker::Company.name
-      c.deleted = false
-      c.save
+  def create_stocks(location_id)
+    skus = 1..101
+    skus.each do |i|
+      c = Inventorystock.new
+        c.sku_id = i
+        c.location_id = location_id
+        c.quantity = Faker::Number.between(from: 0, to: 10)
+        c.price = Faker::Commerce.price(range: 15..50.0)
+        c.cost = Faker::Commerce.price(range: 1..15.0)
+        c.vendor = Faker::Company.name
+        c.deleted = false
+        c.save
     end
+  end
 
-  100.times do |i|
-    c = Inventorystock.new
-      c.sku_id = skus[i].sku_id
-      c.location_id = 2
-      c.quantity = Faker::Number.between(from: 0, to: 10)
-      c.price = Faker::Commerce.price(range: 15..50.0)
-      c.cost = Faker::Commerce.price(range: 1..15.0)
-      c.vendor = Faker::Company.name
-      c.deleted = false
-      c.save
-    end
-
-  100.times do |i|
-    c = Inventorystock.new
-      c.sku_id = skus[i].sku_id
-      c.location_id = 3
-      c.quantity = Faker::Number.between(from: 0, to: 10)
-      c.price = Faker::Commerce.price(range: 15..50.0)
-      c.cost = Faker::Commerce.price(range: 1..15.0)
-      c.vendor = Faker::Company.name
-      c.deleted = false
-      c.save
-    end
+  locations.each do |location_id|
+    create_stocks(location_id)
+  end
 
 puts "Inventory created"
