@@ -154,9 +154,9 @@ def create_tickets_zip
     @appointments = Appointment.order('service_id')
     zip.put_next_entry "tickets_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets_manifest.csv")
     zip.put_next_entry "tickets.csv"; zip << @appointments.to_csv_tickets
-    zip.put_next_entry "ticketspaymentitems.csv"; zip << @appointments.to_csv_ticketskus
+    zip.put_next_entry "ticketspaymentitems.csv"; zip << @appointments.to_csv_ticketpayments
     zip.put_next_entry "ticketsserviceitems.csv"; zip << @appointments.to_csv_ticketservices
-    zip.put_next_entry "ticketsskuitems.csv"; zip << @appointments.to_csv_ticketpayments
+    zip.put_next_entry "ticketsskuitems.csv"; zip << @appointments.to_csv_ticketskus
     zip.put_next_entry "tips.csv"; zip << @appointments.to_csv_tips
   end
   file_stream.rewind
