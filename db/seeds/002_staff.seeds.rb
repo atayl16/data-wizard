@@ -9,10 +9,10 @@ def create_staff(location_id)
     last_name = Faker::Name.last_name
     location_id = location_id
     Staff.create!(
-      employee_id: [ location_id, staff ].join('-'),
-      name: (first_name + " " + last_name),
+      employee_id: [location_id, staff].join('-'),
+      name: (first_name + ' ' + last_name),
       title: Faker::Job.position,
-      email: Faker::Internet.safe_email(name: first_name + "." + last_name),
+      email: Faker::Internet.safe_email(name: first_name + '.' + last_name),
       location_id: location_id,
       deleted: false
     )
@@ -20,7 +20,7 @@ def create_staff(location_id)
 end
 
 locations.each do |location_id|
-    create_staff(location_id)
+  create_staff(location_id)
 end
 
-puts "Staff created"
+puts 'Staff created'

@@ -1,4 +1,4 @@
-locations = [1,2,3]
+locations = [1, 2, 3]
 
 def create_pricing(service_id, location_id, price)
   Salonpricing.create!(
@@ -6,7 +6,8 @@ def create_pricing(service_id, location_id, price)
     location_id: 1,
     employee_id: nil,
     price: 12,
-    deleted: false)
+    deleted: false
+  )
 end
 
 locations.each do |location_id|
@@ -19,4 +20,4 @@ locations.each do |location_id|
   create_pricing(7, location_id, 15)
 end
 
-puts "Pricing created"
+puts 'Pricing created'

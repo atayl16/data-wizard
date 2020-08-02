@@ -1,5 +1,6 @@
       <div class="jumbotron">
         <h2>Expand the sections below and choose one or more files to download</h2>
+
         <div id="card-404785">
           <div class="card">
             <div class="card-header">
@@ -9,7 +10,7 @@
               <div class="card-body">
                 Complete salon set including manifests, locations, staff, services, clients, appointments, tickets and inventory. <br>
                 <div class="btn-group" role="group">
-                  <a class="btn btn-success btn-sm" href="static/export_salon.zip" role="button">Export Salon Set</a>
+                  <a class="btn btn-success btn-sm" href="static/export_salonset.zip" role="button">Export Salon Set</a>
                 </div>
               </div>
             </div>
@@ -21,7 +22,7 @@
             <div id="card-element-259345" class="collapse">
               <div class="card-body">
                 Complete pet grooming set including manifests, locations, staff, services, clients, pets, appointments and inventory. <br>
-                  <a class="btn btn-success btn-sm" href="static/export_pet.zip" role="button">Export Grooming Set</a><br>
+                  <a class="btn btn-success btn-sm" href="static/export_petset.zip" role="button">Export Grooming Set</a><br>
                 Export clients and pets in a zip file without preferred location or preferred staff. Includes manifest.<br>
                 <a class="btn btn-warning btn-sm" href="static/export_clients_and_pets.zip" role="button">Export Clients w/ Pets</a><br>
               </div>
@@ -40,54 +41,55 @@
                 Location file with 10 locations.<br>
                 Staff file with 50 staff that align to the 10 locations.<br>
                 <div class="btn-group" role="group">
-                  <a href="/batchmanifests.csv" class="btn btn-danger btn-sm btn-sm" type="button">Batch Manifest</a>
-                  <a href="/locations.csv" class="btn btn-danger btn-sm" type="button">Locations</a>
-                  <a href="/staffs.csv" class="btn btn-danger btn-sm" type="button">Staff</a>
-                  </div>
+                  <%= button_to 'Export Batchmanifest', {controller: "application", action: "export_batchmanifest"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Locations', {controller: "application", action: "export_locations"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Staff', {controller: "application", action: "export_staff"}, method: :get, class: "btn btn-danger btn-sm" %>
+                </div>
                 <hr>
                 A client file with preferred location and preferred staff that match staff and location files from above.<br>
                 Pet file with client_ids that align to the client file.<br>
                 Custom fields file required for pet name to import.<br>
                 <div class="btn-group" role="group">
-                  <a href="/clients/export.csv" class="btn btn-danger btn-sm" type="button">Clients</a>
-                  <a href="/pets/export.csv" class="btn btn-danger btn-sm" type="button">Pets</a>
-                  <a href="/customfields.csv" class="btn btn-danger btn-sm" type="button">Custom Fields</a>
+                  <%= button_to 'Export Clients', {controller: "application", action: "export_clients"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Pets', {controller: "application", action: "export_pets"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Custom Fields', {controller: "application", action: "export_customfields"}, method: :get, class: "btn btn-danger btn-sm" %>
                 </div>
                 <hr>
                 Service file, service category file and pricing for salons.<br>
                 <div class="btn-group" role="group">
-                  <a href="/salonservices.csv" class="btn btn-danger btn-sm" type="button">Salon Services</a>
-                  <a href="/saloncategories.csv" class="btn btn-danger btn-sm" type="button">Salon Categories</a>
-                  <a href="/salonpricings.csv" class="btn btn-danger btn-sm" type="button">Pricing</a>
+                  <%= button_to 'Export Services', {controller: "application", action: "export_salonservices"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Categories', {controller: "application", action: "export_saloncategories"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Pricing', {controller: "application", action: "export_pricings"}, method: :get, class: "btn btn-danger btn-sm" %>
                 </div>
                 <hr>
                 Service file, service category file and pricing for pet grooming.<br>
                 <div class="btn-group" role="group">
-                  <a href="/petservices.csv" class="btn btn-danger btn-sm" type="button">Pet Services</a>
-                  <a href="/petcategories.csv" class="btn btn-danger btn-sm" type="button">Pet Categories</a>
-                  <a href="/salonpricings.csv" class="btn btn-danger btn-sm" type="button">Pricing</a>
+                  <%= button_to 'Export Services', {controller: "application", action: "export_petservices"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Categories', {controller: "application", action: "export_petcategories"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Pricing', {controller: "application", action: "export_pricings"}, method: :get, class: "btn btn-danger btn-sm" %>
                 </div>
                 <hr>
                 Inventory files.<br>
                 <div class="btn-group" role="group">
-                  <a href="/inventoryproducts.csv" class="btn btn-danger btn-sm" type="button">Products</a>
-                  <a href="/inventoryskus.csv" class="btn btn-danger btn-sm" type="button">SKUs</a>
-                  <a href="/inventorystocks.csv" class="btn btn-danger btn-sm" type="button">Stocks</a>
+                  <%= button_to 'Export Products', {controller: "application", action: "export_inventoryproducts"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export SKUs', {controller: "application", action: "export_inventoryskus"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Stocks', {controller: "application", action: "export_inventorystocks"}, method: :get, class: "btn btn-danger btn-sm" %>
                 </div>
                 <hr>
                 Appointment files.<br>
                 <div class="btn-group" role="group">
-                  <a href="/appointments/export.csv" class="btn btn-danger btn-sm">Appointments</a>
-                  <a href="/appointments/export_services.csv" class="btn btn-danger btn-sm">Appointment Services</a>
-                  <a href="/appointments/export_statuses.csv" class="btn btn-danger btn-sm">Appointment Statuses</a>
+                  <%= button_to 'Export Appointments', {controller: "application", action: "export_appointments"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Services', {controller: "application", action: "export_appointmentservices"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Statuses', {controller: "application", action: "export_appointmentstatuses"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Tips', {controller: "application", action: "export_tips"}, method: :get, class: "btn btn-danger btn-sm" %>
                 </div>
                 <hr>
                 Ticket files.<br>
                 <div class="btn-group" role="group">
-                  <a href="/tickets/export.csv" class="btn btn-danger" type="button">Tickets</a>
-                  <a href="/tickets/export_skus.csv" class="btn btn-danger" type="button">SKUs</a>
-                  <a href="/tickets/export_services.csv" class="btn btn-danger" type="button">Services</a>
-                  <a href="/tickets/export_payments.csv" class="btn btn-danger" type="button">Payments</a>
+                  <%= button_to 'Export Tickets', {controller: "application", action: "export_tickets"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export SKUs', {controller: "application", action: "export_ticketskus"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Services', {controller: "application", action: "export_ticketservices"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%= button_to 'Export Payments', {controller: "application", action: "export_ticketpayments"}, method: :get, class: "btn btn-danger btn-sm" %>
                 </div>
               </div>
             </div>

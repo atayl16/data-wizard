@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: 7309c9d59f1f73e7875635c083f7d8958e0c9f3a
+  revision: 66e6113c29438e70bcc6a031971efe60ae06b71f
   branch: master
   specs:
     faker (2.13.0)
@@ -58,9 +58,9 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     ast (2.4.1)
-    autoprefixer-rails (9.8.4)
+    autoprefixer-rails (9.8.5)
       execjs
-    bcrypt (3.1.13)
+    bcrypt (3.1.15)
     better_errors (2.7.1)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -68,7 +68,7 @@ GEM
     bindex (0.8.1)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
-    bootsnap (1.4.6)
+    bootsnap (1.4.7)
       msgpack (~> 1.0)
     bootstrap (4.5.0)
       autoprefixer-rails (>= 9.1.0)
@@ -115,7 +115,7 @@ GEM
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    i18n (1.8.3)
+    i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     io-like (0.3.1)
     jbuilder (2.10.0)
@@ -142,7 +142,7 @@ GEM
     minitest (5.14.1)
     msgpack (1.3.3)
     nio4r (2.5.2)
-    nokogiri (1.10.9)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     parallel (1.19.2)
@@ -215,7 +215,7 @@ GEM
       rubocop-ast (>= 0.1.0, < 1.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (0.1.0)
+    rubocop-ast (0.2.0)
       parser (>= 2.7.0.1)
     rubocop-faker (1.1.0)
       faker (>= 2.12.0)
@@ -234,7 +234,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    sassc (2.4.0)
+    sassc (2.1.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
       railties (>= 4.0.0)
@@ -276,7 +276,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    websocket-driver (0.7.2)
+    websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     will_paginate (3.3.0)
@@ -312,6 +312,7 @@ DEPENDENCIES
   rubocop-faker
   rubyzip
   sass-rails (~> 5.0)
+  sassc (~> 2.1.0)
   seedbank
   selenium-webdriver
   spring
@@ -326,4 +327,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.17.3
+   2.1.4

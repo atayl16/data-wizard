@@ -1,29 +1,9 @@
 class ClientsController < ApplicationController
-  before_action :set_client, only: [:show, :edit, :update, :destroy]
 
-  # GET /clients
-  # GET /clients.json
   def index
     @clients = Client.paginate(page: params[:page], :per_page => 5)
     @customfields = Customfield.all
   end
-
-  def export_pet
-    @clients = Client.all
-      respond_to do |format|
-        format.csv { send_data @clients.to_csv_pets, filename: "pets.csv" }
-      end
-    
-  end
-
-  def export
-    @clients = Client.all
-      respond_to do |format|
-        format.csv { send_data @clients.to_csv, filename: "clients.csv" }
-      end
-    end
-  end
-
 
   def import
     Client.my_import(params[:file])
@@ -94,4 +74,5 @@ class ClientsController < ApplicationController
     def client_params
       params.fetch(:client, {})
     end
+  end
 end

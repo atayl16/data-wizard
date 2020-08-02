@@ -1,5 +1,4 @@
-<a class="btn btn-danger" href="clients/export.csv" role="button">Export</a>
-
+<%= button_to 'Export', {controller: "application", action: "export_clients"}, method: :get, class: "btn btn-danger" %>
 <!-- <br>
 <p>Need different clients?
 <%= link_to 'Regenerate', seeds_run_path, action: :run %>
