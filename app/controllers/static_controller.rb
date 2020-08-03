@@ -193,7 +193,7 @@ def create_tickets_zip
     zip.put_next_entry "ticketspaymentitems.csv"; zip << @appointments.to_csv_ticketpayments
     zip.put_next_entry "ticketsserviceitems.csv"; zip << @appointments.to_csv_ticketservices
     zip.put_next_entry "ticketsskuitems.csv"; zip << @appointments.to_csv_ticketskus
-    zip.put_next_entry "tips.csv"; zip << @appointments.to_csv_tips
+    # zip.put_next_entry "tips.csv"; zip << @appointments.to_csv_tips
   end
   file_stream.rewind
   File.open("#{Rails.root}/app/assets/csvs/tickets.zip", 'wb') do |file|

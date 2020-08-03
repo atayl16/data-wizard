@@ -1,11 +1,10 @@
       <div class="jumbotron">
         <h2>Expand the sections below and choose one or more files to download</h2>
 
-        <h4>Try the new class import file. Can be imported onto any existing account with location IDs 1-3!</h4>
-        <em>This is a WIP</em>
-        <a class="btn btn-success btn-sm" href="static/export_classes.zip" role="button">*NEW* Export Class Set</a>
-
-
+        <a class="btn btn-primary btn-sm" href="static/export_classes.zip" role="button">*NEW* Export Class Set</a>
+        <em>WIP</em>
+        <br>
+        <br>
         <div id="card-404785">
           <div class="card">
             <div class="card-header">
@@ -86,7 +85,7 @@
                   <%= button_to 'Export Appointments', {controller: "application", action: "export_appointments"}, method: :get, class: "btn btn-danger btn-sm" %>
                   <%= button_to 'Export Services', {controller: "application", action: "export_appointmentservices"}, method: :get, class: "btn btn-danger btn-sm" %>
                   <%= button_to 'Export Statuses', {controller: "application", action: "export_appointmentstatuses"}, method: :get, class: "btn btn-danger btn-sm" %>
-                  <%= button_to 'Export Tips', {controller: "application", action: "export_tips"}, method: :get, class: "btn btn-danger btn-sm" %>
+                  <%# <%= button_to 'Export Tips', {controller: "application", action: "export_tips"}, method: :get, class: "btn btn-danger btn-sm" %> %>
                 </div>
                 <hr>
                 Ticket files.<br>

@@ -29,7 +29,8 @@ def create_appointments(location_id)
     a.sku_amount = (amount * 0.15).round(2)
     a.quantity = 1
     a.amount = (a.price.to_f + a.sku_amount.to_f + a.tip.to_f).round(2)
-    a.tip = (amount * 0.2).round(2)
+    a.tip = 0
+    #(amount * 0.2).round(2)
     a.save
   end
   add_appointment = 500..550
