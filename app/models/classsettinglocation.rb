@@ -1,0 +1,2 @@
+class Classsettinglocation < ApplicationRecord
+end

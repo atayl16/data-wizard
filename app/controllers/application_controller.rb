@@ -134,4 +134,34 @@ class ApplicationController < ActionController::Base
     @staffs = Staff.order("location_id")
     send_data @staffs.to_csv_staff, filename: "employees.csv"
   end
+
+  def export_attendees
+    @attendees = Attendee.all
+    send_data @attendees.to_csv_attendees, filename: "attendees.csv"
+  end
+
+  def export_classcategories
+    @classcategories = Classcategory.all
+    send_data @classcategories.to_csv_classcategories, filename: "categories.csv"
+  end
+
+  def export_events
+    @events = Event.all
+    send_data @events.to_csv_events, filename: "classes.csv"
+  end
+
+  def export_classsettingattendees
+    @classsettingattendees = Classsettingattendee.all
+    send_data @classsettingattendees.to_csv_classsettingattendees, filename: "class_setting_attendees.csv"
+  end
+
+  def export_classsettinglocations
+    @classsettinglocations = Classsettinglocation.all
+    send_data @classsettinglocations.to_csv_classsettinglocations, filename: "class_setting_locations.csv"
+  end
+
+  def export_classsegmenttemplates
+    @classsegmenttemplates = Classsegmenttemplates.all
+    send_data @classsegmenttemplates.to_csv_classsegmenttemplates, filename: "segment_templates.csv"
+  end
 end

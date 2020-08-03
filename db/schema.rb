@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_26_210125) do
+ActiveRecord::Schema.define(version: 2020_08_02_205924) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,9 +44,68 @@ ActiveRecord::Schema.define(version: 2020_07_26_210125) do
     t.decimal "tip"
   end
 
+  create_table "attendees", force: :cascade do |t|
+    t.string "attendee_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "batchmanifests", force: :cascade do |t|
     t.string "filename"
     t.string "filetype"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "classcategories", force: :cascade do |t|
+    t.string "category_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "classsegmenttemplates", force: :cascade do |t|
+    t.string "segment_template_id"
+    t.string "class_setting_id"
+    t.string "position"
+    t.string "kind"
+    t.integer "duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "classsettingattendees", force: :cascade do |t|
+    t.string "class_setting_attendee_id"
+    t.string "class_setting_id"
+    t.string "attendee_id"
+    t.decimal "price"
+    t.integer "capacity"
+    t.boolean "hide_price"
+    t.string "book_from_interval"
+    t.string "book_from_datatype"
+    t.string "book_upto_interval"
+    t.string "book_upto_datatype"
+    t.boolean "members_only"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "classsettinglocations", force: :cascade do |t|
+    t.string "class_setting_location_id"
+    t.string "class_setting_id"
+    t.string "location_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "classsettings", force: :cascade do |t|
+    t.string "class_setting_id"
+    t.string "class_id"
+    t.string "name"
+    t.string "cancellation_policy"
+    t.string "cancellation_interval"
+    t.string "cancellation_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -90,6 +149,18 @@ ActiveRecord::Schema.define(version: 2020_07_26_210125) do
     t.string "field_type"
     t.boolean "required"
     t.string "applicable_to"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "class_id"
+    t.string "category_id"
+    t.string "name"
+    t.string "description"
+    t.string "instructions"
+    t.string "what_to_bring"
+    t.boolean "hide_prices"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -186,6 +257,18 @@ ActiveRecord::Schema.define(version: 2020_07_26_210125) do
     t.string "name"
     t.boolean "online"
     t.boolean "deleted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "petevents", force: :cascade do |t|
+    t.string "class_id"
+    t.string "category_id"
+    t.string "name"
+    t.string "description"
+    t.string "instructions"
+    t.string "what_to_bring"
+    t.boolean "hide_prices"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

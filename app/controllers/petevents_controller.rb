@@ -1,0 +1,2 @@
+class PeteventsController < ApplicationController
+end

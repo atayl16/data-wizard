@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'seeds/run'
   get 'static/export_clients_and_pets' => 'static#export_clients_and_pets'
   get 'static/export_appointments' => 'static#export_appointments'
+  get 'static/export_classes' => 'static#export_classes'
   get 'static/export_inventory' => 'static#export_inventory'
   get 'static/export_salonset' => 'static#export_salonset'
   get 'static/export_petset' => 'static#export_petset'
@@ -37,6 +38,12 @@ Rails.application.routes.draw do
   get '*/export_salonservices' => 'application#export_salonservices'
   get '*/export_pricings' => 'application#export_pricings'
   get '*/export_staff' => 'application#export_staff'
+  get '*/export_attendees' => 'application#export_attendees'
+  get '*/export_classcategories' => 'application#export_classcategories'
+  get '*/export_events' => 'application#export_events'
+  get '*/export_classsettingattendees' => 'application#export_classsettingattendees'
+  get '*/export_classsettinglocations' => 'application#export_classsettinglocations'
+  get '*/export_classsegmenttemplates' => 'application#export_classsegmenttemplates'
 
 
   resources :memberships
@@ -56,6 +63,13 @@ Rails.application.routes.draw do
   resources :salonservices, only: [:index, :export]
   resources :services, only: [:index, :export]
   resources :locations, only: [:index, :export]
+  resources :classsegmenttemplates
+  resources :classsettings
+  resources :classsettinglocations
+  resources :classsettingattendees
+  resources :events
+  resources :classcategories
+  resources :attendees
   devise_for :users
 
   resources :clients do

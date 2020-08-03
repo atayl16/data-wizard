@@ -1,0 +1,2 @@
+class ClasssettinglocationsController < ApplicationController
+end

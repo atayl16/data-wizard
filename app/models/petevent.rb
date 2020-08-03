@@ -1,0 +1,2 @@
+class Petevent < ApplicationRecord
+end

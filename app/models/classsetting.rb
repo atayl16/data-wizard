@@ -1,0 +1,2 @@
+class Classsetting < ApplicationRecord
+end

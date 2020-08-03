@@ -1,0 +1,2 @@
+module ClasscategoriesHelper
+end

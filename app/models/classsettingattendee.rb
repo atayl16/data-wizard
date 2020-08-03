@@ -1,0 +1,2 @@
+class Classsettingattendee < ApplicationRecord
+end

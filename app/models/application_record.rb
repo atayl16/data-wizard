@@ -140,7 +140,7 @@ class ApplicationRecord < ActiveRecord::Base
     truncate!
     connection.execute("TRUNCATE TABLE #{table_name};")
     connection.reset_pk_sequence!(table_name)
-    end
+   end
 
   def self.to_csv_customfields
     attributes = %w[uuid title field_type required applicable_to]
@@ -290,6 +290,66 @@ class ApplicationRecord < ActiveRecord::Base
       csv << attributes
       all.each do |service|
         csv << attributes.map { |attr| service.send(attr) }
+      end
+    end
+  end
+
+  def self.to_csv_attendees
+    attributes = %w[attendee_id name]
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+      all.each do |attendee|
+        csv << attributes.map { |attr| attendee.send(attr) }
+      end
+    end
+  end
+
+  def self.to_csv_classcategories
+    attributes = %w[category_id name]
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+      all.each do |classcategory|
+        csv << attributes.map { |attr| classcategory.send(attr) }
+      end
+    end
+  end
+
+  def self.to_csv_events
+    attributes = %w[class_id category_id name description instructions what_to_bring hide_prices]
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+      all.each do |event|
+        csv << attributes.map { |attr| event.send(attr) }
+      end
+    end
+  end
+
+  def self.to_csv_classsettingattendees
+    attributes = %w[class_setting_attendee_id class_setting_id attendee_id price capacity hide_price book_from_interval book_from_datatype book_upto_interval book_upto_datatype members_only]
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+      all.each do |classsettingattendee|
+        csv << attributes.map { |attr| classsettingattendee.send(attr) }
+      end
+    end
+  end
+
+  def self.to_csv_classsettinglocations
+    attributes = %w[class_setting_location_id	class_setting_id location_id]
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+      all.each do |classsettinglocation|
+        csv << attributes.map { |attr| classsettinglocation.send(attr) }
+      end
+    end
+  end
+
+  def self.to_csv_classsegmenttemplates
+    attributes = %w[segment_template_id	class_setting_id position kind duration]
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+      all.each do |segment|
+        csv << attributes.map { |attr| segment.send(attr) }
       end
     end
   end

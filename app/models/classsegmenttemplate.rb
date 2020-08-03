@@ -1,0 +1,2 @@
+class Classsegmenttemplate < ApplicationRecord
+end

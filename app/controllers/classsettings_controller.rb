@@ -1,0 +1,2 @@
+class ClasssettingsController < ApplicationController
+end

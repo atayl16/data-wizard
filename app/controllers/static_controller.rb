@@ -105,19 +105,55 @@ def create_appointments_zip
   end
 end
 
-  def export_appointments
-    create_appointments_zip
-    file_stream = Zip::OutputStream.write_buffer do |zip|
-      zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_apptset.csv")
-      zip.put_next_entry "appointments.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
-    end
-    file_stream.rewind
-    respond_to do |format|
-      format.zip do
-        send_data file_stream.read, filename: "appointments.zip"
-      end
+def create_classes_zip
+  file_stream = Zip::OutputStream.write_buffer do |zip|
+    @events = Event.all
+    @attendees = Attendee.all
+    @classcategories = Classcategory.all
+    @classsettingattendees = Classsettingattendee.all
+    @classsettinglocations = Classsettinglocation.all
+    @classsegmenttemplates = Classsegmenttemplate.all
+    zip.put_next_entry "classes_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/class_manifest.csv")
+    zip.put_next_entry "attendees.csv"; zip << @attendees.to_csv_attendees
+    zip.put_next_entry "categories.csv"; zip << @classcategories.to_csv_classcategories
+    zip.put_next_entry "classes.csv"; zip << @events.to_csv_events
+    zip.put_next_entry "class_setting_attendees.csv"; zip << @classsettingattendees.to_csv_classsettingattendees
+    zip.put_next_entry "class_setting_locations.csv"; zip << @classsettinglocations.to_csv_classsettinglocations
+    zip.put_next_entry "segment_templates.csv"; zip << @classsegmenttemplates.to_csv_classsegmenttemplates
+  end
+  file_stream.rewind
+  File.open("#{Rails.root}/app/assets/csvs/classes.zip", 'wb') do |file|
+    file.write(file_stream.read)
+  end
+end
+
+def export_classes
+  create_classes_zip
+  file_stream = Zip::OutputStream.write_buffer do |zip|
+    zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_classes.csv")
+    zip.put_next_entry "classes.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/classes.zip")
+  end
+  file_stream.rewind
+  respond_to do |format|
+    format.zip do
+      send_data file_stream.read, filename: "classes.zip"
     end
   end
+end
+
+def export_appointments
+  create_appointments_zip
+  file_stream = Zip::OutputStream.write_buffer do |zip|
+    zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_apptset.csv")
+    zip.put_next_entry "appointments.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
+  end
+  file_stream.rewind
+  respond_to do |format|
+    format.zip do
+      send_data file_stream.read, filename: "appointments.zip"
+    end
+  end
+end
 
 def create_inventory_zip
   file_stream = Zip::OutputStream.write_buffer do |zip|
