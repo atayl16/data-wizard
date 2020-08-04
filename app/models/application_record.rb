@@ -324,6 +324,16 @@ class ApplicationRecord < ActiveRecord::Base
     end
   end
 
+  def self.to_csv_classsettings
+    attributes = %w[class_setting_id class_id name cancellation_policy cancellation_interval cancellation_value]
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+      all.each do |classsetting|
+        csv << attributes.map { |attr| classsetting.send(attr) }
+      end
+    end
+  end
+
   def self.to_csv_classsettingattendees
     attributes = %w[class_setting_attendee_id class_setting_id attendee_id price capacity hide_price book_from_interval book_from_datatype book_upto_interval book_upto_datatype members_only]
     CSV.generate(headers: true) do |csv|

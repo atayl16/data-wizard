@@ -41,6 +41,7 @@ Rails.application.routes.draw do
   get '*/export_attendees' => 'application#export_attendees'
   get '*/export_classcategories' => 'application#export_classcategories'
   get '*/export_events' => 'application#export_events'
+  get '*/export_classsettings' => 'application#export_classsettings'
   get '*/export_classsettingattendees' => 'application#export_classsettingattendees'
   get '*/export_classsettinglocations' => 'application#export_classsettinglocations'
   get '*/export_classsegmenttemplates' => 'application#export_classsegmenttemplates'

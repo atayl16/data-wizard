@@ -111,12 +111,14 @@ def create_classes_zip
     @attendees = Attendee.all
     @classcategories = Classcategory.all
     @classsettingattendees = Classsettingattendee.all
+    @classsettings = Classsetting.all
     @classsettinglocations = Classsettinglocation.all
     @classsegmenttemplates = Classsegmenttemplate.all
     zip.put_next_entry "classes_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/class_manifest.csv")
     zip.put_next_entry "attendees.csv"; zip << @attendees.to_csv_attendees
     zip.put_next_entry "categories.csv"; zip << @classcategories.to_csv_classcategories
     zip.put_next_entry "classes.csv"; zip << @events.to_csv_events
+    zip.put_next_entry "class_settings.csv"; zip << @classsettings.to_csv_classsettings
     zip.put_next_entry "class_setting_attendees.csv"; zip << @classsettingattendees.to_csv_classsettingattendees
     zip.put_next_entry "class_setting_locations.csv"; zip << @classsettinglocations.to_csv_classsettinglocations
     zip.put_next_entry "segment_templates.csv"; zip << @classsegmenttemplates.to_csv_classsegmenttemplates
@@ -193,7 +195,7 @@ def create_tickets_zip
     zip.put_next_entry "ticketspaymentitems.csv"; zip << @appointments.to_csv_ticketpayments
     zip.put_next_entry "ticketsserviceitems.csv"; zip << @appointments.to_csv_ticketservices
     zip.put_next_entry "ticketsskuitems.csv"; zip << @appointments.to_csv_ticketskus
-    # zip.put_next_entry "tips.csv"; zip << @appointments.to_csv_tips
+    zip.put_next_entry "tips.csv"; zip << @appointments.to_csv_tips
   end
   file_stream.rewind
   File.open("#{Rails.root}/app/assets/csvs/tickets.zip", 'wb') do |file|

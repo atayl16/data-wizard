@@ -2,10 +2,10 @@ locations = [1, 2, 3]
 
 def create_pricing(service_id, location_id, price)
   Salonpricing.create!(
-    service_id: 1,
-    location_id: 1,
+    service_id: service_id,
+    location_id: location_id,
     employee_id: nil,
-    price: 12,
+    price: price,
     deleted: false
   )
 end
