@@ -163,8 +163,8 @@ def create_inventory_zip
     @inventoryskus = Inventorysku.all
     @inventorystocks = Inventorystock.all
     zip.put_next_entry "inventory_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/inventory_manifest.csv")
-    zip.put_next_entry "inventory_skus.csv"; zip << @inventoryproducts.to_csv_inventoryproduct
-    zip.put_next_entry "inventory_products.csv"; zip << @inventoryskus.to_csv_inventorysku
+    zip.put_next_entry "inventory_products.csv"; zip << @inventoryproducts.to_csv_inventoryproduct
+    zip.put_next_entry "inventory_skus.csv"; zip << @inventoryskus.to_csv_inventorysku
     zip.put_next_entry "inventory_stocks.csv"; zip << @inventorystocks.to_csv_inventorystock
   end
   file_stream.rewind
