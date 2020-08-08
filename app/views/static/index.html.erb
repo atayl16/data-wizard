@@ -109,13 +109,13 @@
                   Export clients and pets in a zip file without preferred location or preferred staff. Includes manifest.<br>
                   <a class="btn btn-warning btn-sm" href="static/export_clients_and_pets.zip" role="button">Export Clients w/ Pets</a><br>
                   <hr>
-                  Export appointment zip file with appointments manifest. Uses location, employee, service, and client IDs from files above. <strong>Does not include a batch_manifest.</strong><br>
+                  Export appointment zip file with appointments manifest. Uses location, employee, service, and client IDs from files above. <br>
                   <a class="btn btn-warning btn-sm" href="static/export_appointments.zip" role="button"disabled>Export Appointments</a>
                   <hr>
-                  Export appointment zip file with inventory manifest. Uses location IDs from files above. <strong>Does not include a batch_manifest.</strong><br>
+                  Export appointment zip file with inventory manifest. Uses location IDs from files above. <br>
                   <a class="btn btn-warning btn-sm" href="static/export_inventory.zip" role="button"disabled>Export Inventory</a>
                   <hr>
-                  Export ticket zip file with ticket manifest. Uses location, clients, appointments, etc from files above. <strong>Does not include a batch_manifest.</strong><br>
+                  Export ticket zip file with ticket manifest. Uses location, clients, appointments, etc from files above. <br>
                   <a class="btn btn-warning btn-sm" href="static/export_tickets.zip" role="button"disabled>Export Tickets</a>
                   <!-- </div> -->
                 </div>
@@ -130,7 +130,7 @@
             <br>
             Need new data? <%= link_to 'Regenerate the DB', seeds_run_path, action: :run %>
             <br>
-            <em>WIP - This may take a few minutes to complete</em>
+            <em>This may take a few minutes to complete and can only be run once daily.</em>
           </div>
         </div>
       </div>
