@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'static#index'
   get 'clients/import' => 'clients#my_import'
-  get 'seeds/run'
+  get 'seeds/run' => 'static#run'
   get 'static/export_clients_and_pets' => 'static#export_clients_and_pets'
   get 'static/export_appointments' => 'static#export_appointments'
   get 'static/export_classes' => 'static#export_classes'
@@ -76,5 +76,6 @@ Rails.application.routes.draw do
   resources :clients do
     collection {post :import}
   end
+  get "*path", :to => "application#handle_404"
 
 end

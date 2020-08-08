@@ -3,6 +3,7 @@
 
         <a class="btn btn-primary btn-sm" href="static/export_classes.zip" role="button">*NEW* Export Class Set</a>
         <em>WIP</em>
+
         <br>
         <br>
         <div id="card-404785">
@@ -125,8 +126,14 @@
         <div>
           <div>
             <em>If you would like to see a sample of the data, click one of the navigation tabs on the left.</em>
+            <br>
+            <br>
+            Need new data? <%= link_to 'Regenerate the DB', seeds_run_path, action: :run %>
+            <br>
+            <em>WIP - This may take a few minutes to complete</em>
           </div>
-          <br>
+        </div>
+      </div>
           <h3>Instructions</h3>
           <p>Once you have downloaded all of your files, follow the steps below to import them.</p>
           <ol>
@@ -143,7 +150,7 @@
               <span>Put all of your files, including the batch manifest, in a single folder on your computer.</span>
             </li>
             <li class="list-item">
-              <span>Use an archive program to zip the folder. If given an option for the type of folder (zip, tar, etc), choose the zip or .zip type).</span>
+              <span>Use an archive program to zip the folder. If given an option for the type of folder (zip, tar, etc), choose the zip or .zip type.</span>
             </li>
             <li class="list-item">
               Login to your merchant account and choose the Ingest Data option in the top right menu. This should be done from the child account, not the parent account.
@@ -155,5 +162,3 @@
           <button type="button" class="btn btn-danger btn-block">Red - File not meant to be used alone</button>
           <button type="button" class="btn btn-warning btn-block">Yellow - You can use this partial set, but it will not build an entire account</button>
           <button type="button" class="btn btn-success btn-block">Green - A complete set meant to generate enough data for a full account</button>
-        </div>
-      </div>
