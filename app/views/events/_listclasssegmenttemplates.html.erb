@@ -1,0 +1,25 @@
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+  <thead>
+    <tr>
+      <th>segment_template_id</th>
+      <th>class_setting_id</th>
+      <th>position</th>
+      <th>kind</th>
+      <th>duration</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @classsegmenttemplates.each do |classsegmenttemplate| %>
+      <tr>
+        <td><%= classsegmenttemplate.segment_template_id %></td>
+        <td><%= classsegmenttemplate.class_setting_id %></td>
+        <td><%= classsegmenttemplate.position %></td>
+        <td><%= classsegmenttemplate.kind %></td>
+        <td><%= classsegmenttemplate.duration %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= will_paginate @classsegmenttemplates, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

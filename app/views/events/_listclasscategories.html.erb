@@ -1,0 +1,19 @@
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+  <thead>
+    <tr>
+      <th>category_id</th>
+      <th>name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @classcategories.each do |classcategory| %>
+      <tr>
+        <td><%= classcategory.category_id %></td>
+        <td><%= classcategory.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= will_paginate @classcategories, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

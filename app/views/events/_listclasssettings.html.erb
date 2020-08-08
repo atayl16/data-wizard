@@ -1,0 +1,28 @@
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+  <thead>
+    <tr>
+      <th>class_setting_id</th>
+      <th>class_id</th>
+      <th>name</th>
+      <th>cancellation_policy</th>
+      <th>cancellation_interval</th>
+      <th>cancellation_value</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @classsettings.each do |classsetting| %>
+      <tr>
+        <td><%= classsetting.class_setting_id %></td>
+        <td><%= classsetting.class_id %></td>
+        <td><%= classsetting.name %></td>
+        <td><%= classsetting.cancellation_policy %></td>
+        <td><%= classsetting.cancellation_interval %></td>
+        <td><%= classsetting.cancellation_value %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<em>*Some fields excluded from table for brevity</em>
+<br>
+<%= will_paginate @classsettings, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

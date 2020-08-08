@@ -1,0 +1,19 @@
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+  <thead>
+    <tr>
+      <th>attendee_id</th>
+      <th>name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attendees.each do |attendee| %>
+      <tr>
+        <td><%= attendee.attendee_id %></td>
+        <td><%= attendee.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= will_paginate @attendees, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
