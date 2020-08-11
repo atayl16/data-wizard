@@ -1,2 +1,0 @@
-class ClasssegmenttemplatesController < ApplicationController
-end

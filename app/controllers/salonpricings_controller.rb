@@ -1,5 +1,4 @@
 class SalonpricingsController < ApplicationController
-
   def index
     @salonpricings = Salonpricing.all
     respond_to do |format|

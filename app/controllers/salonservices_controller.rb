@@ -1,6 +1,4 @@
 class SalonservicesController < ApplicationController
-
-
   def index
     @salonservices = Salonservice.all
     respond_to do |format|

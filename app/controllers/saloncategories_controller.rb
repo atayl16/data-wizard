@@ -1,5 +1,4 @@
 class SaloncategoriesController < ApplicationController
-
   def index
     @saloncategories = Saloncategory.all
     @salonservices = Salonservice.all

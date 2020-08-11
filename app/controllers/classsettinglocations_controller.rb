@@ -1,2 +1,0 @@
-class ClasssettinglocationsController < ApplicationController
-end
