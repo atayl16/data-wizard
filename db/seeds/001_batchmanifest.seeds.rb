@@ -8,10 +8,6 @@ Batchmanifest.create!(filename: 'addonmappings.csv', filetype: 'add_ons_mappings
 Batchmanifest.create!(filename: 'breedgroups.csv', filetype: 'breedgroups')
 Batchmanifest.create!(filename: 'pets.csv', filetype: 'pets')
 Batchmanifest.create!(filename: 'appointments.zip', filetype: 'appointments')
-Batchmanifest.create!(filename: 'appointments.csv', filetype: 'appointments')
-Batchmanifest.create!(filename: 'appointment_services.csv', filetype: 'appointment_services')
-Batchmanifest.create!(filename: 'appointment_statuses.csv', filetype: 'appointment_statuses')
-Batchmanifest.create!(filename: 'appointment_manifest.csv', filetype: 'appointment_manifest')
 Batchmanifest.create!(filename: 'inventories.zip', filetype: 'inventory')
 Batchmanifest.create!(filename: 'tickets.zip', filetype: 'tickets')
 

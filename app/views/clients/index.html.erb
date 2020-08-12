@@ -6,7 +6,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-32132" href="#card-element-321321">Clients</a>
     </div>
-    <div id="card-element-321321" class="show">
+    <div id="card-element-321321" class="collapse">
       <div class="card-body">
         <%= render :partial => "list" %>
       </div>
@@ -24,23 +24,9 @@
   </div>
   <div class="card">
     <div class="card-header">
-       <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-32132" href="#card-element-213213">Import Clients?</a>
-    </div>
-    <div id="card-element-213213" class="collapse">
-      <div class="card-body">
-        Needs to add specific clients? Use a client import template...
-        <%= form_tag import_clients_path, multipart: true do %>
-           <button type="button" class="btn btn-info btn-sm"><%= file_field_tag :file %></button>
-          <%= submit_tag "Import" %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-32132" href="#card-element-122122">Custom Fields</a>
     </div>
-    <div id="card-element-122122" class="collapse">
+    <div id="card-element-122122" class="show">
       <div class="card-body">
         <%= render :partial => "customfields/list", locals: {customfield: @customfields}%>
       </div>
