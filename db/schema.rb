@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_02_205924) do
+ActiveRecord::Schema.define(version: 2020_08_13_021113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,43 @@ ActiveRecord::Schema.define(version: 2020_08_02_205924) do
   create_table "batchmanifests", force: :cascade do |t|
     t.string "filename"
     t.string "filetype"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bundle_item_group_prices", force: :cascade do |t|
+    t.string "bundle_item_group_id_group_prices"
+    t.string "location_id"
+    t.decimal "price_per_item"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bundle_item_groups", force: :cascade do |t|
+    t.string "bundle_item_group_id_groups"
+    t.string "bundle_id"
+    t.integer "quantity"
+    t.boolean "include_all_skus"
+    t.boolean "include_all_variations"
+    t.boolean "include_all_classes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bundle_items", force: :cascade do |t|
+    t.string "bundle_item_group_id_items"
+    t.string "resource_type"
+    t.string "resource_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bundles", force: :cascade do |t|
+    t.string "bundle_id"
+    t.string "name"
+    t.integer "validity_period"
+    t.boolean "in_membership"
+    t.boolean "available_online"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

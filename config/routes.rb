@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'static/export_clients_and_pets' => 'static#export_clients_and_pets'
   get 'static/export_appointments' => 'static#export_appointments'
   get 'static/export_classes' => 'static#export_classes'
+  get 'static/export_bundles' => 'static#export_bundles'
   get 'static/export_inventory' => 'static#export_inventory'
   get 'static/export_salonset' => 'static#export_salonset'
   get 'static/export_salonsetwclasses' => 'static#export_salonsetwclasses'
@@ -42,6 +43,10 @@ Rails.application.routes.draw do
   get '*/export_attendees' => 'application#export_attendees'
   get '*/export_classcategories' => 'application#export_classcategories'
   get '*/export_events' => 'application#export_events'
+  get '*/export_bundles' => 'application#export_bundles'
+  get '*/export_bundle_item_groups' => 'application#export_bundle_item_groups'
+  get '*/export_bundle_item_group_prices' => 'application#export_bundle_item_group_prices'
+  get '*/export_bundle_items' => 'application#export_bundle_items'
   get '*/export_classsettings' => 'application#export_classsettings'
   get '*/export_classsettingattendees' => 'application#export_classsettingattendees'
   get '*/export_classsettinglocations' => 'application#export_classsettinglocations'
@@ -73,6 +78,10 @@ Rails.application.routes.draw do
   resources :classcategories
   resources :attendees
   resources :clients
+  resources :bundles
+  resources :bundle_items
+  resources :bundle_item_groups
+  resources :bundle_item_group_prices
   devise_for :users
 
   get "*path", :to => "application#handle_404"

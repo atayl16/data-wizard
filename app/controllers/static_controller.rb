@@ -182,6 +182,24 @@ def create_appointments_zip
   end
 end
 
+def create_bundles_zip
+  file_stream = Zip::OutputStream.write_buffer do |zip|
+    @bundles = Bundle.all
+    @bundle_items = BundleItem.all
+    @bundle_item_groups = BundleItemGroup.all
+    @bundle_item_group_prices = BundleItemGroupPrice.all
+    zip.put_next_entry "bundles_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/bundles_manifest.csv")
+    zip.put_next_entry "bundles.csv"; zip << @bundles.to_csv_bundles
+    zip.put_next_entry "bundle_items.csv"; zip << @bundle_items.to_csv_bundle_items
+    zip.put_next_entry "bundle_item_groups.csv"; zip << @bundle_item_groups.to_csv_bundle_item_groups
+    zip.put_next_entry "bundle_item_group_prices.csv"; zip << @bundle_item_group_prices.to_csv_bundle_item_group_prices
+  end
+  file_stream.rewind
+  File.open("#{Rails.root}/app/assets/csvs/bundles.zip", 'wb') do |file|
+    file.write(file_stream.read)
+  end
+end
+
 def create_classes_zip
   file_stream = Zip::OutputStream.write_buffer do |zip|
     @events = Event.all
@@ -216,6 +234,20 @@ def export_classes
   respond_to do |format|
     format.zip do
       send_data file_stream.read, filename: "classes.zip"
+    end
+  end
+end
+
+def export_bundles
+  create_bundles_zip
+  file_stream = Zip::OutputStream.write_buffer do |zip|
+    zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_bundles.csv")
+    zip.put_next_entry "bundles.zip"; zip << File.binread("#{Rails.root}/app/assets/csvs/bundles.zip")
+  end
+  file_stream.rewind
+  respond_to do |format|
+    format.zip do
+      send_data file_stream.read, filename: "bundles.zip"
     end
   end
 end
