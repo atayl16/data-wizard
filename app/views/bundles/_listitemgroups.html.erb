@@ -1,0 +1,27 @@
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+
+<thead>
+  <tr>
+    <th style ="word-wrap:break-word;">bundle item group id</th>
+    <th style ="word-wrap:break-word;">bundle id</th>
+    <th style ="word-wrap:break-word;">quantity</th>
+    <th style ="word-wrap:break-word;">include all skus</th>
+    <th style ="word-wrap:break-word;">include all variations</th>
+    <th style ="word-wrap:break-word;">include all classes</th>
+
+  </tr>
+</thead>
+
+<tbody>
+  <% @bundle_item_groups.each do |bundle| %>
+    <tr>
+      <td style ="word-wrap:break-word;"><%= bundle.bundle_item_group_id_groups %></td>
+      <td style ="word-wrap:break-word;"><%= bundle.bundle_id %></td>
+      <td style ="word-wrap:break-word;"><%= bundle.quantity %></td>
+      <td style ="word-wrap:break-word;"><%= bundle.include_all_skus %></td>
+      <td style ="word-wrap:break-word;"><%= bundle.include_all_variations %></td>
+      <td style ="word-wrap:break-word;"><%= bundle.include_all_classes %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>

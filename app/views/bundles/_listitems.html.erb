@@ -1,0 +1,20 @@
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+
+<thead>
+  <tr>
+    <th style ="word-wrap:break-word;">bundle item group id</th>
+    <th style ="word-wrap:break-word;">type</th>
+    <th style ="word-wrap:break-word;">resource id</th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @bundle_items.each do |bundle| %>
+    <tr>
+      <td style ="word-wrap:break-word;"><%= bundle.bundle_item_group_id_items %></td>
+      <td style ="word-wrap:break-word;"><%= bundle.resource_type %></td>
+      <td style ="word-wrap:break-word;"><%= bundle.resource_id %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>

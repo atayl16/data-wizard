@@ -18,6 +18,7 @@ class ApplicationController < ActionController::Base
     Rake::Task['db:seed:004_memberships'].invoke
     Rake::Task['db:seed:005_pricings'].invoke
     Rake::Task['db:seed:006_appointments'].invoke
+    Rake::Task['db:seed:007_bundles'].invoke
   end
 
   def export_appointments
@@ -183,6 +184,26 @@ class ApplicationController < ActionController::Base
   def export_classsegmenttemplates
     @classsegmenttemplates = Classsegmenttemplates.all
     send_data @classsegmenttemplates.to_csv_classsegmenttemplates, filename: "segment_templates.csv"
+  end
+
+  def export_bundles
+    @bundles = Bundle.all
+    send_data @bundles.to_csv_bundles, filename: "bundles.csv"
+  end
+
+  def export_bundle_items
+    @bundle_items = BundleItem.all
+    send_data @bundle_items.to_csv_bundle_items, filename: "bundle_items.csv"
+  end
+
+  def export_bundle_item_groups
+    @bundle_item_groups = BundleItemGroup.all
+    send_data @bundle_item_groups.to_csv_bundle_item_groups, filename: "bundle_item_groups.csv"
+  end
+
+  def export_bundle_item_group_prices
+    @bundle_item_group_prices = BundleItemGroupPrice.all
+    send_data @bundle_item_group_prices.to_csv_bundle_item_group_prices, filename: "bundle_item_group_prices.csv"
   end
 
   def handle_404

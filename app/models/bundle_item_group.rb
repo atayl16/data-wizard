@@ -1,0 +1,2 @@
+class BundleItemGroup < ApplicationRecord
+end

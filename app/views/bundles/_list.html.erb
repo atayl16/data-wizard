@@ -1,0 +1,24 @@
+<table class="table table-striped table-bordered table-sm" cellspacing="0">
+
+<thead>
+  <tr>
+    <th style ="word-wrap:break-word;">bundle id</th>
+    <th style ="word-wrap:break-word;">name</th>
+    <th style ="word-wrap:break-word;">validity_period</th>
+    <th style ="word-wrap:break-word;">in membership</th>
+    <th style ="word-wrap:break-word;">available online</th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @bundles.each do |bundle| %>
+    <tr>
+      <td style ="word-wrap:break-word;"><%= bundle.bundle_id %></td>
+      <td style ="word-wrap:break-word;"><%= bundle.name %></td>
+      <td style ="word-wrap:break-word;"><%= bundle.validity_period %></td>
+      <td style ="word-wrap:break-word;"><%= bundle.in_membership %></td>
+      <td style ="word-wrap:break-word;"><%= bundle.available_online %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
