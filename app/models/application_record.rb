@@ -367,10 +367,9 @@ class ApplicationRecord < ActiveRecord::Base
   end
 
   def self.to_csv_bundle_items
-    attributes = %w[bundle_item_group_id_items resource_type resource_id]
-    headers = %w[bundle_item_group_id resource_type resource_id]
+    attributes = %w[bundle_item_group_id resource_type resource_id]
     CSV.generate(headers: true) do |csv|
-      csv << headers
+      csv << attributes
       all.each do |segment|
         csv << attributes.map { |attr| segment.send(attr) }
       end
@@ -378,10 +377,9 @@ class ApplicationRecord < ActiveRecord::Base
   end
 
   def self.to_csv_bundle_item_groups
-    attributes = %w[bundle_item_group_id_groups bundle_id quantity include_all_skus include_all_variations include_all_classes]
-    headers = %w[bundle_item_group_id bundle_id quantity include_all_skus include_all_variations include_all_classes]
+    attributes = %w[bundle_item_group_id bundle_id quantity include_all_skus include_all_variations include_all_classes]
     CSV.generate(headers: true) do |csv|
-      csv << headers
+      csv << attributes
       all.each do |segment|
         csv << attributes.map { |attr| segment.send(attr) }
       end
@@ -389,10 +387,9 @@ class ApplicationRecord < ActiveRecord::Base
   end
 
   def self.to_csv_bundle_item_group_prices
-    attributes = %w[bundle_item_group_id_group_prices location_id price_per_item]
-    headers = %w[bundle_item_group_id location_id price_per_item]
+    attributes = %w[bundle_item_group_id location_id price_per_item]
     CSV.generate(headers: true) do |csv|
-      csv << headers
+      csv << attributes
       all.each do |segment|
         csv << attributes.map { |attr| segment.send(attr) }
       end

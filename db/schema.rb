@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2020_08_13_021113) do
   end
 
   create_table "bundle_item_group_prices", force: :cascade do |t|
-    t.string "bundle_item_group_id_group_prices"
+    t.string "bundle_item_group_id"
     t.string "location_id"
     t.decimal "price_per_item"
     t.datetime "created_at", null: false
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2020_08_13_021113) do
   end
 
   create_table "bundle_item_groups", force: :cascade do |t|
-    t.string "bundle_item_group_id_groups"
+    t.string "bundle_item_group_id"
     t.string "bundle_id"
     t.integer "quantity"
     t.boolean "include_all_skus"
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 2020_08_13_021113) do
   end
 
   create_table "bundle_items", force: :cascade do |t|
-    t.string "bundle_item_group_id_items"
+    t.string "bundle_item_group_id"
     t.string "resource_type"
     t.string "resource_id"
     t.datetime "created_at", null: false
