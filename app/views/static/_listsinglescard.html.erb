@@ -11,63 +11,63 @@
       Location file with 10 locations.<br>
       Staff file with 50 staff that align to the 10 locations.<br>
       <div class="btn-group" role="group">
-        <%= button_to 'Export Batchmanifest', {controller: "export", action: "export_batchmanifest"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Locations', {controller: "export", action: "export_locations"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Staff', {controller: "export", action: "export_staff"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Batchmanifest', {controller: "export", action: "batchmanifest"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Locations', {controller: "export", action: "locations"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Staff', {controller: "export", action: "staff"}, method: :get, class: "btn btn-danger btn-sm" %>
       </div>
       <hr>
       A client file with preferred location and preferred staff that match staff and location files from above.<br>
       Pet file with client_ids that align to the client file.<br>
       Custom fields file required for pet name to import.<br>
       <div class="btn-group" role="group">
-        <%= button_to 'Export Clients', {controller: "export", action: "export_clients"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Pets', {controller: "export", action: "export_pets"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Custom Fields', {controller: "export", action: "export_customfields"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Clients', {controller: "export", action: "clients"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Pets', {controller: "export", action: "pets"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Custom Fields', {controller: "export", action: "customfields"}, method: :get, class: "btn btn-danger btn-sm" %>
       </div>
       <hr>
       Service file, service category file and pricing for salons.<br>
       <div class="btn-group" role="group">
-        <%= button_to 'Export Services', {controller: "export", action: "export_salonservices"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Categories', {controller: "export", action: "export_saloncategories"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Pricing', {controller: "export", action: "export_pricings"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Services', {controller: "export", action: "salonservices"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Categories', {controller: "export", action: "saloncategories"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Pricing', {controller: "export", action: "pricings"}, method: :get, class: "btn btn-danger btn-sm" %>
       </div>
       <hr>
       Service file, service category file and pricing for pet grooming.<br>
       <div class="btn-group" role="group">
-        <%= button_to 'Export Services', {controller: "export", action: "export_petservices"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Categories', {controller: "export", action: "export_petcategories"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Pricing', {controller: "export", action: "export_pricings"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Services', {controller: "export", action: "petservices"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Categories', {controller: "export", action: "petcategories"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Pricing', {controller: "export", action: "pricings"}, method: :get, class: "btn btn-danger btn-sm" %>
       </div>
       <hr>
       Inventory files.<br>
       <div class="btn-group" role="group">
-        <%= button_to 'Export Products', {controller: "export", action: "export_inventoryproducts"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export SKUs', {controller: "export", action: "export_inventoryskus"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Stocks', {controller: "export", action: "export_inventorystocks"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Products', {controller: "export", action: "inventoryproducts"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export SKUs', {controller: "export", action: "inventoryskus"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Stocks', {controller: "export", action: "inventorystocks"}, method: :get, class: "btn btn-danger btn-sm" %>
       </div>
       <hr>
       Appointment files.<br>
       <div class="btn-group" role="group">
-        <%= button_to 'Export Appointments', {controller: "export", action: "export_appointments"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Services', {controller: "export", action: "export_appointmentservices"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Statuses', {controller: "export", action: "export_appointmentstatuses"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%  button_to 'Export Tips', {controller: "export", action: "export_tips"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Appointments', {controller: "export", action: "appointments"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Services', {controller: "export", action: "appointmentservices"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Statuses', {controller: "export", action: "appointmentstatuses"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%  button_to 'Export Tips', {controller: "export", action: "tips"}, method: :get, class: "btn btn-danger btn-sm" %>
       </div>
       <hr>
       Ticket files.<br>
       <div class="btn-group" role="group">
-        <%= button_to 'Export Tickets', {controller: "export", action: "export_tickets"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export SKUs', {controller: "export", action: "export_ticketskus"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Services', {controller: "export", action: "export_ticketservices"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Payments', {controller: "export", action: "export_ticketpayments"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Tickets', {controller: "export", action: "tickets"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export SKUs', {controller: "export", action: "ticketskus"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Services', {controller: "export", action: "ticketservices"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Payments', {controller: "export", action: "ticketpayments"}, method: :get, class: "btn btn-danger btn-sm" %>
       </div>
       <hr>
       Bundle files.<br>
       <div class="btn-group" role="group">
-        <%= button_to 'Export Bundles', {controller: "export", action: "export_bundles"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Bundle Items', {controller: "export", action: "export_bundle_items"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Bundle Item Groups', {controller: "export", action: "export_bundle_item_groups"}, method: :get, class: "btn btn-danger btn-sm" %>
-        <%= button_to 'Export Bundle Prices', {controller: "export", action: "export_bundle_item_group_prices"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Bundles', {controller: "export", action: "bundles"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Bundle Items', {controller: "export", action: "bundle_items"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Bundle Item Groups', {controller: "export", action: "bundle_item_groups"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Bundle Prices', {controller: "export", action: "bundle_item_group_prices"}, method: :get, class: "btn btn-danger btn-sm" %>
       </div>
     </div>
   </div>
