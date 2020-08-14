@@ -16,47 +16,51 @@ Rails.application.routes.draw do
   get 'static/export_petsetwbundles' => 'static#export_petsetwbundles'
   get 'static/export_tickets' => 'static#export_tickets'
   get 'static/export_memberships' => 'static#export_memberships'
-  get '*/export_appointments' => 'export#export_appointments'
-  get '*/export_appointmentservices' => 'export#export_appointmentservices'
-  get '*/export_appointmentstatuses' => 'export#export_appointmentstatuses'
-  get '*/export_tickets' => 'export#export_tickets'
-  get '*/export_ticketskus' => 'export#export_ticketskus'
-  get '*/export_ticketservices' => 'export#export_ticketservices'
-  get '*/export_tips' => 'export#export_tips'
-  get '*/export_ticketpayments' => 'export#export_ticketpayments'
-  get '*/export_batchmanifests' => 'export#export_batchmanifest'
-  get '*/export_locations' => 'export#export_locations'
-  get '*/export_pets' => 'export#export_pets'
-  get '*/export_clients' => 'export#export_clients'
-  get '*/export_customfields' => 'export#export_customfields'
-  get '*/export_inventoryproducts' => 'export#export_inventoryproducts'
-  get '*/export_inventoryskus' => 'export#export_inventoryskus'
-  get '*/export_inventorystocks' => 'export#export_inventorystocks'
-  get '*/export_memberships' => 'export#export_memberships'
-  get '*/export_membershiplocations' => 'export#export_membershiplocations'
-  get '*/export_membershipbenefits' => 'export#export_membershipbenefits'
-  get '*/export_membershipservices' => 'export#export_membershipservices'
-  get '*/export_membershipproducts' => 'export#export_membershipproducts'
-  get '*/export_products' => 'export#export_products'
-  get '*/export_petcategories' => 'export#export_petcategories'
-  get '*/export_petservices' => 'export#export_petservices'
-  get '*/export_saloncategories' => 'export#export_saloncategories'
-  get '*/export_salonservices' => 'export#export_salonservices'
-  get '*/export_pricings' => 'export#export_pricings'
-  get '*/export_staff' => 'export#export_staff'
-  get '*/export_attendees' => 'export#export_attendees'
-  get '*/export_classcategories' => 'export#export_classcategories'
-  get '*/export_events' => 'export#export_events'
-  get '*/export_bundles' => 'export#export_bundles'
-  get '*/export_bundle_item_groups' => 'export#export_bundle_item_groups'
-  get '*/export_bundle_item_group_prices' => 'export#export_bundle_item_group_prices'
-  get '*/export_bundle_items' => 'export#export_bundle_items'
-  get '*/export_classsettings' => 'export#export_classsettings'
-  get '*/export_classsettingattendees' => 'export#export_classsettingattendees'
-  get '*/export_classsettinglocations' => 'export#export_classsettinglocations'
-  get '*/export_classsegmenttemplates' => 'export#export_classsegmenttemplates'
 
 
+  resources :export, only: [] do
+    collection do
+      get :export_appointments
+      get :export_appointmentservices
+      get :export_appointmentstatuses
+      get :export_tickets
+      get :export_ticketskus
+      get :export_ticketservices
+      get :export_tips
+      get :export_ticketpayments
+      get :export_batchmanifest
+      get :export_locations
+      get :export_pets
+      get :export_clients
+      get :export_customfields
+      get :export_inventoryproducts
+      get :export_inventoryskus
+      get :export_inventorystocks
+      get :export_memberships
+      get :export_membershiplocations
+      get :export_membershipbenefits
+      get :export_membershipservices
+      get :export_membershipproducts
+      get :export_products
+      get :export_petcategories
+      get :export_petservices
+      get :export_saloncategories
+      get :export_salonservices
+      get :export_pricings
+      get :export_staff
+      get :export_attendees
+      get :export_classcategories
+      get :export_events
+      get :export_bundles
+      get :export_bundle_item_groups
+      get :export_bundle_item_group_prices
+      get :export_bundle_items
+      get :export_classsettings
+      get :export_classsettingattendees
+      get :export_classsettinglocations
+      get :export_classsegmenttemplates
+    end
+  end
   resources :memberships
   resources :tickets
   resources :inventorystocks
