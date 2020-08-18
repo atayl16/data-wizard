@@ -11,7 +11,7 @@ class ExportController < ActionController::Base
       end
     end
 
-  ["bundle", "bundle_item", "bundle_item_group", "bundle_item_group_price", "attendee", "location", "membership", "customfield", "client", "inventoryproduct", "inventorysku", "inventorystock", "membershiplocation", "membershipbenefit", "membershipservice", "membershipproduct", "classsettingattendee", "classsettinglocation", "classsegmenttemplates", "event", "staff"].each do |new_method|
+  ["bundle", "bundle_item", "bundle_item_group", "bundle_item_group_price", "attendee", "location", "membership", "customfield", "client", "inventoryproduct", "inventorysku", "inventorystock", "membershiplocation", "membershipbenefit", "membershipservice", "membershipproduct", "classsettingattendee", "classsettinglocation", "classsegmenttemplates", "event"].each do |new_method|
     define_method("#{new_method.pluralize}") do
       instance_variable_set("@#{new_method.pluralize}", new_method.camelcase.constantize.all)
       instance_var = instance_variable_get("@#{new_method.pluralize}")
@@ -43,6 +43,11 @@ class ExportController < ActionController::Base
   def pets
     @clients = Client.all
     send_data @clients.to_csv_pets, filename: 'pets.csv'
+  end
+
+  def staff
+    @staffs = Staff.order("location_id")
+    send_data @staffs.to_csv_staff, filename: "staffs.csv"
   end
 
   def pricings

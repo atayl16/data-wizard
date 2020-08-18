@@ -144,7 +144,7 @@ class ApplicationRecord < ActiveRecord::Base
     end
   end
 
-  def self.to_csv_inventoryproduct
+  def self.to_csv_inventoryproducts
     attributes = %w[product_id name brand category vendor description visible_to_clients commissionable discontinued discontinued_reasons alternative_product_ids deleted]
     CSV.generate(headers: true) do |csv|
       csv << attributes
@@ -154,7 +154,7 @@ class ApplicationRecord < ActiveRecord::Base
     end
   end
 
-  def self.to_csv_inventorysku
+  def self.to_csv_inventoryskus
     attributes = %w[sku_id product_id name number barcode target_quantity alert_threshold deleted]
     CSV.generate(headers: true) do |csv|
       csv << attributes
@@ -164,7 +164,7 @@ class ApplicationRecord < ActiveRecord::Base
     end
   end
 
-  def self.to_csv_inventorystock
+  def self.to_csv_inventorystocks
     attributes = %w[sku_id location_id quantity price cost vendor expiration_date stock_type deleted]
     CSV.generate(headers: true) do |csv|
       csv << attributes
