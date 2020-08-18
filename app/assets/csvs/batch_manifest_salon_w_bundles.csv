@@ -3,7 +3,7 @@ locations.csv,locations
 categories.csv,categories
 services.csv,services
 pricings.csv,pricings
-employees.csv,employees
+staffs.csv,employees
 appointments.zip,appointments
 addonmappings.csv,add_ons_mappings
 inventories.zip,inventory

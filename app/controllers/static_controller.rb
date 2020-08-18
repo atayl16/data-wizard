@@ -16,7 +16,7 @@ class StaticController < ApplicationController
       zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_simple_salon.csv")
       zip.put_next_entry "categories.csv"; zip << @saloncategories.to_csv_saloncategories
       zip.put_next_entry "clients.csv"; zip << @clients.to_csv_clients
-      zip.put_next_entry "employees.csv"; zip << @staffs.to_csv_staff
+      zip.put_next_entry "staffs.csv"; zip << @staffs.to_csv_staff
       zip.put_next_entry "locations.csv"; zip << @locations.to_csv_locations
       zip.put_next_entry "pricings.csv"; zip << @salonpricings.to_csv_pricings
       zip.put_next_entry "services.csv"; zip << @salonservices.to_csv_salonservices
@@ -53,7 +53,7 @@ class StaticController < ApplicationController
       zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_salon_w_bundles.csv")
       zip.put_next_entry "categories.csv"; zip << @saloncategories.to_csv_saloncategories
       zip.put_next_entry "clients.csv"; zip << @clients.to_csv_clients
-      zip.put_next_entry "employees.csv"; zip << @staffs.to_csv_staff
+      zip.put_next_entry "staffs.csv"; zip << @staffs.to_csv_staff
       zip.put_next_entry "locations.csv"; zip << @locations.to_csv_locations
       zip.put_next_entry "pricings.csv"; zip << @salonpricings.to_csv_pricings
       zip.put_next_entry "services.csv"; zip << @salonservices.to_csv_salonservices
@@ -91,7 +91,7 @@ class StaticController < ApplicationController
       zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_salon_w_classes.csv")
       zip.put_next_entry "categories.csv"; zip << @saloncategories.to_csv_saloncategories
       zip.put_next_entry "clients.csv"; zip << @clients.to_csv_clients
-      zip.put_next_entry "employees.csv"; zip << @staffs.to_csv_staff
+      zip.put_next_entry "staffs.csv"; zip << @staffs.to_csv_staff
       zip.put_next_entry "locations.csv"; zip << @locations.to_csv_locations
       zip.put_next_entry "pricings.csv"; zip << @salonpricings.to_csv_pricings
       zip.put_next_entry "services.csv"; zip << @salonservices.to_csv_salonservices
@@ -130,7 +130,7 @@ class StaticController < ApplicationController
       zip.put_next_entry "batch_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_salon_w_classes_w_bundles.csv")
       zip.put_next_entry "categories.csv"; zip << @saloncategories.to_csv_saloncategories
       zip.put_next_entry "clients.csv"; zip << @clients.to_csv_clients
-      zip.put_next_entry "employees.csv"; zip << @staffs.to_csv_staff
+      zip.put_next_entry "staffs.csv"; zip << @staffs.to_csv_staff
       zip.put_next_entry "locations.csv"; zip << @locations.to_csv_locations
       zip.put_next_entry "pricings.csv"; zip << @salonpricings.to_csv_pricings
       zip.put_next_entry "services.csv"; zip << @salonservices.to_csv_salonservices
@@ -169,7 +169,7 @@ class StaticController < ApplicationController
       zip.put_next_entry "categories.csv"; zip << @petcategories.to_csv_petcategories
       zip.put_next_entry "clients.csv"; zip << @clients.to_csv_clients
       zip.put_next_entry "pets.csv"; zip << @clients.to_csv_pets
-      zip.put_next_entry "employees.csv"; zip << @staffs.to_csv_staff
+      zip.put_next_entry "staffs.csv"; zip << @staffs.to_csv_staff
       zip.put_next_entry "locations.csv"; zip << @locations.to_csv_locations
       zip.put_next_entry "pricings.csv"; zip << @salonpricings.to_csv_pricings
       zip.put_next_entry "services.csv"; zip << @petservices.to_csv_petservices
@@ -207,7 +207,7 @@ class StaticController < ApplicationController
       zip.put_next_entry "categories.csv"; zip << @petcategories.to_csv_petcategories
       zip.put_next_entry "clients.csv"; zip << @clients.to_csv_clients
       zip.put_next_entry "pets.csv"; zip << @clients.to_csv_pets
-      zip.put_next_entry "employees.csv"; zip << @staffs.to_csv_staff
+      zip.put_next_entry "staffs.csv"; zip << @staffs.to_csv_staff
       zip.put_next_entry "locations.csv"; zip << @locations.to_csv_locations
       zip.put_next_entry "pricings.csv"; zip << @salonpricings.to_csv_pricings
       zip.put_next_entry "services.csv"; zip << @petservices.to_csv_petservices
@@ -246,7 +246,7 @@ class StaticController < ApplicationController
       zip.put_next_entry "categories.csv"; zip << @petcategories.to_csv_petcategories
       zip.put_next_entry "clients.csv"; zip << @clients.to_csv_clients
       zip.put_next_entry "pets.csv"; zip << @clients.to_csv_pets
-      zip.put_next_entry "employees.csv"; zip << @staffs.to_csv_staff
+      zip.put_next_entry "staffs.csv"; zip << @staffs.to_csv_staff
       zip.put_next_entry "locations.csv"; zip << @locations.to_csv_locations
       zip.put_next_entry "pricings.csv"; zip << @salonpricings.to_csv_pricings
       zip.put_next_entry "services.csv"; zip << @petservices.to_csv_petservices
@@ -286,7 +286,7 @@ class StaticController < ApplicationController
       zip.put_next_entry "categories.csv"; zip << @petcategories.to_csv_petcategories
       zip.put_next_entry "clients.csv"; zip << @clients.to_csv_clients
       zip.put_next_entry "pets.csv"; zip << @clients.to_csv_pets
-      zip.put_next_entry "employees.csv"; zip << @staffs.to_csv_staff
+      zip.put_next_entry "staffs.csv"; zip << @staffs.to_csv_staff
       zip.put_next_entry "locations.csv"; zip << @locations.to_csv_locations
       zip.put_next_entry "pricings.csv"; zip << @salonpricings.to_csv_pricings
       zip.put_next_entry "services.csv"; zip << @petservices.to_csv_petservices
@@ -331,8 +331,8 @@ def create_appointments_zip
     @appointments = Appointment.order('service_id')
     zip.put_next_entry "appointment_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/appointment_manifest.csv")
     zip.put_next_entry "appointments.csv"; zip << @appointments.to_csv_appointments
-    zip.put_next_entry "appointment_services.csv"; zip << @appointments.to_csv_appointmentservices
-    zip.put_next_entry "appointment_statuses.csv"; zip << @appointments.to_csv_appointmentstatuses
+    zip.put_next_entry "appointmentservices.csv"; zip << @appointments.to_csv_appointmentservices
+    zip.put_next_entry "appointmentstatuses.csv"; zip << @appointments.to_csv_appointmentstatuses
   end
   file_stream.rewind
   File.open("#{Rails.root}/app/assets/csvs/appointments.zip", 'wb') do |file|
@@ -348,9 +348,9 @@ def create_bundles_zip
     @bundle_item_group_prices = BundleItemGroupPrice.all
     zip.put_next_entry "bundles_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/bundles_manifest.csv")
     zip.put_next_entry "bundles.csv"; zip << @bundles.to_csv_bundles
-    zip.put_next_entry "bundle_items.csv"; zip << @bundle_items.to_csv_bundle_items
-    zip.put_next_entry "bundle_item_groups.csv"; zip << @bundle_item_groups.to_csv_bundle_item_groups
-    zip.put_next_entry "bundle_item_group_prices.csv"; zip << @bundle_item_group_prices.to_csv_bundle_item_group_prices
+    zip.put_next_entry "bundleitems.csv"; zip << @bundle_items.to_csv_bundle_items
+    zip.put_next_entry "bundleitemgroups.csv"; zip << @bundle_item_groups.to_csv_bundle_item_groups
+    zip.put_next_entry "bundleitemgroupprices.csv"; zip << @bundle_item_group_prices.to_csv_bundle_item_group_prices
   end
   file_stream.rewind
   File.open("#{Rails.root}/app/assets/csvs/bundles.zip", 'wb') do |file|
@@ -370,11 +370,11 @@ def create_classes_zip
     zip.put_next_entry "classes_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/class_manifest.csv")
     zip.put_next_entry "attendees.csv"; zip << @attendees.to_csv_attendees
     zip.put_next_entry "categories.csv"; zip << @classcategories.to_csv_classcategories
-    zip.put_next_entry "classes.csv"; zip << @events.to_csv_events
-    zip.put_next_entry "class_settings.csv"; zip << @classsettings.to_csv_classsettings
-    zip.put_next_entry "class_setting_attendees.csv"; zip << @classsettingattendees.to_csv_classsettingattendees
-    zip.put_next_entry "class_setting_locations.csv"; zip << @classsettinglocations.to_csv_classsettinglocations
-    zip.put_next_entry "segment_templates.csv"; zip << @classsegmenttemplates.to_csv_classsegmenttemplates
+    zip.put_next_entry "events.csv"; zip << @events.to_csv_events
+    zip.put_next_entry "classsettings.csv"; zip << @classsettings.to_csv_classsettings
+    zip.put_next_entry "classsettingattendees.csv"; zip << @classsettingattendees.to_csv_classsettingattendees
+    zip.put_next_entry "classsettinglocations.csv"; zip << @classsettinglocations.to_csv_classsettinglocations
+    zip.put_next_entry "classsegmenttemplates.csv"; zip << @classsegmenttemplates.to_csv_classsegmenttemplates
   end
   file_stream.rewind
   File.open("#{Rails.root}/app/assets/csvs/classes.zip", 'wb') do |file|
@@ -430,9 +430,9 @@ def create_inventory_zip
     @inventoryskus = Inventorysku.all
     @inventorystocks = Inventorystock.all
     zip.put_next_entry "inventory_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/inventory_manifest.csv")
-    zip.put_next_entry "inventory_products.csv"; zip << @inventoryproducts.to_csv_inventoryproduct
-    zip.put_next_entry "inventory_skus.csv"; zip << @inventoryskus.to_csv_inventorysku
-    zip.put_next_entry "inventory_stocks.csv"; zip << @inventorystocks.to_csv_inventorystock
+    zip.put_next_entry "inventoryproducts.csv"; zip << @inventoryproducts.to_csv_inventoryproduct
+    zip.put_next_entry "inventoryskus.csv"; zip << @inventoryskus.to_csv_inventorysku
+    zip.put_next_entry "inventorystocks.csv"; zip << @inventorystocks.to_csv_inventorystock
   end
   file_stream.rewind
   File.open("#{Rails.root}/app/assets/csvs/inventories.zip", 'wb') do |file|
@@ -489,10 +489,10 @@ end
       @memberships = Membership.all
       zip.put_next_entry "membership_manifest.csv"; zip << File.binread("#{Rails.root}/app/assets/csvs/membership_manifest.csv")
       zip.put_next_entry "memberships.csv"; zip << @memberships.to_csv_memberships
-      zip.put_next_entry "membership_locations.csv"; zip << @memberships.to_csv_membershiplocations
-      zip.put_next_entry "membership_benefits.csv"; zip << @memberships.to_csv_membershipbenefits
-      zip.put_next_entry "benefit_services.csv"; zip << @memberships.to_csv_membershipservices
-      zip.put_next_entry "benefit_products.csv"; zip << @memberships.to_csv_membershipproducts
+      zip.put_next_entry "membershiplocations.csv"; zip << @memberships.to_csv_membershiplocations
+      zip.put_next_entry "membershipbenefits.csv"; zip << @memberships.to_csv_membershipbenefits
+      zip.put_next_entry "membershipservices.csv"; zip << @memberships.to_csv_membershipservices
+      zip.put_next_entry "membershipproducts.csv"; zip << @memberships.to_csv_membershipproducts
     end
     file_stream.rewind
     File.open("#{Rails.root}/app/assets/csvs/memberships.zip", 'wb') do |file|

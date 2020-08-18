@@ -1,7 +1,7 @@
-classes.csv,classes
+events.csv,classes
 categories.csv,categories
 attendees.csv,attendees
-class_settings.csv,class_settings
-class_setting_attendees.csv,class_setting_attendees
-class_setting_locations.csv,class_setting_locations
-segment_templates.csv,segment_templates
+classsettings.csv,class_settings
+classsettingattendees.csv,class_setting_attendees
+classsettinglocations.csv,class_setting_locations
+classsegmenttemplates.csv,segment_templates
