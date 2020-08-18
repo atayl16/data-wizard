@@ -18,29 +18,19 @@ class ExportController < ActionController::Base
     send_data @appointments.to_csv_appointmentstatuses, filename: 'appointment_statuses.csv'
   end
 
-  def tickets
-    @appointments = Appointment.order('service_id')
-    send_data @appointments.to_csv_tickets, filename: 'tickets.csv'
-  end
+  ["ticket", "ticketsku", "ticketservice", "tip", "ticketpayment"].each do |new_method|
+      define_method("#{new_method.pluralize}") do
+        @appointments = Appointment.order('service_id')
+        send_data @appointments.public_send("to_csv_#{new_method.pluralize}"), filename: "#{new_method.pluralize}.csv"
+      end
+    end
 
-  def ticketskus
-    @appointments = Appointment.order('service_id')
-    send_data @appointments.to_csv_ticketskus, filename: 'ticketsskuitems.csv'
-  end
-
-  def ticketservices
-    @appointments = Appointment.order('service_id')
-    send_data @appointments.to_csv_ticketservices, filename: 'ticketsserviceitems.csv'
-  end
-
-  def tips
-    @appointments = Appointment.order('service_id')
-    send_data @appointments.to_csv_tips, filename: 'tips.csv'
-  end
-
-  def ticketpayments
-    @appointments = Appointment.order('service_id')
-    send_data @appointments.to_csv_ticketpayments, filename: 'ticketspaymentitems.csv'
+    ["bundle", "bundle_item", "bundle_item_group", "bundle_item_group_price", "attendee", "location", "membership", "customfield"].each do |new_method|
+    define_method("#{new_method.pluralize}") do
+      instance_variable_set("@#{new_method.pluralize}", new_method.camelcase.constantize.all)
+      instance_var = instance_variable_get("@#{new_method.pluralize}")
+      send_data instance_var.public_send("to_csv_#{new_method.pluralize}"), filename: "#{new_method.pluralize}.csv"
+    end
   end
 
   def batchmanifest
@@ -58,11 +48,6 @@ class ExportController < ActionController::Base
     send_data @clients.to_csv_clients, filename: 'clients.csv'
   end
 
-  def customfields
-    @customfields = Customfield.all
-    send_data @customfields.to_csv_customfields, filename: 'customfields.csv'
-  end
-
   def inventoryproducts
     @inventoryproducts = Inventoryproduct.all
     send_data @inventoryproducts.to_csv_inventoryproduct, filename: "inventory_products.csv"
@@ -76,16 +61,6 @@ class ExportController < ActionController::Base
   def inventorystocks
     @inventorystocks = Inventorystock.all
     send_data @inventorystocks.to_csv_inventorystock, filename: "inventory_stocks.csv"
-  end
-
-  def locations
-    @locations = Location.all
-    send_data @locations.to_csv_locations, filename: "locations.csv"
-  end
-
-  def memberships
-    @memberships = Membership.all
-    send_data @memberships.to_csv_memberships, filename: "memberships.csv"
   end
 
   def membershiplocations
@@ -108,25 +83,21 @@ class ExportController < ActionController::Base
     send_data @memberships.to_csv_membershipproducts, filename: "benefit_products.csv"
   end
 
-  def petcategories
-    @petcategories = Petcategory.all
-    send_data @petcategories.to_csv_petcategories, filename: "categories.csv"
-  end
+  ["petservice", "salonservice"].each do |new_method|
+      define_method("#{new_method.pluralize}") do
+        instance_variable_set("@#{new_method.pluralize}", (new_method.titleize.constantize).all)
+        instance_var = instance_variable_get("@#{new_method.pluralize}")
+        send_data instance_var.public_send("to_csv_#{new_method.pluralize}"), filename: "services.csv" # send method for all methods
+      end
+    end
 
-  def petservices
-    @petservices = Petservice.all
-    send_data @petservices.to_csv_petservices, filename: "services.csv"
-  end
-
-  def saloncategories
-    @saloncategories = Saloncategory.all
-    send_data @saloncategories.to_csv_saloncategories, filename: "categories.csv"
-  end
-
-  def salonservices
-    @salonservices = Salonservice.all
-    send_data @salonservices.to_csv_salonservices, filename: "services.csv"
-  end
+  ["petcategory", "saloncategory", "classcategory"].each do |new_method|
+      define_method("#{new_method.pluralize}") do
+        instance_variable_set("@#{new_method.pluralize}", (new_method.titleize.constantize).all)
+        instance_var = instance_variable_get("@#{new_method.pluralize}")
+        send_data instance_var.public_send("to_csv_#{new_method.pluralize}"), filename: "categories.csv" # send method for all methods
+      end
+    end
 
   def pricings
     @salonpricings = Salonpricing.all
@@ -136,16 +107,6 @@ class ExportController < ActionController::Base
   def staff
     @staffs = Staff.order("location_id")
     send_data @staffs.to_csv_staff, filename: "employees.csv"
-  end
-
-  def attendees
-    @attendees = Attendee.all
-    send_data @attendees.to_csv_attendees, filename: "attendees.csv"
-  end
-
-  def classcategories
-    @classcategories = Classcategory.all
-    send_data @classcategories.to_csv_classcategories, filename: "categories.csv"
   end
 
   def events
@@ -166,25 +127,5 @@ class ExportController < ActionController::Base
   def classsegmenttemplates
     @classsegmenttemplates = Classsegmenttemplates.all
     send_data @classsegmenttemplates.to_csv_classsegmenttemplates, filename: "segment_templates.csv"
-  end
-
-  def bundles
-    @bundles = Bundle.all
-    send_data @bundles.to_csv_bundles, filename: "bundles.csv"
-  end
-
-  def bundle_items
-    @bundle_items = BundleItem.all
-    send_data @bundle_items.to_csv_bundle_items, filename: "bundle_items.csv"
-  end
-
-  def bundle_item_groups
-    @bundle_item_groups = BundleItemGroup.all
-    send_data @bundle_item_groups.to_csv_bundle_item_groups, filename: "bundle_item_groups.csv"
-  end
-
-  def bundle_item_group_prices
-    @bundle_item_group_prices = BundleItemGroupPrice.all
-    send_data @bundle_item_group_prices.to_csv_bundle_item_group_prices, filename: "bundle_item_group_prices.csv"
   end
 end
