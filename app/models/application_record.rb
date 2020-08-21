@@ -208,7 +208,6 @@ class ApplicationRecord < ActiveRecord::Base
   end
 
   def self.export(attributes)
-    # attributes = []
     CSV.generate(headers: true) do |csv|
       csv << attributes
       all.each do |row|
@@ -218,12 +217,10 @@ class ApplicationRecord < ActiveRecord::Base
   end
 
   def self.export_w_headers(attributes, headers)
-    # attributes = []
-    # headers = []
     CSV.generate(headers: true) do |csv|
       csv << headers
-      all.each do |membership|
-        csv << attributes.map { |attr| membership.send(attr) }
+      all.each do |row|
+        csv << attributes.map { |attr| row.send(attr) }
       end
     end
   end
