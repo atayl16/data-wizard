@@ -4,9 +4,9 @@ locations = 1..3
 
 def create_appointments(location_id)
   appointment = 1..400
-  service = Salonservice.where(is_add_on: FALSE).sample(1).first
-  price = Salonpricing.find_by(service_id: service.service_id)
   appointment.each do
+    service = Salonservice.where(is_add_on: FALSE).sample(1).first
+    price = Salonpricing.find_by(service_id: service.service_id)
     staff = [location_id, Faker::Number.between(from: 0, to: 9)].join('-')
     a = Appointment.new
     a.appointment_id = [location_id, Faker::Number.unique.between(from: 100_000, to: 900_000)].join('-')
@@ -35,7 +35,7 @@ def create_appointments(location_id)
   end
   add_appointment = 500..550
   add_appointment.each do
-    service = Salonservice.all.sample(1).first
+    service = Salonservice.where(is_add_on: FALSE).sample(1).first
     price = Salonpricing.find_by(service_id: service.service_id)
     staff = [location_id, Faker::Number.between(from: 0, to: 9)].join('-')
     a = Appointment.new
