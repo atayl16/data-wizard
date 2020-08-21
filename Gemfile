@@ -29,6 +29,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'active_record_query_trace'
 end
 
 group :development do
