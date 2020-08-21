@@ -27,7 +27,7 @@ def create_appointments(location_id)
     a.payment_item_id = Faker::Number.unique.between(from: 100_000, to: 900_000)
     a.ticket_type = 'cash'
     a.inventory_sku_id = Faker::Number.between(from: 1, to: 101)
-    a.sku_amount = Faker::Commerce.price(range: 0..10.0, as_string: true)
+    b.sku_amount = Faker::Commerce.price(range: 6..20.99)
     a.quantity = 1
     a.tip = (price.price * 0.2).round(2)
     a.amount = (a.price.to_f + a.sku_amount.to_f + a.tip.to_f).round(2)
