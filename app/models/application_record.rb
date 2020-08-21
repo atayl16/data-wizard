@@ -207,10 +207,8 @@ class ApplicationRecord < ActiveRecord::Base
     connection.reset_pk_sequence!(table_name)
   end
 
-private
-
   def self.export(attributes)
-    attributes = []
+    # attributes = []
     CSV.generate(headers: true) do |csv|
       csv << attributes
       all.each do |row|
@@ -220,8 +218,8 @@ private
   end
 
   def self.export_w_headers(attributes, headers)
-    attributes = []
-    headers = []
+    # attributes = []
+    # headers = []
     CSV.generate(headers: true) do |csv|
       csv << headers
       all.each do |membership|

@@ -2,11 +2,13 @@ require 'faker'
 
 locations = 1..3
 
+
 def create_appointments(location_id)
   appointment = 1..400
+  service = Salonservice.all.sample(1).first
+  price = Salonpricing.find_by(service_id: service.service_id)
   appointment.each do
     staff = [location_id, Faker::Number.between(from: 0, to: 9)].join('-')
-    priceamount = Faker::Commerce.price
     a = Appointment.new
     a.appointment_id = [location_id, Faker::Number.unique.between(from: 100_000, to: 900_000)].join('-')
     a.location_id = location_id
@@ -14,11 +16,11 @@ def create_appointments(location_id)
     a.client_id = Faker::Number.between(from: 1, to: 2010)
     a.child_id = a.client_id
     a.notes = Faker::Lorem.paragraph(sentence_count: 0, random_sentences_to_add: 2)
-    a.service_id = Faker::Number.between(from: 1, to: 6)
-    a.price = (priceamount * 0.65).round(2)
+    a.service_id = service.service_id
+    a.price = price.price
     a.status = 'booked'
     a.start_time = Faker::Time.between_dates(from: Date.today - 30, to: Date.today - 1, period: :night)
-    a.duration = Faker::Number.between(from: 15, to: 90)
+    a.duration = service.duration
     a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
     a.has_specific_employee = Faker::Boolean.boolean
     a.ticket_id = a.appointment_id
@@ -26,9 +28,9 @@ def create_appointments(location_id)
     a.payment_item_id = Faker::Number.unique.between(from: 100_000, to: 900_000)
     a.ticket_type = 'cash'
     a.inventory_sku_id = Faker::Number.between(from: 1, to: 101)
-    a.sku_amount = (priceamount * 0.15).round(2)
+    a.sku_amount = (a.price * 0.15).round(2)
     a.quantity = 1
-    a.tip = (priceamount * 0.2).round(2)
+    a.tip = (a.price * 0.2).round(2)
     a.amount = (a.price.to_f + a.sku_amount.to_f + a.tip.to_f).round(2)
     a.save
   end
