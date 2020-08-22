@@ -1,1 +1,1 @@
-json.array! @batchmanifests, partial: "batchmanifests/batchmanifest", as: :batchmanifest
+json.array! @batchmanifests, partial: 'batchmanifests/batchmanifest', as: :batchmanifest

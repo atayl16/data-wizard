@@ -1,1 +1,1 @@
-json.array! @memberships, partial: "memberships/membership", as: :membership
+json.array! @memberships, partial: 'memberships/membership', as: :membership

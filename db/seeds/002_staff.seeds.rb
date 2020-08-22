@@ -3,9 +3,9 @@ require 'faker'
 locations = 1..3
 
 def create_staff(location_id)
-  titles = ["Junior", "Senior", ""]
-  staff = 0..9
-  staff.each do |staff|
+  titles = ['Junior', 'Senior', '']
+  staffs = 0..9
+  staffs.each do |staff|
     first_name = Faker::Name.first_name
     last_name = Faker::Name.last_name
     location_id = location_id

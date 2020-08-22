@@ -24,7 +24,7 @@
         <td><%= appointment.employee_id %></td>
         <td><%= appointment.client_id %></td>
         <td><%= appointment.child_id %></td>
-        <td><%= appointment.notes %></td>
+        <td><%= appointment.notes.truncate(8) %></td>
         <td><%= appointment.start_time %></td>
         <td><%= appointment.service_id %></td>
         <td><%= appointment.price %></td>

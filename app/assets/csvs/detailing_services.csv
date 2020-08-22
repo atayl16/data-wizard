@@ -1,0 +1,8 @@
+service_id,category_id,name,description,duration,is_add_on,is_custom,breed_group_id,sku,deleted
+1,1,Express Wash,,15,false,false,,,false
+2,1,Traditional Wash,,30,false,false,,,false
+3,1,Wash & Wax,,60,false,false,,,false
+4,2,Express Interior & Exterior,,60,false,false,,,false
+5,2,Traditional Interior & Exterior,,90,false,false,,,false
+6,2,The Works,,120,false,false,,,false
+7,3,Rims,,15,true,false,,,false

@@ -10,13 +10,20 @@ Rails.application.routes.draw do
   get 'static/export_salonsetwclasses' => 'static#export_salonsetwclasses'
   get 'static/export_salonsetwclasseswbundles' => 'static#export_salonsetwclasseswbundles'
   get 'static/export_salonsetwbundles' => 'static#export_salonsetwbundles'
+  get 'static/yogawbundles' => 'static#yogawbundles'
+  get 'static/detailingwbundles' => 'static#detailingwbundles'
+  get 'static/yogawclasses' => 'static#yogawclasses'
+  get 'static/detailingwclasses' => 'static#detailingwclasses'
+  get 'static/yogawclasseswbundles' => 'static#yogawclasseswbundles'
+  get 'static/detailingwclasseswbundles' => 'static#detailingwclasseswbundles'
   get 'static/export_petset' => 'static#export_petset'
   get 'static/export_petsetwclasses' => 'static#export_petsetwclasses'
   get 'static/export_petsetwclasseswbundles' => 'static#export_petsetwclasseswbundles'
   get 'static/export_petsetwbundles' => 'static#export_petsetwbundles'
   get 'static/export_tickets' => 'static#export_tickets'
   get 'static/export_memberships' => 'static#export_memberships'
-
+  get 'static/yoga' => 'static#yoga'
+  get 'static/detailing' => 'static#detailing'
 
   resources :export, only: [] do
     collection do
@@ -68,16 +75,16 @@ Rails.application.routes.draw do
   resources :inventoryproducts
   resources :petcategories
   resources :petservices
-  resources :appointments, only: [:index, :export]
-  resources :pets, only: [:index, :export]
-  resources :customfields, only: [:index, :export]
-  resources :batchmanifests, only: [:index, :export]
-  resources :salonpricings, only: [:index, :export]
-  resources :saloncategories, only: [:index, :export]
-  resources :staffs, only: [:index, :export]
-  resources :salonservices, only: [:index, :export]
-  resources :services, only: [:index, :export]
-  resources :locations, only: [:index, :export]
+  resources :appointments, only: %i[index export]
+  resources :pets, only: %i[index export]
+  resources :customfields, only: %i[index export]
+  resources :batchmanifests, only: %i[index export]
+  resources :salonpricings, only: %i[index export]
+  resources :saloncategories, only: %i[index export]
+  resources :staffs, only: %i[index export]
+  resources :salonservices, only: %i[index export]
+  resources :services, only: %i[index export]
+  resources :locations, only: %i[index export]
   resources :classsegmenttemplates
   resources :classsettings
   resources :classsettinglocations
@@ -92,6 +99,5 @@ Rails.application.routes.draw do
   resources :bundle_item_group_prices
   devise_for :users
 
-  get "*path", :to => "application#handle_404"
-
+  get '*path', to: 'application#handle_404'
 end

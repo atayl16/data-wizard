@@ -1,0 +1,8 @@
+service_id,category_id,name,description,duration,is_add_on,is_custom,breed_group_id,sku,deleted
+1,1,Relaxation Session,,15,false,false,,,false
+2,1,Beginner Yoga Session,,30,false,false,,,false
+3,1,Traditional Yoga Session,,60,false,false,,,false
+4,2,Tai Chi Session,,60,false,false,,,false
+5,2,Advanced Yoga Session,,90,false,false,,,false
+6,2,Combo Session,,120,false,false,,,false
+7,3,Massage,,15,true,false,,,false

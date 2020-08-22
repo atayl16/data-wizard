@@ -1,13 +1,14 @@
-<h3 id="title">Appointments</h3><br>
+<h3 id="title">Appointments</h3>
 <a class="btn btn-warning" href="static/export_appointments.zip" role="button" disabled>Export Appointment Zip</a>
 <a class="btn btn-warning" href="static/export_tickets.zip" role="button" disabled>Export Ticket Zip</a>
+<button class="btn btn-primary float-right" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Expand All</button>
 
 <div id="card-85858">
   <div class="card">
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-858585">Appointments Table</a>
     </div>
-    <div id="card-element-858585" class="collapse">
+    <div id="card-element-858585" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "list" %>
       </div>
@@ -17,7 +18,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-855855">Appointments</a>
     </div>
-    <div id="card-element-855855" class="collapse">
+    <div id="card-element-855855" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "listappointments"%>
       </div>
@@ -27,7 +28,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-888888">Appointment Services</a>
     </div>
-    <div id="card-element-888888" class="collapse">
+    <div id="card-element-888888" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "listappointmentservices"%>
       </div>
@@ -37,7 +38,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-585858">Appointment Statuses</a>
     </div>
-    <div id="card-element-585858" class="collapse">
+    <div id="card-element-585858" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "listappointmentstatuses"%>
       </div>
@@ -47,7 +48,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-765">Tips</a>
     </div>
-    <div id="card-element-765" class="collapse">
+    <div id="card-element-765" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "listtips"%>
       </div>
@@ -67,7 +68,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-313131">Ticket Services</a>
     </div>
-    <div id="card-element-313131" class="collapse">
+    <div id="card-element-313131" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "listticketservices"%>
       </div>
@@ -77,7 +78,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-151515">Ticket Payments</a>
     </div>
-    <div id="card-element-151515" class="collapse">
+    <div id="card-element-151515" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "listticketpayments"%>
       </div>
@@ -87,7 +88,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-85858" href="#card-element-373737">Ticket SKUs</a>
     </div>
-    <div id="card-element-373737" class="collapse">
+    <div id="card-element-373737" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "listticketskus"%>
       </div>

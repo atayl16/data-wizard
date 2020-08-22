@@ -1,1 +1,1 @@
-json.array! @petcategories, partial: "petcategories/petcategory", as: :petcategory
+json.array! @petcategories, partial: 'petcategories/petcategory', as: :petcategory

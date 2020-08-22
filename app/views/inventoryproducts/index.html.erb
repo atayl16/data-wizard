@@ -1,6 +1,7 @@
 <h3 id="title">Inventory</h3>
 
 <a class="btn btn-warning" href="static/export_inventory.zip" role="button" disabled>Export Inventory Zip</a>
+<button class="btn btn-primary float-right" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Expand All</button>
 
 <div id="card-45345">
   <div class="card">
@@ -17,7 +18,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-45345" href="#card-element-645634">SKUs</a>
     </div>
-    <div id="card-element-645634" class="collapse">
+    <div id="card-element-645634" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "inventoryskus/list" %>
       </div>
@@ -27,7 +28,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-45345" href="#card-element-234399">Stocks</a>
     </div>
-    <div id="card-element-234399" class="collapse">
+    <div id="card-element-234399" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "inventorystocks/list" %>
       </div>

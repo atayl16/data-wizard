@@ -1,12 +1,14 @@
 <h3 id="title">Client Profile</h3>
-
+<button class="btn btn-primary float-right" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Expand All</button>
+<br>
+<br>
 
 <div id="card-32132">
   <div class="card">
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-32132" href="#card-element-321321">Clients</a>
     </div>
-    <div id="card-element-321321" class="collapse">
+    <div id="card-element-321321" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "list" %>
       </div>
@@ -16,7 +18,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-32132" href="#card-element-5456">Pets</a>
     </div>
-    <div id="card-element-5456" class="collapse">
+    <div id="card-element-5456" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "listpet" %>
       </div>

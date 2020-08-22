@@ -1,6 +1,7 @@
 <h3 id="title">Bundles</h3>
-
-
+<button class="btn btn-primary float-right" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Expand All</button>
+<br>
+<br>
 <div id="card-48658">
   <div class="card">
     <div class="card-header">
@@ -16,7 +17,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-48658" href="#card-element-5456">Bundle Items</a>
     </div>
-    <div id="card-element-5456" class="collapse">
+    <div id="card-element-5456" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "listitems" %>
       </div>
@@ -26,7 +27,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-48658" href="#card-element-122122">Bundle Item Groups</a>
     </div>
-    <div id="card-element-122122" class="collapse">
+    <div id="card-element-122122" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "listitemgroups" %>
       </div>
@@ -36,7 +37,7 @@
     <div class="card-header">
        <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-48658" href="#card-element-5654">Bundle Item Group Prices</a>
     </div>
-    <div id="card-element-5654" class="collapse">
+    <div id="card-element-5654" class="collapse multi-collapse">
       <div class="card-body">
         <%= render :partial => "listitemgroupprices" %>
       </div>

@@ -27,7 +27,7 @@ def create_appointments(location_id)
     a.payment_item_id = Faker::Number.unique.between(from: 100_000, to: 900_000)
     a.ticket_type = 'cash'
     a.inventory_sku_id = Faker::Number.between(from: 1, to: 101)
-    b.sku_amount = Faker::Commerce.price(range: 6..20.99)
+    a.sku_amount = Faker::Commerce.price(range: 6..20.99)
     a.quantity = 1
     a.tip = (price.price * 0.2).round(2)
     a.amount = (a.price.to_f + a.sku_amount.to_f + a.tip.to_f).round(2)
@@ -53,6 +53,13 @@ def create_appointments(location_id)
     a.duration = service.duration
     a.change_time = Faker::Time.between_dates(from: Date.today - 60, to: Date.today - 30, period: :night)
     a.has_specific_employee = Faker::Boolean.boolean
+    a.ticket_status = 'closed'
+    a.payment_item_id = Faker::Number.unique.between(from: 100_000, to: 900_000)
+    a.ticket_type = 'cash'
+    a.inventory_sku_id = Faker::Number.between(from: 1, to: 101)
+    a.sku_amount = Faker::Commerce.price(range: 6..20.99)
+    a.quantity = 1
+    a.tip = (price.price * 0.2).round(2)
     a.save
     b = Appointment.new
     b.appointment_id = a.appointment_id
@@ -68,7 +75,7 @@ def create_appointments(location_id)
     b.duration = 15
     b.change_time = a.change_time
     b.ticket_status = 'closed'
-    b.payment_item_id = Faker::Number.unique.between(from: 100_000, to: 900_000)
+    b.payment_item_id = a.payment_item_id
     b.ticket_type = 'cash'
     b.inventory_sku_id = Faker::Number.between(from: 1, to: 101)
     b.sku_amount = Faker::Commerce.price(range: 6..20.99)

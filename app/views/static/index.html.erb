@@ -1,19 +1,24 @@
       <div class="jumbotron">
         <h2>Expand the sections below and choose one or more files to download</h2>
 
-        <a class="btn btn-warning btn-sm" href="static/export_bundles.zip" role="button"disabled>Export Bundles **NEW**</a>
-        <em>Bundles are not yet live on production!</em>
+        <button class="btn btn-primary float-right" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Expand All</button>
         <br>
-
+        <h5>Complete Sets</h5>
         <div id="card-404785">
             <%= render :partial => "listsaloncard"%>
             <%= render :partial => "listpetcard"%>
-            <%= render :partial => "listpartialscard"%>
-            <%= render :partial => "listsinglescard"%>
+            <%= render :partial => "listyogacard"%>
+            <%= render :partial => "listdetailingcard"%>
         <div>
-          <div>
-            <em>If you would like to see a sample of the data, click one of the navigation tabs on the left.</em>
-            <!-- Need new data? <%= link_to 'Regenerate the DB', seeds_run_path, action: :run %> -->
+        <br>
+        <h5>Other</h5>
+        <div id="card-998809">
+          <%= render :partial => "listpartialscard"%>
+          <%= render :partial => "listsinglescard"%>
+        <div>
+      </div>
+          <em>If you would like to see a sample of the data, click one of the navigation tabs on the left.</em>
+          <!-- Need new data? <%= link_to 'Regenerate the DB', seeds_run_path, action: :run %> -->
           </div>
         </div>
       </div>
@@ -30,3 +35,4 @@
           <button type="button" class="btn btn-danger btn-block">Red - File not meant to be used alone</button>
           <button type="button" class="btn btn-warning btn-block">Yellow - You can use this partial set, but it will not build an entire account</button>
           <button type="button" class="btn btn-success btn-block">Green - A complete set meant to generate enough data for a full account</button>
+          <button type="button" class="btn btn-primary btn-block">Blue - Site functionality that will not export anything</button>

@@ -1,1 +1,1 @@
-json.array! @saloncategories, partial: "saloncategories/saloncategory", as: :saloncategory
+json.array! @saloncategories, partial: 'saloncategories/saloncategory', as: :saloncategory
