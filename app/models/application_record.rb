@@ -55,8 +55,8 @@ class ApplicationRecord < ActiveRecord::Base
   end
 
   def self.to_csv_giftcards
-    attributes = %w[code amount start_time]
-    headers = %w[code amount purchased_at]
+    attributes = %w[code amount start_time client_id location_id]
+    headers = %w[code amount purchased_at client_id location_id]
     export_w_headers(attributes, headers)
   end
 
