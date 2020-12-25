@@ -54,6 +54,12 @@ class ApplicationRecord < ActiveRecord::Base
     export_w_headers(attributes, headers)
   end
 
+  def self.to_csv_giftcards
+    attributes = %w[code amount start_time]
+    headers = %w[code amount purchased_at]
+    export_w_headers(attributes, headers)
+  end
+
   def self.to_csv_batchmanifest
     attributes = %w[filename filetype]
     export(attributes)

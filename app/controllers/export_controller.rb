@@ -2,7 +2,7 @@ require 'rake'
 require 'rake/task'
 Rails.application.load_tasks
 class ExportController < ActionController::Base
-  %w[appointment appointmentservice appointmentstatus ticket ticketsku ticketservice tip ticketpayment].each do |new_method|
+  %w[appointment appointmentservice appointmentstatus giftcards ticket ticketsku ticketservice tip ticketpayment].each do |new_method|
     define_method(new_method.pluralize.to_s) do
       @appointments = Appointment.order('service_id')
       send_data @appointments.public_send("to_csv_#{new_method.pluralize}"), filename: "#{new_method.pluralize}.csv"

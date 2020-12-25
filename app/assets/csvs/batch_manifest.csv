@@ -14,3 +14,4 @@ appointmentstatuses.csv,appointment_statuses
 appointmentmanifest.csv,appointment_manifest
 inventories.zip,inventory
 tickets.zip,tickets
+giftcards.zip, gift_card_purchases

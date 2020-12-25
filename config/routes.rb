@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'static/export_appointments' => 'static#export_appointments'
   get 'static/export_classes' => 'static#export_classes'
   get 'static/export_bundles' => 'static#export_bundles'
+  get 'static/export_giftcards' => 'static#export_giftcards'
   get 'static/export_inventory' => 'static#export_inventory'
   get 'static/export_salonset' => 'static#export_salonset'
   get 'static/export_salonsetwclasses' => 'static#export_salonsetwclasses'
@@ -35,6 +36,7 @@ Rails.application.routes.draw do
       get :ticketservices
       get :tips
       get :ticketpayments
+      get :giftcards
       get :batchmanifest
       get :locations
       get :pets
@@ -76,6 +78,7 @@ Rails.application.routes.draw do
   resources :petcategories
   resources :petservices
   resources :appointments, only: %i[index export]
+  resources :giftcards, only: %i[index export]
   resources :pets, only: %i[index export]
   resources :customfields, only: %i[index export]
   resources :batchmanifests, only: %i[index export]

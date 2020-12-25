@@ -31,6 +31,7 @@ def create_appointments(location_id)
     a.quantity = 1
     a.tip = (price.price * 0.2).round(2)
     a.amount = (a.price.to_f + a.sku_amount.to_f + a.tip.to_f).round(2)
+    a.code = Faker::Number.unique.number(digits: 10)
     a.save
   end
   add_appointment = 500..550
@@ -59,7 +60,6 @@ def create_appointments(location_id)
     a.inventory_sku_id = Faker::Number.between(from: 1, to: 101)
     a.sku_amount = Faker::Commerce.price(range: 6..20.99)
     a.quantity = 1
-    a.tip = (price.price * 0.2).round(2)
     a.save
     b = Appointment.new
     b.appointment_id = a.appointment_id
@@ -80,8 +80,7 @@ def create_appointments(location_id)
     b.inventory_sku_id = Faker::Number.between(from: 1, to: 101)
     b.sku_amount = Faker::Commerce.price(range: 6..20.99)
     b.quantity = 1
-    b.tip = (b.price * 0.2).round(2)
-    b.amount = (a.price.to_f + a.sku_amount.to_f + a.tip.to_f + b.price.to_f + b.sku_amount.to_f + b.tip.to_f).round(2)
+    b.amount = (a.price.to_f + a.sku_amount.to_f + a.tip.to_f + b.price.to_f + b.sku_amount.to_f).round(2)
     b.save
   end
 end
