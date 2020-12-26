@@ -667,7 +667,7 @@ verticals = %w[yoga detailing]
     create_giftcards_zip
     file_stream = Zip::OutputStream.write_buffer do |zip|
       zip.put_next_entry 'batch_manifest.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_giftcards.csv")
-      zip.put_next_entry 'giftcards.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/giftcards.zip")
+      zip.put_next_entry 'giftcards.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/giftcards.csv")
     end
     file_stream.rewind
     respond_to do |format|

@@ -10,4 +10,4 @@ inventories.zip,inventory
 tickets.zip,tickets
 classes.zip,classes
 bundles.zip,bundles
-giftcards.zip,gift_card_purchases
+giftcards.csv,gift_card_purchases
