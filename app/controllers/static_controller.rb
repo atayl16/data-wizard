@@ -481,8 +481,8 @@ verticals = %w[yoga detailing]
       @clients = Client.all
       @customfields = Customfield.all
       zip.put_next_entry 'batch_manifest.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_pets.csv")
-      zip.put_next_entry 'clients.csv'; zip << @clients.to_csv_pets
-      zip.put_next_entry 'pets.csv'; zip << @clients.to_csv_clients
+      zip.put_next_entry 'pets.csv'; zip << @clients.to_csv_pets
+      zip.put_next_entry 'clients.csv'; zip << @clients.to_csv_clients
       zip.put_next_entry 'customfields.csv'; zip << @customfields.to_csv_customfields
     end
     file_stream.rewind
