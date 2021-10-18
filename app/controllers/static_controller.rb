@@ -8,6 +8,7 @@ verticals = %w[yoga detailing]
       create_appointments_zip
       create_tickets_zip
       create_inventory_zip
+      create_memberships_zip
       file_stream = Zip::OutputStream.write_buffer do |zip|
         @clients = Client.all
         @locations = Location.all
@@ -24,6 +25,7 @@ verticals = %w[yoga detailing]
         zip.put_next_entry 'appointments.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
         zip.put_next_entry 'inventories.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
         zip.put_next_entry 'tickets.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+        zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
         zip.put_next_entry 'addonmappings.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
         zip.put_next_entry 'giftcards.csv'; zip << @appointments.to_csv_giftcards
       end
@@ -46,6 +48,7 @@ verticals = %w[yoga detailing]
       create_tickets_zip
       create_inventory_zip
       create_bundles_zip
+      create_memberships_zip
       file_stream = Zip::OutputStream.write_buffer do |zip|
         @clients = Client.all
         @locations = Location.all
@@ -62,6 +65,7 @@ verticals = %w[yoga detailing]
         zip.put_next_entry 'appointments.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
         zip.put_next_entry 'inventories.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
         zip.put_next_entry 'tickets.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+        zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
         zip.put_next_entry 'bundles.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/bundles.zip")
         zip.put_next_entry 'addonmappings.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
         zip.put_next_entry 'giftcards.csv'; zip << @appointments.to_csv_giftcards
@@ -85,6 +89,7 @@ verticals = %w[yoga detailing]
       create_tickets_zip
       create_inventory_zip
       create_classes_zip
+      create_memberships_zip
       file_stream = Zip::OutputStream.write_buffer do |zip|
         @clients = Client.all
         @locations = Location.all
@@ -101,6 +106,7 @@ verticals = %w[yoga detailing]
         zip.put_next_entry 'appointments.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
         zip.put_next_entry 'inventories.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
         zip.put_next_entry 'tickets.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+        zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
         zip.put_next_entry 'classes.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/classes.zip")
         zip.put_next_entry 'addonmappings.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
         zip.put_next_entry 'giftcards.csv'; zip << @appointments.to_csv_giftcards
@@ -125,6 +131,7 @@ verticals = %w[yoga detailing]
       create_inventory_zip
       create_classes_zip
       create_bundles_zip
+      create_memberships_zip
       file_stream = Zip::OutputStream.write_buffer do |zip|
         @clients = Client.all
         @locations = Location.all
@@ -141,6 +148,7 @@ verticals = %w[yoga detailing]
         zip.put_next_entry 'appointments.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
         zip.put_next_entry 'inventories.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
         zip.put_next_entry 'tickets.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+        zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
         zip.put_next_entry 'classes.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/classes.zip")
         zip.put_next_entry 'bundles.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/bundles.zip")
         zip.put_next_entry 'addonmappings.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
@@ -182,6 +190,7 @@ verticals = %w[yoga detailing]
       zip.put_next_entry 'appointments.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
       zip.put_next_entry 'inventories.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
       zip.put_next_entry 'tickets.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+      zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
       zip.put_next_entry 'addonmappings.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
       zip.put_next_entry 'giftcards.csv'; zip << @appointments.to_csv_giftcards
     end
@@ -202,6 +211,7 @@ verticals = %w[yoga detailing]
     create_tickets_zip
     create_inventory_zip
     create_bundles_zip
+    create_memberships_zip
     file_stream = Zip::OutputStream.write_buffer do |zip|
       @saloncategories = Saloncategory.all
       @salonservices = Salonservice.all
@@ -221,6 +231,7 @@ verticals = %w[yoga detailing]
       zip.put_next_entry 'bundles.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/bundles.zip")
       zip.put_next_entry 'inventories.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
       zip.put_next_entry 'tickets.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+      zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
       zip.put_next_entry 'addonmappings.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
       zip.put_next_entry 'giftcards.csv'; zip << @appointments.to_csv_giftcards
     end
@@ -241,6 +252,7 @@ verticals = %w[yoga detailing]
     create_tickets_zip
     create_inventory_zip
     create_classes_zip
+    create_memberships_zip
     file_stream = Zip::OutputStream.write_buffer do |zip|
       @saloncategories = Saloncategory.all
       @salonservices = Salonservice.all
@@ -259,6 +271,7 @@ verticals = %w[yoga detailing]
       zip.put_next_entry 'appointments.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
       zip.put_next_entry 'inventories.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
       zip.put_next_entry 'tickets.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+      zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
       zip.put_next_entry 'classes.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/classes.zip")
       zip.put_next_entry 'addonmappings.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
       zip.put_next_entry 'giftcards.csv'; zip << @appointments.to_csv_giftcards
@@ -281,6 +294,7 @@ verticals = %w[yoga detailing]
     create_inventory_zip
     create_classes_zip
     create_bundles_zip
+    create_memberships_zip
     file_stream = Zip::OutputStream.write_buffer do |zip|
       @saloncategories = Saloncategory.all
       @salonservices = Salonservice.all
@@ -300,6 +314,7 @@ verticals = %w[yoga detailing]
       zip.put_next_entry 'bundles.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/bundles.zip")
       zip.put_next_entry 'inventories.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
       zip.put_next_entry 'tickets.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+      zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
       zip.put_next_entry 'classes.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/classes.zip")
       zip.put_next_entry 'addonmappings.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
       zip.put_next_entry 'giftcards.csv'; zip << @appointments.to_csv_giftcards
@@ -320,6 +335,7 @@ verticals = %w[yoga detailing]
     create_appointments_zip
     create_tickets_zip
     create_inventory_zip
+    create_memberships_zip
     file_stream = Zip::OutputStream.write_buffer do |zip|
       @petcategories = Petcategory.all
       @petservices = Petservice.all
@@ -339,6 +355,7 @@ verticals = %w[yoga detailing]
       zip.put_next_entry 'appointments.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
       zip.put_next_entry 'inventories.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
       zip.put_next_entry 'tickets.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+      zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
       zip.put_next_entry 'addonmappings.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
       zip.put_next_entry 'giftcards.csv'; zip << @appointments.to_csv_giftcards
     end
@@ -359,6 +376,7 @@ verticals = %w[yoga detailing]
     create_tickets_zip
     create_inventory_zip
     create_bundles_zip
+    create_memberships_zip
     file_stream = Zip::OutputStream.write_buffer do |zip|
       @petcategories = Petcategory.all
       @petservices = Petservice.all
@@ -379,6 +397,7 @@ verticals = %w[yoga detailing]
       zip.put_next_entry 'bundles.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/bundles.zip")
       zip.put_next_entry 'inventories.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
       zip.put_next_entry 'tickets.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+      zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
       zip.put_next_entry 'addonmappings.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
       zip.put_next_entry 'giftcards.csv'; zip << @appointments.to_csv_giftcards
     end
@@ -399,6 +418,7 @@ verticals = %w[yoga detailing]
     create_tickets_zip
     create_inventory_zip
     create_classes_zip
+    create_memberships_zip
     file_stream = Zip::OutputStream.write_buffer do |zip|
       @petcategories = Petcategory.all
       @petservices = Petservice.all
@@ -418,6 +438,7 @@ verticals = %w[yoga detailing]
       zip.put_next_entry 'appointments.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/appointments.zip")
       zip.put_next_entry 'inventories.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
       zip.put_next_entry 'tickets.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+      zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
       zip.put_next_entry 'classes.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/classes.zip")
       zip.put_next_entry 'addonmappings.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
       zip.put_next_entry 'giftcards.csv'; zip << @appointments.to_csv_giftcards
@@ -440,6 +461,7 @@ verticals = %w[yoga detailing]
     create_inventory_zip
     create_classes_zip
     create_bundles_zip
+    create_memberships_zip
     file_stream = Zip::OutputStream.write_buffer do |zip|
       @petcategories = Petcategory.all
       @petservices = Petservice.all
@@ -460,6 +482,7 @@ verticals = %w[yoga detailing]
       zip.put_next_entry 'bundles.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/bundles.zip")
       zip.put_next_entry 'inventories.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/inventories.zip")
       zip.put_next_entry 'tickets.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/tickets.zip")
+      zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
       zip.put_next_entry 'classes.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/classes.zip")
       zip.put_next_entry 'addonmappings.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/addonmappings.csv")
       zip.put_next_entry 'giftcards.csv'; zip << @appointments.to_csv_giftcards
@@ -695,6 +718,11 @@ verticals = %w[yoga detailing]
 
   def export_memberships
     create_memberships_zip
+    file_stream = Zip::OutputStream.write_buffer do |zip|
+      @memberships = Membership.all
+      zip.put_next_entry 'batch_manifest.csv'; zip << File.binread("#{Rails.root}/app/assets/csvs/batch_manifest_memberships.csv")
+      zip.put_next_entry 'memberships.zip'; zip << File.binread("#{Rails.root}/app/assets/csvs/memberships.zip")
+    end
     file_stream.rewind
     respond_to do |format|
       format.zip do

@@ -20,12 +20,11 @@ module Ingest
 end
 
 Sentry.init do |config|
-  config.dsn = 'https://1ae328fef0a24f398b27a9e990a0362f@o538689.ingest.sentry.io/5657083'
-  config.breadcrumbs_logger = [:active_support_logger]
+  config.dsn = 'https://21b7b284305d42e6b34c98040c367892@o538694.ingest.sentry.io/5657852'
 
   # To activate performance monitoring, set one of these options.
   # We recommend adjusting the value in production:
-  # config.traces_sample_rate = 0.5
+  config.traces_sample_rate = 0.5
   # or
   config.traces_sampler = lambda do |context|
     true

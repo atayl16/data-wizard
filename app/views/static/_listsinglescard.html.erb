@@ -70,6 +70,15 @@
         <%= button_to 'Export Bundle Prices', {controller: "export", action: "bundle_item_group_prices"}, method: :get, class: "btn btn-danger btn-sm" %>
       </div>
       <hr>
+      Membership files.<br>
+      <div class="btn-group" role="group">
+        <%= button_to 'Export Memberships', {controller: "export", action: "memberships"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Membership Locations', {controller: "export", action: "membershiplocations"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Memberships Benefits', {controller: "export", action: "membershipbenefits"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Memberships Services', {controller: "export", action: "membershipservices"}, method: :get, class: "btn btn-danger btn-sm" %>
+        <%= button_to 'Export Memberships Products', {controller: "export", action: "membershipproducts"}, method: :get, class: "btn btn-danger btn-sm" %>
+      </div>
+      <hr>
       Gift Card files.<br>
       <div class="btn-group" role="group">
         <%= button_to 'Export Gift Cards', {controller: "export", action: "giftcards"}, method: :get, class: "btn btn-danger btn-sm" %>
